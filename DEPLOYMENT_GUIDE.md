@@ -184,8 +184,14 @@ nano .env
 修改以下内容（**必须修改的项已标注 ⚠️**）：
 
 ```env
-# ⚠️ 数据库连接 - 密码要和 docker-compose.yml 中 POSTGRES_PASSWORD 一致
+# ⚠️ 数据库连接
+# DATABASE_URL 中的密码、用户名、库名必须与下方的 POSTGRES_* 变量一致
 DATABASE_URL="postgresql://postgres:你的数据库密码@postgres:5432/mlangsub?schema=public"
+
+# PostgreSQL 容器配置（需与上面 DATABASE_URL 保持一致）
+POSTGRES_USER="postgres"
+POSTGRES_PASSWORD="你的数据库密码"
+POSTGRES_DB="mlangsub"
 
 # Redis - Docker 内部网络，直接用服务名
 REDIS_URL="redis://redis:6379"
@@ -221,22 +227,21 @@ cat .env | grep JWT_SECRET
 
 ---
 
-**步骤 9：同步修改 docker-compose.yml 中的密码**
+**步骤 9：验证 docker-compose.yml（无需手动修改）**
+
+`docker-compose.yml` 已使用 `${变量名}` 语法，会自动从 `.env` 文件读取配置，你只需确认 `.env` 配置正确即可，无需再手动同步密码。
 
 ```bash
-nano docker-compose.yml
+# 快速检查变量引用是否正确（应全部为 ${...} 格式，无硬编码值）
+grep -E 'POSTGRES_USER|POSTGRES_PASSWORD|POSTGRES_DB|DATABASE_URL|REDIS_URL|JWT_SECRET' docker-compose.yml
 ```
-
-找到 `POSTGRES_PASSWORD: password` 这一行，将 `password` 改为和 `.env` 中 `DATABASE_URL` 里相同的密码。
-
-同时修改 `JWT_SECRET: change-this-to-a-random-secret` 为和 `.env` 中相同的值。
 
 **✅ 验证方法：**
 
 ```bash
-# 检查 docker-compose.yml 中的密码是否和 .env 一致
-grep POSTGRES_PASSWORD docker-compose.yml
-grep JWT_SECRET docker-compose.yml
+# 确认 docker-compose 能正确解析变量
+docker compose config | grep -E 'POSTGRES_PASSWORD|DATABASE_URL|JWT_SECRET'
+# 应显示你在 .env 中设置的实际值
 ```
 
 ---
