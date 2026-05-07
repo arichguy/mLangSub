@@ -233,7 +233,7 @@ cat .env | grep JWT_SECRET
 
 ```bash
 # 快速检查变量引用是否正确（应全部为 ${...} 格式，无硬编码值）
-grep -E 'POSTGRES_USER|POSTGRES_PASSWORD|POSTGRES_DB|DATABASE_URL|REDIS_URL|JWT_SECRET' docker-compose.yml
+grep -E '\$\{' docker-compose.yml
 ```
 
 **✅ 验证方法：**
