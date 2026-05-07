@@ -1,5 +1,5 @@
 {
-  "name": "subextract",
+  "name": "mlangsub",
   "version": "1.0.0",
   "description": "多语言在线视频字幕下载网站 - 支持 YouTube、Bilibili 等 50+ 平台",
   "private": true,

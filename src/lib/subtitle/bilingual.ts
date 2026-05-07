@@ -1,4 +1,4 @@
-import type { SubtitleIR, SubtitleSegment, BilingualOptions, SubtitleFormat } from "@/types/subtitle";
+import type { SubtitleIR, SubtitleSegment, SubtitleFormat } from "@/types/subtitle";
 import { parseInput, toFormat } from "./converter";
 
 /**

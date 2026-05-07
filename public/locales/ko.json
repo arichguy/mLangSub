@@ -1,6 +1,6 @@
 {
   "app": {
-    "name": "SubExtract",
+    "name": "mLangSub",
     "tagline": "자막 다운로더",
     "description": "YouTube, Bilibili 등 50개 이상의 플랫폼에서 자막 추출"
   },
@@ -58,7 +58,7 @@
     "download_failed": "자막 다운로드에 실패했습니다"
   },
   "footer": {
-    "copyright": "© 2026 SubExtract. All rights reserved.",
+    "copyright": "© 2026 mLangSub. All rights reserved.",
     "terms": "이용약관",
     "privacy": "개인정보처리방침",
     "contact": "문의하기"

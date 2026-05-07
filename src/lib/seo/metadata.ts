@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-const BASE_URL = process.env.NEXT_PUBLIC_APP_URL || "https://subextract.com";
+const BASE_URL = process.env.NEXT_PUBLIC_APP_URL || "https://mlangsub.com";
 
 export function generatePageMetadata({
   title,
@@ -29,7 +29,7 @@ export function generatePageMetadata({
       title,
       description,
       url,
-      siteName: "SubExtract",
+      siteName: "mLangSub",
       images: [{ url: ogImage, width: 1200, height: 630 }],
       locale,
       type: "website",
@@ -63,7 +63,7 @@ export function generateWebAppSchema() {
   return {
     "@context": "https://schema.org",
     "@type": "WebApplication",
-    name: "SubExtract",
+    name: "mLangSub",
     description: "多语言在线视频字幕下载工具 - 从 YouTube、Bilibili 等 50+ 平台提取字幕",
     applicationCategory: "Multimedia",
     operatingSystem: "All",

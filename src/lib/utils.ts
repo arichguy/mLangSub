@@ -29,6 +29,9 @@ export function getPlatformName(platform: string): string {
     iqiyi: "爱奇艺",
     hotstar: "Hotstar",
     dailymotion: "Dailymotion",
+    tiktok: "TikTok",
+    twitch: "Twitch",
+    facebook: "Facebook",
   };
   return names[platform] || platform;
 }

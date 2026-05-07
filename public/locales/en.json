@@ -1,6 +1,6 @@
 {
   "app": {
-    "name": "SubExtract",
+    "name": "mLangSub",
     "tagline": "Subtitle Downloader",
     "description": "Extract subtitles from 50+ platforms including YouTube and Bilibili"
   },
@@ -58,7 +58,7 @@
     "download_failed": "Subtitle download failed. Try another format"
   },
   "footer": {
-    "copyright": "© 2026 SubExtract. All rights reserved.",
+    "copyright": "© 2026 mLangSub. All rights reserved.",
     "terms": "Terms of Use",
     "privacy": "Privacy Policy",
     "contact": "Contact Us"

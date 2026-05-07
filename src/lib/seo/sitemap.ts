@@ -1,4 +1,4 @@
-const BASE_URL = process.env.NEXT_PUBLIC_APP_URL || "https://subextract.com";
+const BASE_URL = process.env.NEXT_PUBLIC_APP_URL || "https://mlangsub.com";
 
 const SUPPORTED_PLATFORMS = [
   "youtube",

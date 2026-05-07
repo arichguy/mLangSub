@@ -4,11 +4,11 @@ services:
   # PostgreSQL 数据库
   postgres:
     image: postgres:16-alpine
-    container_name: subextract-postgres
+    container_name: mlangsub-postgres
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: password
-      POSTGRES_DB: subextract
+      POSTGRES_DB: mlangsub
     ports:
       - "5432:5432"
     volumes:
@@ -23,7 +23,7 @@ services:
   # Redis 缓存
   redis:
     image: redis:7-alpine
-    container_name: subextract-redis
+    container_name: mlangsub-redis
     ports:
       - "6379:6379"
     volumes:
@@ -40,15 +40,15 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: subextract-app
+    container_name: mlangsub-app
     ports:
       - "3000:3000"
     environment:
-      DATABASE_URL: postgresql://postgres:password@postgres:5432/subextract?schema=public
+      DATABASE_URL: postgresql://postgres:password@postgres:5432/mlangsub?schema=public
       REDIS_URL: redis://redis:6379
       JWT_SECRET: change-this-to-a-random-secret
       NEXT_PUBLIC_APP_URL: http://localhost:3000
-      NEXT_PUBLIC_APP_NAME: SubExtract
+      NEXT_PUBLIC_APP_NAME: mLangSub
     depends_on:
       postgres:
         condition: service_healthy

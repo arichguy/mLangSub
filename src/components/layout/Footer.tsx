@@ -4,7 +4,7 @@ interface FooterProps {
 
 export function Footer({ t }: FooterProps) {
   const texts = (t as any)?.footer || {
-    copyright: "© 2026 SubExtract. 保留所有权利.",
+    copyright: "© 2026 mLangSub. 保留所有权利.",
     terms: "使用条款",
     privacy: "隐私政策",
     contact: "联系我们",
@@ -28,10 +28,12 @@ export function Footer({ t }: FooterProps) {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-2 mb-3">
-              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-warm-orange text-white font-bold text-xs">
-                SE
-              </div>
-              <span className="font-semibold">SubExtract</span>
+              <img
+                src="/images/logo.svg"
+                alt="mLangSub"
+                className="h-8 w-8 rounded-lg"
+              />
+              <span className="font-semibold">mLangSub</span>
             </div>
             <p className="text-sm text-warm-muted leading-relaxed">
               从 YouTube、Bilibili 等 50+ 视频平台提取多语言字幕，支持 SRT、VTT、ASS、TXT、HTML 格式下载。

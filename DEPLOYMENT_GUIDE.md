@@ -1,4 +1,4 @@
-# SubExtract 部署指南
+# mLangSub 部署指南
 
 ## 服务器要求
 
@@ -41,8 +41,8 @@ sudo systemctl enable postgresql
 sudo systemctl start postgresql
 
 # 创建数据库和用户
-sudo -u postgres psql -c "CREATE USER subextract WITH PASSWORD 'your_password';"
-sudo -u postgres psql -c "CREATE DATABASE subextract OWNER subextract;"
+sudo -u postgres psql -c "CREATE USER mlangsub WITH PASSWORD 'your_password';"
+sudo -u postgres psql -c "CREATE DATABASE mlangsub OWNER mlangsub;"
 
 # Redis
 sudo apt install -y redis-server
@@ -54,8 +54,8 @@ sudo systemctl start redis-server
 
 ```bash
 cd /www/wwwroot
-git clone <your-repo-url> subextract
-cd subextract
+git clone <your-repo-url> mlangsub
+cd mlangsub
 
 # 复制环境变量
 cp .env.example .env
@@ -80,7 +80,7 @@ npm run build
 
 # 使用 PM2 启动
 npm install -g pm2
-pm2 start npm --name "subextract" -- start
+pm2 start npm --name "mlangsub" -- start
 pm2 save
 pm2 startup
 ```
@@ -153,7 +153,7 @@ docker-compose down
 ```bash
 # 查看 PM2 状态
 pm2 status
-pm2 logs subextract
+pm2 logs mlangsub
 pm2 monit
 
 # 检查服务

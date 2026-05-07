@@ -191,7 +191,7 @@ function toASS(ir: SubtitleIR): string {
   }).join("\n");
 
   return `[Script Info]
-Title: SubExtract Generated
+Title: mLangSub Generated
 ScriptType: v4.00+
 WrapStyle: 0
 

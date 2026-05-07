@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Download, ChevronDown } from "lucide-react";
+import { Download } from "lucide-react";
 import { cn, getLangFlag } from "@/lib/utils";
 import { FormatSelector } from "./FormatSelector";
 import type { SubtitleTrack, SubtitleFormat } from "@/types/subtitle";

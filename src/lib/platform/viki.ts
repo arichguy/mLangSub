@@ -18,7 +18,7 @@ export async function getVikiVideoInfo(
   try {
     const res = await fetch(`${VIKI_API_BASE}/videos/${videoId}.json`, {
       headers: {
-        "User-Agent": "Mozilla/5.0 (compatible; SubExtract/1.0)",
+        "User-Agent": "Mozilla/5.0 (compatible; mLangSub/1.0)",
       },
     });
 
@@ -44,7 +44,7 @@ export async function getVikiSubtitles(
       `${VIKI_API_BASE}/videos/${videoId}/subtitles.json`,
       {
         headers: {
-          "User-Agent": "Mozilla/5.0 (compatible; SubExtract/1.0)",
+          "User-Agent": "Mozilla/5.0 (compatible; mLangSub/1.0)",
         },
       }
     );

@@ -1,4 +1,4 @@
-import { Metadata } from "next";
+import type { Metadata } from "next";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { PlatformSEOContent } from "@/components/home/PlatformSEOContent";
@@ -25,6 +25,36 @@ const PLATFORM_INFO: Record<
     description:
       "免费在线 Viki 字幕下载工具。支持 Viki 平台多语言字幕提取，SRT/VTT/TXT/ASS/HTML 格式下载。",
   },
+  "dailymotion-subtitle-downloader": {
+    name: "Dailymotion",
+    title: "Dailymotion 字幕下载器 - 在线提取 Dailymotion 多语言字幕",
+    description:
+      "免费在线 Dailymotion 字幕下载工具。支持多语言字幕提取，SRT/VTT/TXT/ASS/HTML 格式下载。",
+  },
+  "iqiyi-subtitle-downloader": {
+    name: "iQiyi",
+    title: "iQiyi 字幕下载器 - 在线提取爱奇艺多语言字幕",
+    description:
+      "免费在线 爱奇艺/iQiyi 字幕下载工具。支持多语言字幕提取，SRT/VTT/TXT/ASS/HTML 格式下载。",
+  },
+  "wetv-subtitle-downloader": {
+    name: "WeTV",
+    title: "WeTV 字幕下载器 - 在线提取 WeTV 多语言字幕",
+    description:
+      "免费在线 WeTV 字幕下载工具。支持多语言字幕提取，SRT/VTT/TXT/ASS/HTML 格式下载。",
+  },
+  "hotstar-subtitle-downloader": {
+    name: "Hotstar",
+    title: "Hotstar 字幕下载器 - 在线提取 Hotstar 多语言字幕",
+    description:
+      "免费在线 Hotstar 字幕下载工具。支持多语言字幕提取，SRT/VTT/TXT/ASS/HTML 格式下载。",
+  },
+  "viu-subtitle-downloader": {
+    name: "Viu",
+    title: "Viu 字幕下载器 - 在线提取 Viu 多语言字幕",
+    description:
+      "免费在线 Viu 字幕下载工具。支持多语言字幕提取，SRT/VTT/TXT/ASS/HTML 格式下载。",
+  },
 };
 
 export async function generateStaticParams() {
@@ -38,10 +68,10 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const info = PLATFORM_INFO[params.platform];
   if (!info) {
-    return { title: "页面未找到 - SubExtract" };
+    return { title: "页面未找到 - mLangSub" };
   }
 
-  const baseUrl = process.env.NEXT_PUBLIC_APP_URL || "https://subextract.com";
+  const baseUrl = process.env.NEXT_PUBLIC_APP_URL || "https://mlangsub.com";
 
   return {
     title: info.title,
@@ -53,7 +83,7 @@ export async function generateMetadata({
       title: info.title,
       description: info.description,
       url: `${baseUrl}/${params.platform}`,
-      siteName: "SubExtract",
+      siteName: "mLangSub",
       type: "website",
     },
   };

@@ -1,9 +1,27 @@
 import type { SubtitleTrack, SubtitleFormat } from "@/types/subtitle";
 
-/**
- * Playwright-based browser simulation for subtitle extraction.
- * Used as a last-resort fallback when yt-dlp and API methods fail.
- */
+const BROWSER_UA =
+  "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36";
+
+const STEALTH_ARGS = [
+  "--disable-blink-features=AutomationControlled",
+  "--disable-features=IsolateOrigins,site-per-process",
+  "--no-sandbox",
+  "--disable-setuid-sandbox",
+  "--disable-infobars",
+  "--disable-dev-shm-usage",
+];
+
+const VIEWPORTS = [
+  { width: 1366, height: 768 },
+  { width: 1440, height: 900 },
+  { width: 1536, height: 864 },
+  { width: 1280, height: 800 },
+];
+
+function randomViewport() {
+  return VIEWPORTS[Math.floor(Math.random() * VIEWPORTS.length)];
+}
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 let playwrightModule: any = null;
@@ -37,31 +55,55 @@ export async function listSubtitlesViaBrowser(
   let browser: any = null;
 
   try {
-    browser = await pw.chromium.launch({ headless: true });
+    const viewport = randomViewport();
+
+    browser = await pw.chromium.launch({
+      headless: true,
+      args: STEALTH_ARGS,
+    });
 
     const context = await browser.newContext({
-      userAgent:
-        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+      userAgent: BROWSER_UA,
+      viewport,
+      locale: "en-US",
+      timezoneId: "America/New_York",
+      geolocation: { latitude: 40.7128, longitude: -74.006 },
+      permissions: [],
+    });
+
+    // Inject stealth scripts to hide automation markers
+    await context.addInitScript(() => {
+      Object.defineProperty(navigator, "webdriver", { get: () => false });
+      // @ts-ignore
+      window.chrome = { runtime: {} };
+      // Overwrite plugins length
+      Object.defineProperty(navigator, "plugins", {
+        get: () => [1, 2, 3, 4, 5],
+      });
+      Object.defineProperty(navigator, "languages", {
+        get: () => ["en-US", "en"],
+      });
     });
 
     const page = await context.newPage();
-    await page.goto(url, { waitUntil: "domcontentloaded", timeout: 20000 });
-    await page.waitForTimeout(3000);
+    await page.goto(url, { waitUntil: "domcontentloaded", timeout: 30000 });
+    await page.waitForTimeout(4000);
 
     const ccSubtitles: SubtitleTrack[] = [];
     const autoTranslated: SubtitleTrack[] = [];
     let videoInfo = null;
 
     // Extract subtitle tracks from <track> elements
-    const tracks: { lang: string; label: string; kind: string; src: string }[] = await page.evaluate(() => {
-      const trackElements = document.querySelectorAll("video track, audio track");
-      return Array.from(trackElements).map((t) => ({
-        lang: t.getAttribute("srclang") || t.getAttribute("lang") || "",
-        label: t.getAttribute("label") || "",
-        kind: t.getAttribute("kind") || "subtitles",
-        src: t.getAttribute("src") || "",
-      }));
-    });
+    const tracks: { lang: string; label: string; kind: string; src: string }[] =
+      await page.evaluate(() => {
+        const trackElements = document.querySelectorAll("video track, audio track");
+        return Array.from(trackElements).map((t) => ({
+          lang: t.getAttribute("srclang") || t.getAttribute("lang") || "",
+          label: t.getAttribute("label") || "",
+          kind: t.getAttribute("kind") || "subtitles",
+          src: t.getAttribute("src") || "",
+        }));
+      });
 
     for (const track of tracks) {
       const subTrack: SubtitleTrack = {
@@ -84,12 +126,24 @@ export async function listSubtitlesViaBrowser(
       videoInfo = await page.evaluate(() => {
         const title =
           (document.querySelector("h1")?.textContent || "").trim() ||
-          (document.querySelector('meta[property="og:title"]') as HTMLMetaElement)?.content ||
+          (
+            document.querySelector(
+              'meta[property="og:title"]'
+            ) as HTMLMetaElement
+          )?.content ||
           document.title;
         const author =
-          (document.querySelector('meta[name="author"]') as HTMLMetaElement)?.content || "";
+          (
+            document.querySelector(
+              'meta[name="author"]'
+            ) as HTMLMetaElement
+          )?.content || "";
         const thumbnail =
-          (document.querySelector('meta[property="og:image"]') as HTMLMetaElement)?.content || "";
+          (
+            document.querySelector(
+              'meta[property="og:image"]'
+            ) as HTMLMetaElement
+          )?.content || "";
         return { title, author, thumbnail };
       });
     } catch {
@@ -104,7 +158,11 @@ export async function listSubtitlesViaBrowser(
     const errorMsg = err instanceof Error ? err.message : String(err);
     console.error("Browser extraction error:", errorMsg);
     if (browser) {
-      try { await browser.close(); } catch { /* ignore */ }
+      try {
+        await browser.close();
+      } catch {
+        /* ignore */
+      }
     }
     return { ccSubtitles: [], autoTranslated: [], videoInfo: null };
   }
@@ -121,9 +179,32 @@ export async function downloadSubtitleViaBrowser(
   let browser: any = null;
 
   try {
-    browser = await pw.chromium.launch({ headless: true });
+    const viewport = randomViewport();
 
-    const context = await browser.newContext();
+    browser = await pw.chromium.launch({
+      headless: true,
+      args: STEALTH_ARGS,
+    });
+
+    const context = await browser.newContext({
+      userAgent: BROWSER_UA,
+      viewport,
+      locale: "en-US",
+    });
+
+    // Inject stealth scripts
+    await context.addInitScript(() => {
+      Object.defineProperty(navigator, "webdriver", { get: () => false });
+      // @ts-ignore
+      window.chrome = { runtime: {} };
+      Object.defineProperty(navigator, "plugins", {
+        get: () => [1, 2, 3, 4, 5],
+      });
+      Object.defineProperty(navigator, "languages", {
+        get: () => ["en-US", "en"],
+      });
+    });
+
     const page = await context.newPage();
 
     let subtitleContent: string | null = null;
@@ -133,17 +214,22 @@ export async function downloadSubtitleViaBrowser(
       const responseUrl = response.url();
       if (
         !subtitleContent &&
-        (responseUrl.includes(langCode) || responseUrl.includes("subtitle") || responseUrl.includes("caption") || responseUrl.includes("timedtext")) &&
+        (responseUrl.includes(langCode) ||
+          responseUrl.includes("subtitle") ||
+          responseUrl.includes("caption") ||
+          responseUrl.includes("timedtext")) &&
         (ct.includes("text") || ct.includes("xml") || ct.includes("json"))
       ) {
         try {
           subtitleContent = await response.text();
-        } catch { /* ignore */ }
+        } catch {
+          /* ignore */
+        }
       }
     });
 
-    await page.goto(url, { waitUntil: "domcontentloaded", timeout: 20000 });
-    await page.waitForTimeout(5000);
+    await page.goto(url, { waitUntil: "domcontentloaded", timeout: 30000 });
+    await page.waitForTimeout(6000);
 
     await context.close();
     await browser.close();
@@ -153,7 +239,11 @@ export async function downloadSubtitleViaBrowser(
     const errorMsg = err instanceof Error ? err.message : String(err);
     console.error("Browser download error:", errorMsg);
     if (browser) {
-      try { await browser.close(); } catch { /* ignore */ }
+      try {
+        await browser.close();
+      } catch {
+        /* ignore */
+      }
     }
     return null;
   }

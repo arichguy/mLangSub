@@ -11,7 +11,7 @@ import { BilingualSelector } from "@/components/home/BilingualSelector";
 import { useAnalyze } from "@/hooks/useAnalyze";
 import { useDownload } from "@/hooks/useDownload";
 import type { SubtitleTrack, SubtitleFormat } from "@/types/subtitle";
-import { AlertCircle, Film, FileText, Globe, Download, Languages } from "lucide-react";
+import { AlertCircle, FileText, Globe, Download, Languages } from "lucide-react";
 
 const SUPPORTED_PLATFORMS = [
   "YouTube",

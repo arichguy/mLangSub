@@ -21,16 +21,18 @@ export function Header({ locale = defaultLocale, t }: HeaderProps) {
     admin: "管理",
     language: "语言",
   };
-  const appTexts = (t as any)?.app || { name: "SubExtract", tagline: "字幕下载工具" };
+  const appTexts = (t as any)?.app || { name: "mLangSub", tagline: "字幕下载工具" };
 
   return (
     <header className="sticky top-0 z-50 border-b border-warm-border bg-warm-bg/95 backdrop-blur supports-[backdrop-filter]:bg-warm-bg/80">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4">
         {/* Logo */}
         <a href="/" className="flex items-center gap-2">
-          <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-warm-orange text-white font-bold text-sm">
-            SE
-          </div>
+          <img
+            src="/images/logo.svg"
+            alt={appTexts.name}
+            className="h-9 w-9 rounded-lg"
+          />
           <div className="hidden sm:block">
             <div className="font-semibold text-warm-text">{appTexts.name}</div>
             <div className="text-xs text-warm-muted">{appTexts.tagline}</div>

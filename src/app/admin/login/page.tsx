@@ -49,11 +49,13 @@ export default function AdminLoginPage() {
     <div className="flex min-h-screen items-center justify-center bg-warm-bg px-4">
       <div className="w-full max-w-sm">
         <div className="text-center mb-8">
-          <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-warm-orange text-white font-bold text-xl mb-4">
-            SE
-          </div>
+          <img
+            src="/images/logo.svg"
+            alt="mLangSub"
+            className="mx-auto h-14 w-14 rounded-2xl mb-4"
+          />
           <h1 className="text-xl font-bold text-warm-text">管理面板登录</h1>
-          <p className="text-sm text-warm-muted mt-1">SubExtract Admin</p>
+          <p className="text-sm text-warm-muted mt-1">mLangSub Admin</p>
         </div>
 
         <form onSubmit={handleLogin} className="rounded-2xl border border-warm-border bg-white p-6 shadow-card space-y-4">

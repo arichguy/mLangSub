@@ -36,38 +36,52 @@ function getRandom(proxies: ProxyInfo[]): ProxyInfo {
 function getByCountry(proxies: ProxyInfo[], country?: string): ProxyInfo | null {
   if (!country) return getRandom(proxies);
   const filtered = proxies.filter(
-    (p) => (p as any).country?.toLowerCase() === country.toLowerCase()
+    (p) => p.country?.toLowerCase() === country.toLowerCase()
   );
   if (filtered.length === 0) return getRandom(proxies);
   return filtered[Math.floor(Math.random() * filtered.length)];
 }
 
 export function buildProxyUrl(proxy: ProxyInfo): string {
-  const auth = proxy.username && proxy.password
-    ? `${encodeURIComponent(proxy.username)}:${encodeURIComponent(proxy.password)}@`
-    : "";
+  const auth =
+    proxy.username && proxy.password
+      ? `${encodeURIComponent(proxy.username)}:${encodeURIComponent(proxy.password)}@`
+      : "";
   return `${proxy.protocol}://${auth}${proxy.host}:${proxy.port}`;
 }
 
 export async function executeWithRetry<T>(
   fn: (proxy?: string) => Promise<T>,
-  maxRetries: number = 3,
-  onProxyFail?: (proxy: ProxyInfo) => Promise<void>
+  maxRetries: number = 3
 ): Promise<T> {
   let lastError: Error | null = null;
   const baseDelay = 1000;
 
+  // Fetch the proxy pool once, then rotate within it across retries
+  const proxies = await getActiveProxies();
+  let proxyIndex = 0;
+
   for (let attempt = 0; attempt <= maxRetries; attempt++) {
+    const proxy = proxies.length > 0
+      ? proxies[proxyIndex++ % proxies.length]
+      : null;
+    const proxyUrl = proxy ? buildProxyUrl(proxy) : undefined;
+
     try {
-      const proxy = await getProxy("random");
-      const proxyUrl = proxy ? buildProxyUrl(proxy) : undefined;
       return await fn(proxyUrl);
     } catch (err) {
       lastError = err instanceof Error ? err : new Error(String(err));
-      console.error(`Retry attempt ${attempt + 1}/${maxRetries} failed:`, lastError.message);
+      console.error(
+        `Retry attempt ${attempt + 1}/${maxRetries} failed:`,
+        lastError.message
+      );
+
+      // Mark the failed proxy so it gets deactivated after repeated failures
+      if (proxy) {
+        markProxyFailed(proxy.host, proxy.port).catch(() => {});
+      }
 
       if (attempt < maxRetries) {
-        // Exponential backoff
         const delay = baseDelay * Math.pow(2, attempt);
         await new Promise((resolve) => setTimeout(resolve, delay));
       }

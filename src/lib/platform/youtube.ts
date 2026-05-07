@@ -53,7 +53,7 @@ export async function fetchTimedText(
     const url = buildTimedTextUrl(params);
     const res = await fetch(url, {
       headers: {
-        "User-Agent": "Mozilla/5.0 (compatible; SubExtract/1.0)",
+        "User-Agent": "Mozilla/5.0 (compatible; mLangSub/1.0)",
       },
     });
 

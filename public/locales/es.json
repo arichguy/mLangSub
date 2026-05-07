@@ -1,6 +1,6 @@
 {
   "app": {
-    "name": "SubExtract",
+    "name": "mLangSub",
     "tagline": "Descargador de Subtítulos",
     "description": "Extrae subtítulos de más de 50 plataformas incluyendo YouTube y Bilibili"
   },
@@ -58,7 +58,7 @@
     "download_failed": "Falló la descarga de subtítulos"
   },
   "footer": {
-    "copyright": "© 2026 SubExtract. Todos los derechos reservados.",
+    "copyright": "© 2026 mLangSub. Todos los derechos reservados.",
     "terms": "Términos de Uso",
     "privacy": "Política de Privacidad",
     "contact": "Contacto"

@@ -129,9 +129,11 @@ export default function AdminDashboard() {
       <header className="sticky top-0 z-50 border-b border-warm-border bg-white/95 backdrop-blur">
         <div className="mx-auto flex h-14 max-w-6xl items-center justify-between px-4">
           <div className="flex items-center gap-3">
-            <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-warm-orange text-white font-bold text-xs">
-              SE
-            </div>
+            <img
+              src="/images/logo.svg"
+              alt="mLangSub"
+              className="h-8 w-8 rounded-lg"
+            />
             <span className="font-semibold text-sm text-warm-text">管理面板</span>
           </div>
           <div className="flex items-center gap-2">

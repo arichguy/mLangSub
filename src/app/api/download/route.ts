@@ -37,12 +37,19 @@ export async function GET(request: NextRequest) {
 
     const { videoUrl, lang, format, type } = parsed.data;
 
-    // Log access
     const ip =
       request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ||
       request.headers.get("x-real-ip") ||
       "anonymous";
 
+    const { content, cached } = await downloadSubtitle(
+      videoUrl,
+      lang,
+      format as SubtitleFormat,
+      type
+    );
+
+    // Log access (with cacheHit info available)
     prisma.accessLog
       .create({
         data: {
@@ -53,16 +60,10 @@ export async function GET(request: NextRequest) {
           action: "download",
           subtitleLang: lang,
           subtitleFormat: format,
+          cacheHit: cached,
         },
       })
       .catch(() => {});
-
-    const { content, cached } = await downloadSubtitle(
-      videoUrl,
-      lang,
-      format as SubtitleFormat,
-      type
-    );
 
     if (!content) {
       return NextResponse.json(

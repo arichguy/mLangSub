@@ -1,6 +1,6 @@
 {
   "app": {
-    "name": "SubExtract",
+    "name": "mLangSub",
     "tagline": "字幕ダウンローダー",
     "description": "YouTube、Bilibiliなど50以上のプラットフォームから字幕を抽出"
   },
@@ -58,7 +58,7 @@
     "download_failed": "字幕のダウンロードに失敗しました"
   },
   "footer": {
-    "copyright": "© 2026 SubExtract. All rights reserved.",
+    "copyright": "© 2026 mLangSub. All rights reserved.",
     "terms": "利用規約",
     "privacy": "プライバシーポリシー",
     "contact": "お問い合わせ"

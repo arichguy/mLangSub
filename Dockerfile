@@ -1,4 +1,4 @@
-# SubExtract - Next.js 应用 Dockerfile
+# mLangSub - Next.js 应用 Dockerfile
 FROM node:20-alpine AS base
 
 # 安装 Python、OpenSSL 和 yt-dlp 依赖

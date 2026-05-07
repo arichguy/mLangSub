@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 
 export async function GET() {
-  const baseUrl = process.env.NEXT_PUBLIC_APP_URL || "https://subextract.com";
+  const baseUrl = process.env.NEXT_PUBLIC_APP_URL || "https://mlangsub.com";
 
   const robots = `User-agent: *
 Allow: /

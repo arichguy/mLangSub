@@ -6,6 +6,7 @@ export interface ProxyInfo {
   protocol: string;
   username?: string;
   password?: string;
+  country?: string;
 }
 
 export async function getActiveProxies(): Promise<ProxyInfo[]> {
@@ -19,6 +20,7 @@ export async function getActiveProxies(): Promise<ProxyInfo[]> {
     protocol: p.protocol,
     username: p.username || undefined,
     password: p.password || undefined,
+    country: p.country || undefined,
   }));
 }
 

@@ -57,7 +57,7 @@ export function PlatformSEOContent({ info }: PlatformSEOContentProps) {
             { q: `如何在 ${info.name} 下载字幕？`, a: "只需粘贴视频链接到输入框，点击开始分析，系统会自动检测可用字幕。选择您需要的语言和格式，点击下载按钮即可获取字幕文件。" },
             { q: "支持哪些字幕格式？", a: "支持 SRT（最常用）、VTT（Web标准）、ASS（高级样式）、TXT（纯文本）和 HTML（网页格式）五种格式。" },
             { q: "可以下载双语字幕吗？", a: "可以！在字幕列表下方的双语字幕区域，选择两种语言即可生成并下载合并后的双语字幕文件。" },
-            { q: "下载需要付费吗？", a: "完全免费。SubExtract 是免费的在线工具，无需注册或付费。" },
+            { q: "下载需要付费吗？", a: "完全免费。mLangSub 是免费的在线工具，无需注册或付费。" },
           ].map((faq, i) => (
             <details key={i} className="group rounded-xl border border-warm-border bg-white shadow-subtle">
               <summary className="flex cursor-pointer items-center justify-between px-5 py-4 text-sm font-medium text-warm-text">
