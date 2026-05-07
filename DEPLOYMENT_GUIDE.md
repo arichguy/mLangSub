@@ -146,19 +146,19 @@ git --version
 
 ```bash
 # 创建项目目录
-sudo mkdir -p /opt/mlangsub
-cd /opt/mlangsub
+sudo mkdir -p /opt/mLangSub
+cd /opt/mLangSub
 
 # 克隆代码（替换为你的仓库地址）
 sudo git clone https://github.com/arichguy/mLangSub.git .
 ```
 
-> 如果你没有 Git 仓库，也可以用"方案三：手动上传"的方式将项目文件上传到 `/opt/mlangsub` 目录。
+> 如果你没有 Git 仓库，也可以用"方案三：手动上传"的方式将项目文件上传到 `/opt/mLangSub` 目录。
 
 **✅ 验证方法：**
 
 ```bash
-ls /opt/mlangsub
+ls /opt/mLangSub
 # 应该能看到 package.json、Dockerfile、docker-compose.yml 等文件
 ```
 
@@ -169,7 +169,7 @@ ls /opt/mlangsub
 **步骤 7：创建 .env 文件**
 
 ```bash
-cd /opt/mlangsub
+cd /opt/mLangSub
 cp .env.example .env
 ```
 
@@ -246,7 +246,7 @@ grep JWT_SECRET docker-compose.yml
 **步骤 10：构建并启动所有服务**
 
 ```bash
-cd /opt/mlangsub
+cd /opt/mLangSub
 sudo docker compose up -d --build
 ```
 
@@ -266,9 +266,9 @@ sudo docker compose ps
 
 # 预期输出类似：
 # NAME                STATUS
-# mlangsub-app        Up 2 minutes
-# mlangsub-postgres   Up 2 minutes (healthy)
-# mlangsub-redis      Up 2 minutes (healthy)
+# mLangSub-app        Up 2 minutes
+# mLangSub-postgres   Up 2 minutes (healthy)
+# mLangSub-redis      Up 2 minutes (healthy)
 ```
 
 如果看到所有容器都是 `Up` 状态，说明启动成功！
@@ -331,7 +331,7 @@ nginx -v
 **步骤 14：创建 Nginx 配置文件**
 
 ```bash
-sudo nano /etc/nginx/sites-available/mlangsub
+sudo nano /etc/nginx/sites-available/mLangSub
 ```
 
 粘贴以下内容（将 `your-domain.com` 替换为你的域名，如果没有域名就用服务器IP）：
@@ -367,7 +367,7 @@ server {
 
 ```bash
 # 创建软链接启用配置
-sudo ln -s /etc/nginx/sites-available/mlangsub /etc/nginx/sites-enabled/
+sudo ln -s /etc/nginx/sites-available/mLangSub /etc/nginx/sites-enabled/
 
 # 删除默认配置（可选）
 sudo rm -f /etc/nginx/sites-enabled/default
@@ -568,7 +568,7 @@ sudo apt install -y git
 cd /www/wwwroot
 
 # 克隆项目
-sudo git clone https://github.com/arichguy/mLangSub.git mlangsub
+sudo git clone https://github.com/arichguy/mLangSub.git mLangSub
 ```
 
 **方式 B：通过宝塔文件管理器上传**
@@ -578,12 +578,12 @@ sudo git clone https://github.com/arichguy/mLangSub.git mlangsub
 3. 进入 `/www/wwwroot` 目录
 4. 点击"上传"按钮，上传压缩包
 5. 上传完成后，右键压缩包选择"解压"
-6. 将解压后的文件夹重命名为 `mlangsub`
+6. 将解压后的文件夹重命名为 `mLangSub`
 
 **✅ 验证方法：**
 
 ```bash
-ls /www/wwwroot/mlangsub
+ls /www/wwwroot/mLangSub
 # 应该能看到 package.json、next.config.mjs、src 等文件和目录
 ```
 
@@ -632,7 +632,7 @@ yt-dlp --version
 **步骤 12：配置环境变量**
 
 ```bash
-cd /www/wwwroot/mlangsub
+cd /www/wwwroot/mLangSub
 cp .env.example .env
 nano .env
 ```
@@ -671,7 +671,7 @@ RATE_LIMIT_GLOBAL_PER_MIN=1000
 **✅ 验证方法：**
 
 ```bash
-cat /www/wwwroot/mlangsub/.env | grep DATABASE_URL
+cat /www/wwwroot/mLangSub/.env | grep DATABASE_URL
 # 应显示你修改后的数据库连接字符串
 ```
 
@@ -680,7 +680,7 @@ cat /www/wwwroot/mlangsub/.env | grep DATABASE_URL
 **步骤 13：安装 Node.js 依赖**
 
 ```bash
-cd /www/wwwroot/mlangsub
+cd /www/wwwroot/mLangSub
 npm ci
 ```
 
@@ -689,7 +689,7 @@ npm ci
 **✅ 验证方法：**
 
 ```bash
-ls /www/wwwroot/mlangsub/node_modules | head -5
+ls /www/wwwroot/mLangSub/node_modules | head -5
 # 应显示一些包名，如 @prisma、bcryptjs 等
 ```
 
@@ -698,7 +698,7 @@ ls /www/wwwroot/mlangsub/node_modules | head -5
 **步骤 14：初始化数据库**
 
 ```bash
-cd /www/wwwroot/mlangsub
+cd /www/wwwroot/mLangSub
 
 # 生成 Prisma 客户端
 npx prisma generate
@@ -730,7 +730,7 @@ sudo -u postgres psql -d mlangsub -c "\dt"
 **步骤 15：构建项目**
 
 ```bash
-cd /www/wwwroot/mlangsub
+cd /www/wwwroot/mLangSub
 npm run build
 ```
 
@@ -739,7 +739,7 @@ npm run build
 **✅ 验证方法：**
 
 ```bash
-ls /www/wwwroot/mlangsub/.next
+ls /www/wwwroot/mLangSub/.next
 # 应显示 standalone、static 等目录
 ```
 
@@ -753,17 +753,17 @@ ls /www/wwwroot/mlangsub/.next
 2. 找到 **PM2管理器**，点击"设置"
 3. 点击 **添加项目**
 4. 填写信息：
-   - 项目名称：`mlangsub`
-   - 启动文件：选择 `/www/wwwroot/mlangsub/node_modules/.bin/next`（或手动输入路径）
-   - 运行目录：`/www/wwwroot/mlangsub`
+   - 项目名称：`mLangSub`
+   - 启动文件：选择 `/www/wwwroot/mLangSub/node_modules/.bin/next`（或手动输入路径）
+   - 运行目录：`/www/wwwroot/mLangSub`
    - 启动命令：`start`（即执行 `npm start`）
 5. 点击"提交"
 
 **或者通过命令行启动：**
 
 ```bash
-cd /www/wwwroot/mlangsub
-pm2 start npm --name "mlangsub" -- start
+cd /www/wwwroot/mLangSub
+pm2 start npm --name "mLangSub" -- start
 pm2 save
 ```
 
@@ -771,7 +771,7 @@ pm2 save
 
 ```bash
 pm2 status
-# 应显示 mlangsub 状态为 online
+# 应显示 mLangSub 状态为 online
 
 curl http://localhost:3000
 # 应返回 HTML 内容
@@ -787,7 +787,7 @@ curl http://localhost:3000
 2. 点击 **添加站点**
 3. 填写信息：
    - 域名：输入你的域名（如 `sub.example.com`），没有域名就输入服务器IP
-   - 根目录：`/www/wwwroot/mlangsub`（可以不改，因为我们要用反向代理）
+   - 根目录：`/www/wwwroot/mLangSub`（可以不改，因为我们要用反向代理）
    - PHP版本：选择"纯静态"
    - 数据库：不创建
 4. 点击"提交"
@@ -800,7 +800,7 @@ curl http://localhost:3000
 2. 在左侧菜单点击 **反向代理**
 3. 点击 **添加反向代理**
 4. 填写信息：
-   - 代理名称：`mlangsub`
+   - 代理名称：`mLangSub`
    - 目标URL：`http://127.0.0.1:3000`
    - 发送域名：`$host`
 5. 点击"提交"
@@ -822,7 +822,7 @@ pm2 save
 sudo reboot
 # 等待重启完成后重新连接
 pm2 status
-# 应显示 mlangsub 状态为 online
+# 应显示 mLangSub 状态为 online
 ```
 
 ---
@@ -832,7 +832,7 @@ pm2 status
 > Playwright 是浏览器兜底方案，当 yt-dlp 无法提取字幕时会自动使用。建议安装。
 
 ```bash
-cd /www/wwwroot/mlangsub
+cd /www/wwwroot/mLangSub
 npx playwright install chromium
 npx playwright install-deps chromium
 ```
@@ -1050,18 +1050,18 @@ pm2 --version
 # 如果上传的是 .zip 文件
 sudo apt install -y unzip
 cd /www/wwwroot
-sudo unzip mlangsub.zip -d mlangsub
+sudo unzip mLangSub.zip -d mLangSub
 
 # 如果上传的是 .tar.gz 文件
 cd /www/wwwroot
-sudo mkdir -p mlangsub
-sudo tar -xzf mlangsub.tar.gz -C mlangsub
+sudo mkdir -p mLangSub
+sudo tar -xzf mLangSub.tar.gz -C mLangSub
 ```
 
 **✅ 验证方法：**
 
 ```bash
-ls /www/wwwroot/mlangsub
+ls /www/wwwroot/mLangSub
 # 应该能看到 package.json、src、prisma 等文件和目录
 ```
 
@@ -1072,7 +1072,7 @@ ls /www/wwwroot/mlangsub
 **步骤 13：配置环境变量**
 
 ```bash
-cd /www/wwwroot/mlangsub
+cd /www/wwwroot/mLangSub
 cp .env.example .env
 nano .env
 ```
@@ -1111,7 +1111,7 @@ RATE_LIMIT_GLOBAL_PER_MIN=1000
 **✅ 验证方法：**
 
 ```bash
-cat /www/wwwroot/mlangsub/.env | grep DATABASE_URL
+cat /www/wwwroot/mLangSub/.env | grep DATABASE_URL
 # 应显示你修改后的连接字符串
 ```
 
@@ -1120,7 +1120,7 @@ cat /www/wwwroot/mlangsub/.env | grep DATABASE_URL
 **步骤 14：安装依赖**
 
 ```bash
-cd /www/wwwroot/mlangsub
+cd /www/wwwroot/mLangSub
 npm ci
 ```
 
@@ -1143,7 +1143,7 @@ ls node_modules | wc -l
 **步骤 15：初始化数据库**
 
 ```bash
-cd /www/wwwroot/mlangsub
+cd /www/wwwroot/mLangSub
 
 # 生成 Prisma 客户端
 npx prisma generate
@@ -1174,7 +1174,7 @@ sudo -u postgres psql -d mlangsub -c "SELECT username FROM \"Admin\";"
 **步骤 16：构建项目**
 
 ```bash
-cd /www/wwwroot/mlangsub
+cd /www/wwwroot/mLangSub
 npm run build
 ```
 
@@ -1189,7 +1189,7 @@ npm run build
 **✅ 验证方法：**
 
 ```bash
-ls /www/wwwroot/mlangsub/.next/standalone
+ls /www/wwwroot/mLangSub/.next/standalone
 # 应显示 server.js 等文件
 ```
 
@@ -1198,7 +1198,7 @@ ls /www/wwwroot/mlangsub/.next/standalone
 **步骤 17：创建数据目录**
 
 ```bash
-cd /www/wwwroot/mlangsub
+cd /www/wwwroot/mLangSub
 mkdir -p data/subtitles data/tmp
 ```
 
@@ -1209,8 +1209,8 @@ mkdir -p data/subtitles data/tmp
 **步骤 18：使用 PM2 启动**
 
 ```bash
-cd /www/wwwroot/mlangsub
-pm2 start npm --name "mlangsub" -- start
+cd /www/wwwroot/mLangSub
+pm2 start npm --name "mLangSub" -- start
 
 # 保存 PM2 进程列表
 pm2 save
@@ -1229,7 +1229,7 @@ sudo env PATH=$PATH:/usr/bin /usr/lib/node_modules/pm2/bin/pm2 startup systemd -
 
 ```bash
 pm2 status
-# 应显示 mlangsub 状态为 online
+# 应显示 mLangSub 状态为 online
 
 curl http://localhost:3000
 # 应返回 HTML 内容
@@ -1242,7 +1242,7 @@ curl http://localhost:3000
 **步骤 19：创建 Nginx 配置**
 
 ```bash
-sudo nano /etc/nginx/sites-available/mlangsub
+sudo nano /etc/nginx/sites-available/mLangSub
 ```
 
 粘贴以下内容（将 `your-domain.com` 替换为你的域名）：
@@ -1277,7 +1277,7 @@ server {
 **步骤 20：启用配置**
 
 ```bash
-sudo ln -s /etc/nginx/sites-available/mlangsub /etc/nginx/sites-enabled/
+sudo ln -s /etc/nginx/sites-available/mLangSub /etc/nginx/sites-enabled/
 sudo rm -f /etc/nginx/sites-enabled/default
 sudo nginx -t
 sudo systemctl reload nginx
@@ -1299,7 +1299,7 @@ sudo nginx -t
 ### 5.7 安装 Playwright（可选）
 
 ```bash
-cd /www/wwwroot/mlangsub
+cd /www/wwwroot/mLangSub
 npx playwright install chromium
 npx playwright install-deps chromium
 ```
@@ -1436,7 +1436,7 @@ curl http://localhost:3000/api/analyze \
 **Docker 方式：**
 
 ```bash
-cd /opt/mlangsub
+cd /opt/mLangSub
 git pull
 sudo docker compose up -d --build
 ```
@@ -1444,13 +1444,13 @@ sudo docker compose up -d --build
 **宝塔 / 手动方式：**
 
 ```bash
-cd /www/wwwroot/mlangsub
+cd /www/wwwroot/mLangSub
 git pull
 npm ci
 npx prisma generate
 npx prisma db push
 npm run build
-pm2 restart mlangsub
+pm2 restart mLangSub
 ```
 
 **手动上传方式（无 Git）：**
@@ -1460,12 +1460,12 @@ pm2 restart mlangsub
 3. 在服务器上执行：
 
 ```bash
-cd /www/wwwroot/mlangsub
+cd /www/wwwroot/mLangSub
 npm ci
 npx prisma generate
 npx prisma db push
 npm run build
-pm2 restart mlangsub
+pm2 restart mLangSub
 ```
 
 ---
@@ -1494,13 +1494,13 @@ sudo docker compose up -d --build
 
 ```bash
 # 查看实时日志
-pm2 logs mlangsub
+pm2 logs mLangSub
 
 # 查看最近 100 行日志
-pm2 logs mlangsub --lines 100
+pm2 logs mLangSub --lines 100
 
 # 清除日志
-pm2 flush mlangsub
+pm2 flush mLangSub
 ```
 
 **Docker 方式：**
@@ -1527,13 +1527,13 @@ sudo docker compose logs -f postgres
 mkdir -p /backup/postgres
 
 # 备份数据库
-sudo -u postgres pg_dump mlangsub > /backup/postgres/mlangsub_$(date +%Y%m%d).sql
+sudo -u postgres pg_dump mlangsub > /backup/postgres/mLangSub_$(date +%Y%m%d).sql
 ```
 
 **Docker 方式：**
 
 ```bash
-sudo docker compose exec postgres pg_dump -U postgres mlangsub > /backup/postgres/mlangsub_$(date +%Y%m%d).sql
+sudo docker compose exec postgres pg_dump -U postgres mlangsub > /backup/postgres/mLangSub_$(date +%Y%m%d).sql
 ```
 
 **设置自动备份（crontab）：**
@@ -1545,7 +1545,7 @@ crontab -e
 添加以下行（每天凌晨 3 点备份）：
 
 ```
-0 3 * * * sudo -u postgres pg_dump mlangsub > /backup/postgres/mlangsub_$(date +\%Y\%m\%d).sql
+0 3 * * * sudo -u postgres pg_dump mlangsub > /backup/postgres/mLangSub_$(date +\%Y\%m\%d).sql
 ```
 
 ---
@@ -1586,12 +1586,12 @@ pm2 status
 sudo docker compose ps
 
 # 2. 如果应用未运行，启动它
-pm2 restart mlangsub
+pm2 restart mLangSub
 # 或
 sudo docker compose restart app
 
 # 3. 检查应用日志
-pm2 logs mlangsub --lines 50
+pm2 logs mLangSub --lines 50
 # 或
 sudo docker compose logs --tail 50 app
 
@@ -1636,7 +1636,7 @@ sudo systemctl start postgresql
 sudo -u postgres psql -d mlangsub -c "SELECT 1;"
 
 # 4. 检查 .env 中的 DATABASE_URL 是否正确
-cat /www/wwwroot/mlangsub/.env | grep DATABASE_URL
+cat /www/wwwroot/mLangSub/.env | grep DATABASE_URL
 
 # 5. Docker 方式：确认容器名正确
 # .env 中应使用 postgres（Docker 服务名），而不是 localhost
@@ -1722,15 +1722,15 @@ sudo docker compose logs app
 
 ```bash
 # 编辑 .env 文件
-nano /www/wwwroot/mlangsub/.env
+nano /www/wwwroot/mLangSub/.env
 # 或 Docker 方式
-nano /opt/mlangsub/.env
+nano /opt/mLangSub/.env
 
 # 将 JWT_SECRET 修改为一个随机字符串
 JWT_SECRET="你的随机字符串至少32位"
 
 # 重启应用
-pm2 restart mlangsub
+pm2 restart mLangSub
 # 或 Docker 方式
 sudo docker compose restart app
 ```
@@ -1766,14 +1766,14 @@ sudo ufw status
 pm2 status
 
 # 查看应用详细信息
-pm2 describe mlangsub
+pm2 describe mLangSub
 
 # 查看实时资源使用
 pm2 monit
 
 # Docker 方式
 sudo docker compose ps
-sudo docker stats mlangsub-app
+sudo docker stats mLangSub-app
 ```
 
 ---
@@ -1811,7 +1811,7 @@ sudo docker stats mlangsub-app
 ## 附录 C：目录结构说明
 
 ```
-mlangsub/
+mLangSub/
 ├── .env                    # 环境变量配置（从 .env.example 复制）
 ├── .next/                  # 构建输出目录（npm run build 后生成）
 │   ├── standalone/         # 独立部署文件

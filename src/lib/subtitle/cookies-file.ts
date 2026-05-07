@@ -16,7 +16,7 @@ export async function createTempCookieFile(
   const raw = await getCookies(platform);
   if (!raw) return null;
 
-  const tmpDir = path.join(os.tmpdir(), "mlangsub-cookies");
+  const tmpDir = path.join(os.tmpdir(), "mLangSub-cookies");
   await fs.mkdir(tmpDir, { recursive: true });
 
   const filePath = path.join(tmpDir, `${platform}-${Date.now()}.txt`);

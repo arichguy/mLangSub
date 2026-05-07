@@ -4,7 +4,7 @@ services:
   # PostgreSQL 数据库
   postgres:
     image: postgres:16-alpine
-    container_name: mlangsub-postgres
+    container_name: mLangSub-postgres
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: password
@@ -23,7 +23,7 @@ services:
   # Redis 缓存
   redis:
     image: redis:7-alpine
-    container_name: mlangsub-redis
+    container_name: mLangSub-redis
     ports:
       - "6379:6379"
     volumes:
@@ -40,7 +40,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: mlangsub-app
+    container_name: mLangSub-app
     ports:
       - "3000:3000"
     environment:
