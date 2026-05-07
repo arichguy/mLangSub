@@ -1,0 +1,63 @@
+{
+  "app": { "name": "mLangSub", "tagline": "Narzędzie do Napisów", "description": "Wyodrębnij napisy z ponad 50 platform, w tym YouTube i Bilibili" },
+  "nav": { "home": "Strona Główna", "supported_platforms": "Platformy", "admin": "Admin", "language": "Język" },
+  "home": {
+    "title": "Internetowy Pobieracz Napisów Wideo",
+    "subtitle": "Wyodrębnij wielojęzyczne napisy z YouTube, Bilibili, Viki i ponad 50 platform wideo",
+    "placeholder": "Wklej URL wideo...", "analyze": "Analizuj", "analyzing": "Analizowanie...",
+    "supported_platforms": "Obsługiwane Platformy", "how_it_works": "Jak To Działa",
+    "step1_title": "Wklej URL", "step1_desc": "Skopiuj link do filmu, z którego chcesz pobrać napisy",
+    "step2_title": "Analizuj Wideo", "step2_desc": "Automatycznie wykrywamy wideo i wyodrębniamy dostępne napisy",
+    "step3_title": "Wybierz Format", "step3_desc": "Wybierz spośród formatów SRT, VTT, TXT, ASS lub HTML",
+    "step4_title": "Pobierz", "step4_desc": "Pobierz plik z napisami jednym kliknięciem"
+  },
+  "subtitle": {
+    "cc_subtitles": "Napisy CC", "auto_translated": "Automatycznie Tłumaczone Napisy",
+    "no_subtitles": "Nie wykryto napisów dla tego filmu", "no_voice": "Nie wykryto głosu w tym filmie",
+    "download": "Pobierz", "bilingual_title": "Napisy Dwujęzyczne",
+    "first_lang": "Pierwszy Język", "second_lang": "Drugi Język",
+    "download_bilingual": "Pobierz Dwujęzyczne", "format": "Format", "language": "Język",
+    "select_language": "Wybierz Język", "count_languages": "{count} języków"
+  },
+  "video": { "title": "Tytuł", "author": "Autor", "duration": "Czas Trwania", "upload_date": "Data Przesłania", "platform": "Platforma", "no_info": "Brak informacji o wideo" },
+  "url_input": { "placeholder": "Wklej URL wideo...", "button_analyze": "Analizuj", "button_analyzing": "Analizowanie...", "error_empty": "Wprowadź URL wideo", "error_invalid": "Wprowadź prawidłowy URL (zaczynający się od http:// lub https://)" },
+  "progress": { "analyzing": "Analizowanie wideo...", "complete": "Ukończono" },
+  "bilingual": { "title": "Łączenie Napisów Dwujęzycznych", "first_lang": "Pierwszy Język", "second_lang": "Drugi Język", "download": "Pobierz Napisy Dwujęzyczne" },
+  "errors": {
+    "invalid_url": "Żądane wideo nie istnieje. Sprawdź URL",
+    "not_supported": "Ta platforma nie jest jeszcze obsługiwana. Spróbuj innego linku",
+    "network_error": "Błąd sieci. Spróbuj ponownie później",
+    "server_error": "Błąd serwera. Spróbuj ponownie później",
+    "rate_limited": "Zbyt wiele żądań. Poczekaj chwilę",
+    "download_failed": "Pobieranie napisów nie powiodło się. Spróbuj innego formatu",
+    "analyze_failed": "Analiza nie powiodła się", "bilingual_failed": "Pobieranie dwujęzyczne nie powiodło się. Upewnij się, że napisy istnieją w obu językach"
+  },
+  "footer": {
+    "copyright": "© 2026 mLangSub. Wszelkie prawa zastrzeżone.", "terms": "Warunki Użytkowania",
+    "privacy": "Polityka Prywatności", "contact": "Kontakt",
+    "description": "Wyodrębnij wielojęzyczne napisy z ponad 50 platform wideo. Obsługuje formaty SRT, VTT, ASS, TXT, HTML.",
+    "supported_platforms": "Obsługiwane Platformy", "links": "Linki"
+  },
+  "admin": {
+    "title": "Panel Administracyjny", "dashboard": "Pulpit", "cache_management": "Zarządzanie Pamięcią Podręczną",
+    "access_log": "Dziennik Dostępu", "total_visits": "Łączna Liczba Odwiedzin", "total_downloads": "Łączna Liczba Pobrań",
+    "bilingual_count": "Napisy Dwujęzyczne", "unique_ips": "Unikalne IP", "cache_status": "Stan Pamięci Podręcznej",
+    "cache_entries": "Wpisy Pamięci Podręcznej", "total_size": "Całkowity Rozmiar", "hit_rate": "Współczynnik Trafień",
+    "refresh": "Odśwież", "clear_expired": "Wyczyść Wygasłe", "cache_cleared": "Pamięć podręczna wyczyszczona",
+    "clear_cache_failed": "Czyszczenie pamięci podręcznej nie powiodło się", "fetch_error": "Nie udało się pobrać danych",
+    "network_error": "Błąd sieci", "trend_7d": "Trend 7-Dniowy", "date": "Data",
+    "visits": "Odwiedziny", "downloads": "Pobrania", "action": "Akcja", "video_id": "ID Wideo",
+    "platform_col": "Platforma", "language_col": "Język", "type": "Typ", "size": "Rozmiar", "cache_hit": "Trafienie",
+    "download_action": "Pobierz", "bilingual_action": "Dwujęzyczne", "analyze_action": "Analizuj",
+    "login_title": "Logowanie do Panelu Administracyjnego", "username": "Nazwa Użytkownika",
+    "password": "Hasło", "login": "Zaloguj się", "logging_in": "Logowanie...",
+    "login_failed": "Logowanie nie powiodło się", "fill_required": "Wprowadź nazwę użytkownika i hasło",
+    "back_home": "Powrót na Stronę Główną", "logout": "Wyloguj się", "settings": "Ustawienia",
+    "change_password": "Zmień Hasło", "old_password": "Obecne Hasło",
+    "new_password": "Nowe Hasło", "password_changed": "Hasło zmienione pomyślnie",
+    "password_change_failed": "Zmiana hasła nie powiodła się", "user_not_found": "Użytkownik nie znaleziony",
+    "wrong_password": "Nieprawidłowe obecne hasło", "unauthorized": "Nieautoryzowany"
+  },
+  "common": { "back_home": "Powrót na Stronę Główną", "retry": "Spróbuj Ponownie", "not_found": "Strona Nie Znaleziona" },
+  "platform": { "not_found": "Strona Nie Znaleziona", "back_home": "Powrót na Stronę Główną", "faq": "Często Zadawane Pytania" }
+}

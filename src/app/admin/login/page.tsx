@@ -4,9 +4,11 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { Lock, User, Loader2 } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { useTranslation } from "@/lib/i18n/useTranslation";
 
 export default function AdminLoginPage() {
   const router = useRouter();
+  const { t } = useTranslation();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
@@ -17,7 +19,7 @@ export default function AdminLoginPage() {
     setError("");
 
     if (!username || !password) {
-      setError("请输入用户名和密码");
+      setError(t("admin.fill_required", "请输入用户名和密码"));
       return;
     }
 
@@ -31,7 +33,7 @@ export default function AdminLoginPage() {
 
       const data = await res.json();
       if (!data.success) {
-        setError(data.error || "登录失败");
+        setError(data.error || t("admin.login_failed", "登录失败"));
         return;
       }
 
@@ -39,7 +41,7 @@ export default function AdminLoginPage() {
       localStorage.setItem("admin_username", data.data.username);
       router.push("/admin");
     } catch {
-      setError("网络错误，请稍后重试");
+      setError(t("admin.network_error", "网络错误，请稍后重试"));
     } finally {
       setIsLoading(false);
     }
@@ -54,14 +56,14 @@ export default function AdminLoginPage() {
             alt="mLangSub"
             className="mx-auto h-14 w-14 rounded-2xl mb-4"
           />
-          <h1 className="text-xl font-bold text-warm-text">管理面板登录</h1>
+          <h1 className="text-xl font-bold text-warm-text">{t("admin.login_title", "管理面板登录")}</h1>
           <p className="text-sm text-warm-muted mt-1">mLangSub Admin</p>
         </div>
 
         <form onSubmit={handleLogin} className="rounded-2xl border border-warm-border bg-white p-6 shadow-card space-y-4">
           <div>
             <label className="block text-sm font-medium text-warm-text mb-1.5">
-              用户名
+              {t("admin.username", "用户名")}
             </label>
             <div className="relative">
               <User className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-warm-muted" />
@@ -78,7 +80,7 @@ export default function AdminLoginPage() {
 
           <div>
             <label className="block text-sm font-medium text-warm-text mb-1.5">
-              密码
+              {t("admin.password", "密码")}
             </label>
             <div className="relative">
               <Lock className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-warm-muted" />
@@ -109,17 +111,17 @@ export default function AdminLoginPage() {
             {isLoading ? (
               <span className="flex items-center justify-center gap-2">
                 <Loader2 className="h-4 w-4 animate-spin" />
-                登录中...
+                {t("admin.logging_in", "登录中...")}
               </span>
             ) : (
-              "登录"
+              t("admin.login", "登录")
             )}
           </button>
         </form>
 
         <p className="mt-6 text-center text-xs text-warm-muted">
           <a href="/" className="hover:text-warm-orange transition-colors">
-            ← 返回首页
+            ← {t("admin.back_home", "返回首页")}
           </a>
         </p>
       </div>

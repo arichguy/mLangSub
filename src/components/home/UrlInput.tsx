@@ -3,22 +3,16 @@
 import { useState } from "react";
 import { Link2, Loader2, ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { useTranslation } from "@/lib/i18n/useTranslation";
 
 interface UrlInputProps {
   onAnalyze: (url: string) => void;
   isLoading: boolean;
   placeholder?: string;
-  buttonText?: string;
-  loadingText?: string;
 }
 
-export function UrlInput({
-  onAnalyze,
-  isLoading,
-  placeholder = "粘贴视频链接...",
-  buttonText = "开始分析",
-  loadingText = "分析中...",
-}: UrlInputProps) {
+export function UrlInput({ onAnalyze, isLoading, placeholder }: UrlInputProps) {
+  const { t } = useTranslation();
   const [url, setUrl] = useState("");
   const [error, setError] = useState("");
 
@@ -26,12 +20,11 @@ export function UrlInput({
     e?.preventDefault();
     const trimmed = url.trim();
     if (!trimmed) {
-      setError("请输入视频链接");
+      setError(t("url_input.error_empty", "请输入视频链接"));
       return;
     }
-    // Basic URL validation
     if (!/^https?:\/\/.+/i.test(trimmed)) {
-      setError("请输入有效的URL（以 http:// 或 https:// 开头）");
+      setError(t("url_input.error_invalid", "请输入有效的URL"));
       return;
     }
     setError("");
@@ -60,7 +53,7 @@ export function UrlInput({
             onKeyDown={(e) => {
               if (e.key === "Enter") handleSubmit();
             }}
-            placeholder={placeholder}
+            placeholder={placeholder || t("url_input.placeholder", "粘贴视频链接...")}
             disabled={isLoading}
             className="flex-1 border-none bg-transparent py-3.5 text-warm-text outline-none text-sm sm:text-base placeholder:text-warm-muted/60"
             autoFocus
@@ -78,11 +71,11 @@ export function UrlInput({
             {isLoading ? (
               <>
                 <Loader2 className="h-4 w-4 animate-spin" />
-                <span className="hidden sm:inline">{loadingText}</span>
+                <span className="hidden sm:inline">{t("url_input.button_analyzing", "分析中...")}</span>
               </>
             ) : (
               <>
-                <span>{buttonText}</span>
+                <span>{t("url_input.button_analyze", "开始分析")}</span>
                 <ArrowRight className="h-4 w-4" />
               </>
             )}

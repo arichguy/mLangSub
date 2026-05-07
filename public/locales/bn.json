@@ -1,0 +1,63 @@
+{
+  "app": { "name": "mLangSub", "tagline": "সাবটাইটেল ডাউনলোডার", "description": "YouTube এবং Bilibili সহ ৫০টিরও বেশি প্ল্যাটফর্ম থেকে সাবটাইটেল বের করুন" },
+  "nav": { "home": "হোম", "supported_platforms": "সমর্থিত প্ল্যাটফর্ম", "admin": "অ্যাডমিন", "language": "ভাষা" },
+  "home": {
+    "title": "অনলাইন ভিডিও সাবটাইটেল ডাউনলোডার",
+    "subtitle": "YouTube, Bilibili, Viki এবং ৫০টিরও বেশি ভিডিও প্ল্যাটফর্ম থেকে বহুভাষী সাবটাইটেল বের করুন",
+    "placeholder": "ভিডিও URL পেস্ট করুন...", "analyze": "বিশ্লেষণ", "analyzing": "বিশ্লেষণ হচ্ছে...",
+    "supported_platforms": "সমর্থিত প্ল্যাটফর্ম", "how_it_works": "কীভাবে কাজ করে",
+    "step1_title": "URL পেস্ট করুন", "step1_desc": "যে ভিডিওর সাবটাইটেল ডাউনলোড করতে চান তার লিংক কপি করুন",
+    "step2_title": "ভিডিও বিশ্লেষণ", "step2_desc": "আমরা স্বয়ংক্রিয়ভাবে ভিডিও সনাক্ত করে উপলব্ধ সাবটাইটেল বের করি",
+    "step3_title": "ফরম্যাট বাছুন", "step3_desc": "SRT, VTT, TXT, ASS বা HTML ফরম্যাট থেকে বেছে নিন",
+    "step4_title": "ডাউনলোড", "step4_desc": "এক ক্লিকে আপনার সাবটাইটেল ফাইল ডাউনলোড করুন"
+  },
+  "subtitle": {
+    "cc_subtitles": "CC সাবটাইটেল", "auto_translated": "স্বয়ংক্রিয় অনূদিত সাবটাইটেল",
+    "no_subtitles": "এই ভিডিওর জন্য কোনো সাবটাইটেল সনাক্ত করা যায়নি", "no_voice": "এই ভিডিওতে কোনো কণ্ঠস্বর সনাক্ত করা যায়নি",
+    "download": "ডাউনলোড", "bilingual_title": "দ্বিভাষী সাবটাইটেল",
+    "first_lang": "প্রথম ভাষা", "second_lang": "দ্বিতীয় ভাষা",
+    "download_bilingual": "দ্বিভাষী ডাউনলোড", "format": "ফরম্যাট", "language": "ভাষা",
+    "select_language": "ভাষা নির্বাচন", "count_languages": "{count}টি ভাষা"
+  },
+  "video": { "title": "শিরোনাম", "author": "লেখক", "duration": "সময়কাল", "upload_date": "আপলোডের তারিখ", "platform": "প্ল্যাটফর্ম", "no_info": "কোনো ভিডিও তথ্য নেই" },
+  "url_input": { "placeholder": "ভিডিও URL পেস্ট করুন...", "button_analyze": "বিশ্লেষণ", "button_analyzing": "বিশ্লেষণ হচ্ছে...", "error_empty": "অনুগ্রহ করে ভিডিও URL লিখুন", "error_invalid": "অনুগ্রহ করে একটি বৈধ URL লিখুন (http:// বা https:// দিয়ে শুরু)" },
+  "progress": { "analyzing": "ভিডিও বিশ্লেষণ হচ্ছে...", "complete": "সম্পন্ন" },
+  "bilingual": { "title": "দ্বিভাষী সাবটাইটেল একত্রীকরণ", "first_lang": "প্রথম ভাষা", "second_lang": "দ্বিতীয় ভাষা", "download": "দ্বিভাষী সাবটাইটেল ডাউনলোড" },
+  "errors": {
+    "invalid_url": "অনুরোধকৃত ভিডিওটি বিদ্যমান নেই। URL পরীক্ষা করুন",
+    "not_supported": "এই প্ল্যাটফর্মটি এখনও সমর্থিত নয়। অন্য ভিডিও লিংক ব্যবহার করুন",
+    "network_error": "নেটওয়ার্ক ত্রুটি। অনুগ্রহ করে পরে আবার চেষ্টা করুন",
+    "server_error": "সার্ভার ত্রুটি। অনুগ্রহ করে পরে আবার চেষ্টা করুন",
+    "rate_limited": "অনেক বেশি অনুরোধ। অনুগ্রহ করে কিছুক্ষণ অপেক্ষা করুন",
+    "download_failed": "সাবটাইটেল ডাউনলোড ব্যর্থ হয়েছে। অন্য ফরম্যাট ব্যবহার করে দেখুন",
+    "analyze_failed": "বিশ্লেষণ ব্যর্থ", "bilingual_failed": "দ্বিভাষী ডাউনলোড ব্যর্থ। নিশ্চিত করুন যে উভয় ভাষায় সাবটাইটেল বিদ্যমান"
+  },
+  "footer": {
+    "copyright": "© 2026 mLangSub. সর্বস্বত্ব সংরক্ষিত।", "terms": "ব্যবহারের শর্তাবলী",
+    "privacy": "গোপনীয়তা নীতি", "contact": "যোগাযোগ",
+    "description": "৫০টিরও বেশি ভিডিও প্ল্যাটফর্ম থেকে বহুভাষী সাবটাইটেল বের করুন। SRT, VTT, ASS, TXT, HTML ফরম্যাট সমর্থন করে।",
+    "supported_platforms": "সমর্থিত প্ল্যাটফর্ম", "links": "লিংক"
+  },
+  "admin": {
+    "title": "অ্যাডমিন প্যানেল", "dashboard": "ড্যাশবোর্ড", "cache_management": "ক্যাশে ব্যবস্থাপনা",
+    "access_log": "অ্যাক্সেস লগ", "total_visits": "মোট ভিজিট", "total_downloads": "মোট ডাউনলোড",
+    "bilingual_count": "দ্বিভাষী সাবটাইটেল", "unique_ips": "অনন্য IP", "cache_status": "ক্যাশে অবস্থা",
+    "cache_entries": "ক্যাশে এন্ট্রি", "total_size": "মোট আকার", "hit_rate": "হিট রেট",
+    "refresh": "রিফ্রেশ", "clear_expired": "মেয়াদোত্তীর্ণ মুছুন", "cache_cleared": "ক্যাশে পরিষ্কার করা হয়েছে",
+    "clear_cache_failed": "ক্যাশে পরিষ্কার ব্যর্থ", "fetch_error": "ডেটা আনা ব্যর্থ",
+    "network_error": "নেটওয়ার্ক ত্রুটি", "trend_7d": "৭ দিনের প্রবণতা", "date": "তারিখ",
+    "visits": "ভিজিট", "downloads": "ডাউনলোড", "action": "কার্য", "video_id": "ভিডিও ID",
+    "platform_col": "প্ল্যাটফর্ম", "language_col": "ভাষা", "type": "ধরন", "size": "আকার", "cache_hit": "হিট",
+    "download_action": "ডাউনলোড", "bilingual_action": "দ্বিভাষী", "analyze_action": "বিশ্লেষণ",
+    "login_title": "অ্যাডমিন প্যানেল লগইন", "username": "ব্যবহারকারীর নাম",
+    "password": "পাসওয়ার্ড", "login": "লগইন", "logging_in": "লগইন হচ্ছে...",
+    "login_failed": "লগইন ব্যর্থ", "fill_required": "অনুগ্রহ করে ব্যবহারকারীর নাম এবং পাসওয়ার্ড লিখুন",
+    "back_home": "হোমে ফিরুন", "logout": "লগআউট", "settings": "সেটিংস",
+    "change_password": "পাসওয়ার্ড পরিবর্তন", "old_password": "বর্তমান পাসওয়ার্ড",
+    "new_password": "নতুন পাসওয়ার্ড", "password_changed": "পাসওয়ার্ড সফলভাবে পরিবর্তিত হয়েছে",
+    "password_change_failed": "পাসওয়ার্ড পরিবর্তন ব্যর্থ", "user_not_found": "ব্যবহারকারী পাওয়া যায়নি",
+    "wrong_password": "বর্তমান পাসওয়ার্ড ভুল", "unauthorized": "অননুমোদিত"
+  },
+  "common": { "back_home": "হোমে ফিরুন", "retry": "আবার চেষ্টা করুন", "not_found": "পৃষ্ঠা পাওয়া যায়নি" },
+  "platform": { "not_found": "পৃষ্ঠা পাওয়া যায়নি", "back_home": "হোমে ফিরুন", "faq": "প্রায়শই জিজ্ঞাসিত প্রশ্ন" }
+}

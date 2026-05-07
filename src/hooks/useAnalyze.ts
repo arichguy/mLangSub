@@ -3,6 +3,8 @@
 import { useState, useCallback } from "react";
 import type { AnalyzeResponse } from "@/types/video";
 
+type TFunc = (key: string, fallback?: string) => string;
+
 interface AnalyzeState {
   isLoading: boolean;
   data: AnalyzeResponse | null;
@@ -10,7 +12,7 @@ interface AnalyzeState {
   csrfToken: string | null;
 }
 
-export function useAnalyze() {
+export function useAnalyze(t?: TFunc) {
   const [state, setState] = useState<AnalyzeState>({
     isLoading: false,
     data: null,
@@ -35,7 +37,7 @@ export function useAnalyze() {
         setState({
           isLoading: false,
           data: null,
-          error: data.message || data.error || "分析失败",
+          error: data.message || data.error || (t ? t("errors.analyze_failed", "分析失败") : "分析失败"),
           csrfToken: null,
         });
         return;
@@ -51,11 +53,11 @@ export function useAnalyze() {
       setState({
         isLoading: false,
         data: null,
-        error: "网络连接失败，请稍后重试",
+        error: t ? t("errors.network_error", "网络连接失败，请稍后重试") : "网络连接失败，请稍后重试",
         csrfToken: null,
       });
     }
-  }, []);
+  }, [t]);
 
   const reset = useCallback(() => {
     setState({ isLoading: false, data: null, error: null, csrfToken: null });

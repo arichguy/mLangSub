@@ -1,0 +1,63 @@
+{
+  "app": { "name": "mLangSub", "tagline": "Pengunduh Subtitle", "description": "Ekstrak subtitle dari 50+ platform termasuk YouTube dan Bilibili" },
+  "nav": { "home": "Beranda", "supported_platforms": "Platform Didukung", "admin": "Admin", "language": "Bahasa" },
+  "home": {
+    "title": "Pengunduh Subtitle Video Online",
+    "subtitle": "Ekstrak subtitle multibahasa dari YouTube, Bilibili, Viki dan 50+ platform video",
+    "placeholder": "Tempel URL video...", "analyze": "Analisis", "analyzing": "Menganalisis...",
+    "supported_platforms": "Platform Didukung", "how_it_works": "Cara Kerja",
+    "step1_title": "Tempel URL", "step1_desc": "Salin tautan video yang ingin Anda unduh subtitlenya",
+    "step2_title": "Analisis Video", "step2_desc": "Kami mendeteksi video secara otomatis dan mengekstrak subtitle yang tersedia",
+    "step3_title": "Pilih Format", "step3_desc": "Pilih dari format SRT, VTT, TXT, ASS, atau HTML",
+    "step4_title": "Unduh", "step4_desc": "Unduh file subtitle Anda dengan satu klik"
+  },
+  "subtitle": {
+    "cc_subtitles": "Subtitle CC", "auto_translated": "Subtitle Terjemahan Otomatis",
+    "no_subtitles": "Tidak ada subtitle terdeteksi untuk video ini", "no_voice": "Tidak ada suara terdeteksi di video ini",
+    "download": "Unduh", "bilingual_title": "Subtitle Dua Bahasa",
+    "first_lang": "Bahasa Pertama", "second_lang": "Bahasa Kedua",
+    "download_bilingual": "Unduh Dua Bahasa", "format": "Format", "language": "Bahasa",
+    "select_language": "Pilih Bahasa", "count_languages": "{count} bahasa"
+  },
+  "video": { "title": "Judul", "author": "Penulis", "duration": "Durasi", "upload_date": "Tanggal Unggah", "platform": "Platform", "no_info": "Tidak ada info video" },
+  "url_input": { "placeholder": "Tempel URL video...", "button_analyze": "Analisis", "button_analyzing": "Menganalisis...", "error_empty": "Silakan masukkan URL video", "error_invalid": "Silakan masukkan URL yang valid (dimulai dengan http:// atau https://)" },
+  "progress": { "analyzing": "Menganalisis video...", "complete": "Selesai" },
+  "bilingual": { "title": "Penggabung Subtitle Dua Bahasa", "first_lang": "Bahasa Pertama", "second_lang": "Bahasa Kedua", "download": "Unduh Subtitle Dua Bahasa" },
+  "errors": {
+    "invalid_url": "Video yang diminta tidak ada. Periksa URL",
+    "not_supported": "Platform ini belum didukung. Coba tautan video lain",
+    "network_error": "Kesalahan jaringan. Silakan coba lagi nanti",
+    "server_error": "Kesalahan server. Silakan coba lagi nanti",
+    "rate_limited": "Terlalu banyak permintaan. Silakan tunggu sebentar",
+    "download_failed": "Unduhan subtitle gagal. Coba format lain",
+    "analyze_failed": "Analisis gagal", "bilingual_failed": "Unduhan dua bahasa gagal. Pastikan subtitle tersedia dalam kedua bahasa"
+  },
+  "footer": {
+    "copyright": "© 2026 mLangSub. Hak cipta dilindungi.", "terms": "Ketentuan Penggunaan",
+    "privacy": "Kebijakan Privasi", "contact": "Hubungi Kami",
+    "description": "Ekstrak subtitle multibahasa dari 50+ platform video. Mendukung format SRT, VTT, ASS, TXT, HTML.",
+    "supported_platforms": "Platform Didukung", "links": "Tautan"
+  },
+  "admin": {
+    "title": "Panel Admin", "dashboard": "Dasbor", "cache_management": "Manajemen Cache",
+    "access_log": "Log Akses", "total_visits": "Total Kunjungan", "total_downloads": "Total Unduhan",
+    "bilingual_count": "Subtitle Dua Bahasa", "unique_ips": "IP Unik", "cache_status": "Status Cache",
+    "cache_entries": "Entri Cache", "total_size": "Ukuran Total", "hit_rate": "Tingkat Hit",
+    "refresh": "Segarkan", "clear_expired": "Hapus Kedaluwarsa", "cache_cleared": "Cache dibersihkan",
+    "clear_cache_failed": "Pembersihan cache gagal", "fetch_error": "Gagal mengambil data",
+    "network_error": "Kesalahan jaringan", "trend_7d": "Tren 7 Hari", "date": "Tanggal",
+    "visits": "Kunjungan", "downloads": "Unduhan", "action": "Aksi", "video_id": "ID Video",
+    "platform_col": "Platform", "language_col": "Bahasa", "type": "Tipe", "size": "Ukuran", "cache_hit": "Hit",
+    "download_action": "Unduh", "bilingual_action": "Dua Bahasa", "analyze_action": "Analisis",
+    "login_title": "Login Panel Admin", "username": "Nama Pengguna",
+    "password": "Kata Sandi", "login": "Masuk", "logging_in": "Sedang masuk...",
+    "login_failed": "Login gagal", "fill_required": "Silakan masukkan nama pengguna dan kata sandi",
+    "back_home": "Kembali ke Beranda", "logout": "Keluar", "settings": "Pengaturan",
+    "change_password": "Ubah Kata Sandi", "old_password": "Kata Sandi Saat Ini",
+    "new_password": "Kata Sandi Baru", "password_changed": "Kata sandi berhasil diubah",
+    "password_change_failed": "Gagal mengubah kata sandi", "user_not_found": "Pengguna tidak ditemukan",
+    "wrong_password": "Kata sandi saat ini salah", "unauthorized": "Tidak sah"
+  },
+  "common": { "back_home": "Kembali ke Beranda", "retry": "Coba Lagi", "not_found": "Halaman Tidak Ditemukan" },
+  "platform": { "not_found": "Halaman Tidak Ditemukan", "back_home": "Kembali ke Beranda", "faq": "Pertanyaan Umum" }
+}

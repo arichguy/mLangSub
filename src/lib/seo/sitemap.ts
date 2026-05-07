@@ -1,17 +1,13 @@
+import { locales } from "@/lib/i18n/config";
+
 const BASE_URL = process.env.NEXT_PUBLIC_APP_URL || "https://mlangsub.com";
 
 const SUPPORTED_PLATFORMS = [
-  "youtube",
-  "bilibili",
-  "viki",
-  "dailymotion",
-  "iqiyi",
-  "wetv",
-  "hotstar",
-  "viu",
+  "youtube", "bilibili", "viki", "dailymotion",
+  "iqiyi", "wetv", "hotstar", "viu",
 ];
 
-const LOCALES = ["zh-CN", "en", "ja", "ko", "es"];
+const LOCALES = locales;
 
 function generateUrl(
   path: string,

@@ -12,23 +12,18 @@ import { useAnalyze } from "@/hooks/useAnalyze";
 import { useDownload } from "@/hooks/useDownload";
 import type { SubtitleTrack, SubtitleFormat } from "@/types/subtitle";
 import { AlertCircle, FileText, Globe, Download, Languages } from "lucide-react";
+import { useTranslation } from "@/lib/i18n/useTranslation";
 
 const SUPPORTED_PLATFORMS = [
-  "YouTube",
-  "Bilibili",
-  "Viki",
-  "Dailymotion",
-  "iQiyi",
-  "WeTV",
-  "Hotstar",
-  "Viu",
-  "TikTok",
-  "Twitch",
+  "YouTube", "Bilibili", "Viki", "Dailymotion",
+  "iQiyi", "WeTV", "Hotstar", "Viu",
+  "TikTok", "Twitch",
 ];
 
 export default function HomePage() {
-  const { isLoading, data, error, csrfToken, analyze, reset } = useAnalyze();
-  const { downloadingLang, download, downloadBilingual, setCsrfToken } = useDownload();
+  const { t } = useTranslation();
+  const { isLoading, data, error, csrfToken, analyze, reset } = useAnalyze(t);
+  const { downloadingLang, download, downloadBilingual, setCsrfToken } = useDownload(t);
 
   useEffect(() => {
     setCsrfToken(csrfToken);
@@ -47,13 +42,7 @@ export default function HomePage() {
   const handleDownload = useCallback(
     (track: SubtitleTrack, format: SubtitleFormat) => {
       if (!data?.videoInfo) return;
-      download(
-        currentUrl,
-        data.videoInfo.platform,
-        data.videoInfo.videoId,
-        track,
-        format
-      );
+      download(currentUrl, data.videoInfo.platform, data.videoInfo.videoId, track, format);
     },
     [currentUrl, data, download]
   );
@@ -61,14 +50,7 @@ export default function HomePage() {
   const handleBilingualDownload = useCallback(
     (first: SubtitleTrack, second: SubtitleTrack, format: SubtitleFormat) => {
       if (!data?.videoInfo) return;
-      downloadBilingual(
-        currentUrl,
-        data.videoInfo.platform,
-        data.videoInfo.videoId,
-        first,
-        second,
-        format
-      );
+      downloadBilingual(currentUrl, data.videoInfo.platform, data.videoInfo.videoId, first, second, format);
     },
     [currentUrl, data, downloadBilingual]
   );
@@ -76,6 +58,13 @@ export default function HomePage() {
   const allTracks = [
     ...(data?.ccSubtitles || []),
     ...(data?.autoTranslated || []),
+  ];
+
+  const howItWorksSteps = [
+    { icon: Globe, title: t("home.step1_title", "粘贴链接"), desc: t("home.step1_desc", "复制链接") },
+    { icon: FileText, title: t("home.step2_title", "分析视频"), desc: t("home.step2_desc", "自动检测") },
+    { icon: Languages, title: t("home.step3_title", "选择格式"), desc: t("home.step3_desc", "SRT/VTT/ASS/TXT/HTML") },
+    { icon: Download, title: t("home.step4_title", "下载字幕"), desc: t("home.step4_desc", "一键下载") },
   ];
 
   return (
@@ -87,25 +76,19 @@ export default function HomePage() {
         <section className="px-4 py-12 sm:py-16">
           <div className="mx-auto max-w-2xl text-center mb-8">
             <h1 className="text-3xl sm:text-4xl font-bold text-warm-text mb-4 tracking-tight">
-              在线视频字幕下载
+              {t("home.title", "在线视频字幕下载")}
             </h1>
             <p className="text-warm-muted text-sm sm:text-base leading-relaxed max-w-lg mx-auto">
-              从 YouTube、Bilibili、Viki 等 50+ 视频平台提取多语言字幕，支持 SRT/VTT/ASS/TXT/HTML 格式
+              {t("home.subtitle", "从 YouTube、Bilibili、Viki 等 50+ 视频平台提取多语言字幕")}
             </p>
           </div>
 
-          <UrlInput
-            onAnalyze={handleAnalyze}
-            isLoading={isLoading}
-          />
+          <UrlInput onAnalyze={handleAnalyze} isLoading={isLoading} />
 
           {/* Supported platforms pills */}
           <div className="mt-6 flex flex-wrap justify-center gap-2">
             {SUPPORTED_PLATFORMS.slice(0, 8).map((p) => (
-              <span
-                key={p}
-                className="inline-block rounded-full border border-warm-border bg-white px-3 py-1 text-xs text-warm-muted"
-              >
+              <span key={p} className="inline-block rounded-full border border-warm-border bg-white px-3 py-1 text-xs text-warm-muted">
                 {p}
               </span>
             ))}
@@ -130,7 +113,7 @@ export default function HomePage() {
                   onClick={reset}
                   className="mt-4 text-sm text-red-600 underline hover:text-red-800"
                 >
-                  重新尝试
+                  {t("common.retry", "重新尝试")}
                 </button>
               </div>
             )}
@@ -138,7 +121,6 @@ export default function HomePage() {
             {/* Results */}
             {data && data.success && (
               <div className="grid gap-8 lg:grid-cols-3">
-                {/* Subtitle List */}
                 <div className="lg:col-span-2 space-y-6">
                   {data.message && !data.ccSubtitles.length && !data.autoTranslated.length ? (
                     <div className="rounded-2xl border border-amber-200 bg-amber-50 p-8 text-center">
@@ -154,7 +136,6 @@ export default function HomePage() {
                         downloadingLang={downloadingLang || undefined}
                       />
 
-                      {/* Bilingual */}
                       {allTracks.length >= 2 && (
                         <BilingualSelector
                           availableTracks={allTracks}
@@ -166,7 +147,6 @@ export default function HomePage() {
                   )}
                 </div>
 
-                {/* Video Info Sidebar */}
                 <div className="lg:col-span-1">
                   {data.videoInfo && (
                     <div className="sticky top-20">
@@ -180,34 +160,14 @@ export default function HomePage() {
             {/* Empty state */}
             {!isLoading && !data && !error && (
               <div className="mt-8">
-                {/* How it works */}
                 <div className="text-center mb-10">
-                  <h2 className="text-xl font-semibold text-warm-text mb-2">使用说明</h2>
-                  <p className="text-sm text-warm-muted">三步轻松获取字幕文件</p>
+                  <h2 className="text-xl font-semibold text-warm-text mb-2">
+                    {t("home.how_it_works", "使用说明")}
+                  </h2>
+                  <p className="text-sm text-warm-muted">{t("home.step3_desc", "三步轻松获取字幕文件")}</p>
                 </div>
                 <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-                  {[
-                    {
-                      icon: Globe,
-                      title: "粘贴链接",
-                      desc: "复制您想下载字幕的视频链接",
-                    },
-                    {
-                      icon: FileText,
-                      title: "分析视频",
-                      desc: "自动检测并提取可用字幕",
-                    },
-                    {
-                      icon: Languages,
-                      title: "选择格式",
-                      desc: "SRT/VTT/ASS/TXT/HTML",
-                    },
-                    {
-                      icon: Download,
-                      title: "下载字幕",
-                      desc: "一键下载字幕文件",
-                    },
-                  ].map((step, i) => (
+                  {howItWorksSteps.map((step, i) => (
                     <div
                       key={i}
                       className="rounded-2xl border border-warm-border bg-white p-6 text-center shadow-subtle hover:shadow-card transition-shadow"

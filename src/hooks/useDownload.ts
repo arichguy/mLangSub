@@ -3,7 +3,9 @@
 import { useState, useCallback, useRef } from "react";
 import type { SubtitleTrack, SubtitleFormat } from "@/types/subtitle";
 
-export function useDownload() {
+type TFunc = (key: string, fallback?: string) => string;
+
+export function useDownload(t?: TFunc) {
   const [downloadingLang, setDownloadingLang] = useState<string | null>(null);
   const csrfRef = useRef<string | null>(null);
 
@@ -38,7 +40,7 @@ export function useDownload() {
 
         const res = await fetch(`/api/download?${params}`, { headers });
         if (!res.ok) {
-          throw new Error("下载失败");
+          throw new Error(t ? t("errors.download_failed", "下载失败") : "下载失败");
         }
 
         const blob = await res.blob();
@@ -54,12 +56,12 @@ export function useDownload() {
         URL.revokeObjectURL(downloadUrl);
       } catch (err) {
         console.error("Download error:", err);
-        alert("字幕下载失败，请尝试其他格式");
+        alert(t ? t("errors.download_failed", "字幕下载失败，请尝试其他格式") : "字幕下载失败，请尝试其他格式");
       } finally {
         setDownloadingLang(null);
       }
     },
-    []
+    [t]
   );
 
   const downloadBilingual = useCallback(
@@ -98,7 +100,7 @@ export function useDownload() {
 
         if (!res.ok) {
           const errData = await res.json();
-          throw new Error(errData.error || "下载失败");
+          throw new Error(errData.error || (t ? t("errors.download_failed", "下载失败") : "下载失败"));
         }
 
         const blob = await res.blob();
@@ -112,12 +114,12 @@ export function useDownload() {
         URL.revokeObjectURL(downloadUrl);
       } catch (err) {
         console.error("Bilingual download error:", err);
-        alert("双语字幕下载失败，请确认两种语言的字幕均存在");
+        alert(t ? t("errors.bilingual_failed", "双语字幕下载失败，请确认两种语言的字幕均存在") : "双语字幕下载失败，请确认两种语言的字幕均存在");
       } finally {
         setDownloadingLang(null);
       }
     },
-    []
+    [t]
   );
 
   return { downloadingLang, download, downloadBilingual, setCsrfToken };

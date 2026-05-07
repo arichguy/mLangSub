@@ -39,7 +39,8 @@
     "download_bilingual": "下载双语字幕",
     "format": "格式",
     "language": "语言",
-    "select_language": "选择语言"
+    "select_language": "选择语言",
+    "count_languages": "{count} 个语言"
   },
   "video": {
     "title": "标题",
@@ -49,18 +50,102 @@
     "platform": "平台",
     "no_info": "暂无视频信息"
   },
+  "url_input": {
+    "placeholder": "粘贴视频链接...",
+    "button_analyze": "开始分析",
+    "button_analyzing": "分析中...",
+    "error_empty": "请输入视频链接",
+    "error_invalid": "请输入有效的URL（以 http:// 或 https:// 开头）"
+  },
+  "progress": {
+    "analyzing": "正在分析视频...",
+    "complete": "完成"
+  },
+  "bilingual": {
+    "title": "双语字幕合并",
+    "first_lang": "第一语言",
+    "second_lang": "第二语言",
+    "download": "下载双语字幕"
+  },
   "errors": {
     "invalid_url": "您请求的视频不存在，请检查视频链接是否正确",
     "not_supported": "暂不支持该平台，请尝试其他视频链接",
     "network_error": "网络连接失败，请稍后重试",
     "server_error": "服务器处理错误，请稍后再试",
     "rate_limited": "请求过于频繁，请稍后再试",
-    "download_failed": "字幕下载失败，请尝试其他格式"
+    "download_failed": "字幕下载失败，请尝试其他格式",
+    "analyze_failed": "分析失败",
+    "bilingual_failed": "双语字幕下载失败，请确认两种语言的字幕均存在"
   },
   "footer": {
     "copyright": "© 2026 mLangSub. 保留所有权利.",
     "terms": "使用条款",
     "privacy": "隐私政策",
-    "contact": "联系我们"
+    "contact": "联系我们",
+    "description": "从 YouTube、Bilibili 等 50+ 视频平台提取多语言字幕，支持 SRT、VTT、ASS、TXT、HTML 格式下载。",
+    "supported_platforms": "支持平台",
+    "links": "链接"
+  },
+  "admin": {
+    "title": "管理面板",
+    "dashboard": "仪表盘",
+    "cache_management": "缓存管理",
+    "access_log": "访问日志",
+    "total_visits": "总访问量",
+    "total_downloads": "总下载量",
+    "bilingual_count": "双语字幕",
+    "unique_ips": "独立IP",
+    "cache_status": "缓存状态",
+    "cache_entries": "缓存条目",
+    "total_size": "总大小",
+    "hit_rate": "命中率",
+    "refresh": "刷新",
+    "clear_expired": "清理过期",
+    "cache_cleared": "缓存已清理",
+    "clear_cache_failed": "清理缓存失败",
+    "fetch_error": "获取数据失败",
+    "network_error": "网络错误",
+    "trend_7d": "最近7天趋势",
+    "date": "日期",
+    "visits": "访问量",
+    "downloads": "下载量",
+    "action": "操作",
+    "video_id": "视频ID",
+    "platform_col": "平台",
+    "language_col": "语言",
+    "type": "类型",
+    "size": "大小",
+    "cache_hit": "命中",
+    "download_action": "下载",
+    "bilingual_action": "双语",
+    "analyze_action": "分析",
+    "login_title": "管理面板登录",
+    "username": "用户名",
+    "password": "密码",
+    "login": "登录",
+    "logging_in": "登录中...",
+    "login_failed": "登录失败",
+    "fill_required": "请输入用户名和密码",
+    "back_home": "返回首页",
+    "logout": "退出",
+    "settings": "设置",
+    "change_password": "修改密码",
+    "old_password": "原密码",
+    "new_password": "新密码",
+    "password_changed": "密码修改成功",
+    "password_change_failed": "修改密码失败",
+    "user_not_found": "用户不存在",
+    "wrong_password": "原密码错误",
+    "unauthorized": "未授权"
+  },
+  "common": {
+    "back_home": "返回首页",
+    "retry": "重新尝试",
+    "not_found": "页面未找到"
+  },
+  "platform": {
+    "not_found": "页面未找到",
+    "back_home": "返回首页",
+    "faq": "常见问题"
   }
 }

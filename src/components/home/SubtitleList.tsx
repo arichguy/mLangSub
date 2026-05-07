@@ -2,6 +2,7 @@
 
 import { SubtitleItem } from "./SubtitleItem";
 import type { SubtitleTrack, SubtitleFormat } from "@/types/subtitle";
+import { useTranslation } from "@/lib/i18n/useTranslation";
 
 interface SubtitleListProps {
   ccSubtitles: SubtitleTrack[];
@@ -16,6 +17,8 @@ export function SubtitleList({
   onDownload,
   downloadingLang,
 }: SubtitleListProps) {
+  const { t } = useTranslation();
+
   if (ccSubtitles.length === 0 && autoTranslated.length === 0) {
     return null;
   }
@@ -25,9 +28,9 @@ export function SubtitleList({
       {ccSubtitles.length > 0 && (
         <section>
           <h3 className="text-sm font-semibold text-warm-text uppercase tracking-wide mb-3">
-            CC 字幕
+            {t("subtitle.cc_subtitles", "CC 字幕")}
             <span className="ml-2 text-xs font-normal text-warm-muted normal-case tracking-normal">
-              ({ccSubtitles.length} 个语言)
+              ({t("subtitle.count_languages", "{count} 个语言").replace("{count}", String(ccSubtitles.length))})
             </span>
           </h3>
           <div className="space-y-2">
@@ -46,9 +49,9 @@ export function SubtitleList({
       {autoTranslated.length > 0 && (
         <section>
           <h3 className="text-sm font-semibold text-warm-text uppercase tracking-wide mb-3">
-            自动翻译字幕
+            {t("subtitle.auto_translated", "自动翻译字幕")}
             <span className="ml-2 text-xs font-normal text-warm-muted normal-case tracking-normal">
-              ({autoTranslated.length} 个语言)
+              ({t("subtitle.count_languages", "{count} 个语言").replace("{count}", String(autoTranslated.length))})
             </span>
           </h3>
           <div className="space-y-2">

@@ -1,0 +1,63 @@
+{
+  "app": { "name": "mLangSub", "tagline": "Strumento per Sottotitoli", "description": "Estrai sottotitoli da oltre 50 piattaforme, inclusi YouTube e Bilibili" },
+  "nav": { "home": "Home", "supported_platforms": "Piattaforme", "admin": "Admin", "language": "Lingua" },
+  "home": {
+    "title": "Downloader di Sottotitoli Video Online",
+    "subtitle": "Estrai sottotitoli multilingue da YouTube, Bilibili, Viki e oltre 50 piattaforme video",
+    "placeholder": "Incolla URL video...", "analyze": "Analizza", "analyzing": "Analisi in corso...",
+    "supported_platforms": "Piattaforme Supportate", "how_it_works": "Come Funziona",
+    "step1_title": "Incolla URL", "step1_desc": "Copia il link del video da cui vuoi scaricare i sottotitoli",
+    "step2_title": "Analizza Video", "step2_desc": "Rileviamo automaticamente il video ed estraiamo i sottotitoli disponibili",
+    "step3_title": "Scegli Formato", "step3_desc": "Seleziona tra i formati SRT, VTT, TXT, ASS o HTML",
+    "step4_title": "Scarica", "step4_desc": "Scarica il tuo file di sottotitoli con un clic"
+  },
+  "subtitle": {
+    "cc_subtitles": "Sottotitoli CC", "auto_translated": "Sottotitoli Tradotti Automaticamente",
+    "no_subtitles": "Nessun sottotitolo rilevato per questo video", "no_voice": "Nessuna voce rilevata in questo video",
+    "download": "Scarica", "bilingual_title": "Sottotitoli Bilingue",
+    "first_lang": "Prima Lingua", "second_lang": "Seconda Lingua",
+    "download_bilingual": "Scarica Bilingue", "format": "Formato", "language": "Lingua",
+    "select_language": "Seleziona Lingua", "count_languages": "{count} lingue"
+  },
+  "video": { "title": "Titolo", "author": "Autore", "duration": "Durata", "upload_date": "Data Caricamento", "platform": "Piattaforma", "no_info": "Nessuna info video" },
+  "url_input": { "placeholder": "Incolla URL video...", "button_analyze": "Analizza", "button_analyzing": "Analisi in corso...", "error_empty": "Inserisci un URL video", "error_invalid": "Inserisci un URL valido (che inizia con http:// o https://)" },
+  "progress": { "analyzing": "Analisi video in corso...", "complete": "Completato" },
+  "bilingual": { "title": "Unione Sottotitoli Bilingue", "first_lang": "Prima Lingua", "second_lang": "Seconda Lingua", "download": "Scarica Sottotitoli Bilingue" },
+  "errors": {
+    "invalid_url": "Il video richiesto non esiste. Verifica l'URL",
+    "not_supported": "Questa piattaforma non è ancora supportata. Prova un altro link video",
+    "network_error": "Errore di rete. Riprova più tardi",
+    "server_error": "Errore del server. Riprova più tardi",
+    "rate_limited": "Troppe richieste. Attendi un momento",
+    "download_failed": "Download sottotitoli fallito. Prova un altro formato",
+    "analyze_failed": "Analisi fallita", "bilingual_failed": "Download bilingue fallito. Assicurati che i sottotitoli esistano in entrambe le lingue"
+  },
+  "footer": {
+    "copyright": "© 2026 mLangSub. Tutti i diritti riservati.", "terms": "Termini di Utilizzo",
+    "privacy": "Informativa sulla Privacy", "contact": "Contattaci",
+    "description": "Estrai sottotitoli multilingue da oltre 50 piattaforme video. Supporta formati SRT, VTT, ASS, TXT, HTML.",
+    "supported_platforms": "Piattaforme Supportate", "links": "Link"
+  },
+  "admin": {
+    "title": "Pannello di Amministrazione", "dashboard": "Dashboard", "cache_management": "Gestione Cache",
+    "access_log": "Registro Accessi", "total_visits": "Visite Totali", "total_downloads": "Download Totali",
+    "bilingual_count": "Sottotitoli Bilingue", "unique_ips": "IP Univoci", "cache_status": "Stato Cache",
+    "cache_entries": "Voci Cache", "total_size": "Dimensione Totale", "hit_rate": "Tasso di Successo",
+    "refresh": "Aggiorna", "clear_expired": "Pulisci Scaduti", "cache_cleared": "Cache pulita",
+    "clear_cache_failed": "Pulizia cache fallita", "fetch_error": "Recupero dati fallito",
+    "network_error": "Errore di rete", "trend_7d": "Andamento 7 Giorni", "date": "Data",
+    "visits": "Visite", "downloads": "Download", "action": "Azione", "video_id": "ID Video",
+    "platform_col": "Piattaforma", "language_col": "Lingua", "type": "Tipo", "size": "Dimensione", "cache_hit": "Hit",
+    "download_action": "Scarica", "bilingual_action": "Bilingue", "analyze_action": "Analizza",
+    "login_title": "Accesso Pannello Admin", "username": "Nome Utente",
+    "password": "Password", "login": "Accedi", "logging_in": "Accesso in corso...",
+    "login_failed": "Accesso fallito", "fill_required": "Inserisci nome utente e password",
+    "back_home": "Torna alla Home", "logout": "Esci", "settings": "Impostazioni",
+    "change_password": "Cambia Password", "old_password": "Password Attuale",
+    "new_password": "Nuova Password", "password_changed": "Password cambiata con successo",
+    "password_change_failed": "Cambio password fallito", "user_not_found": "Utente non trovato",
+    "wrong_password": "Password attuale errata", "unauthorized": "Non autorizzato"
+  },
+  "common": { "back_home": "Torna alla Home", "retry": "Riprova", "not_found": "Pagina Non Trovata" },
+  "platform": { "not_found": "Pagina Non Trovata", "back_home": "Torna alla Home", "faq": "Domande Frequenti" }
+}

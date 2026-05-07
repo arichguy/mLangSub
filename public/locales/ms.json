@@ -1,0 +1,63 @@
+{
+  "app": { "name": "mLangSub", "tagline": "Alat Muat Turun Sari Kata", "description": "Ekstrak sari kata dari 50+ platform termasuk YouTube dan Bilibili" },
+  "nav": { "home": "Utama", "supported_platforms": "Platform Disokong", "admin": "Admin", "language": "Bahasa" },
+  "home": {
+    "title": "Pemuat Turun Sari Kata Video Dalam Talian",
+    "subtitle": "Ekstrak sari kata pelbagai bahasa dari YouTube, Bilibili, Viki dan 50+ platform video",
+    "placeholder": "Tampal URL video...", "analyze": "Analisis", "analyzing": "Menganalisis...",
+    "supported_platforms": "Platform Disokong", "how_it_works": "Cara Ia Berfungsi",
+    "step1_title": "Tampal URL", "step1_desc": "Salin pautan video yang ingin anda muat turun sari katanya",
+    "step2_title": "Analisis Video", "step2_desc": "Kami mengesan video secara automatik dan mengekstrak sari kata yang tersedia",
+    "step3_title": "Pilih Format", "step3_desc": "Pilih daripada format SRT, VTT, TXT, ASS atau HTML",
+    "step4_title": "Muat Turun", "step4_desc": "Muat turun fail sari kata anda dengan satu klik"
+  },
+  "subtitle": {
+    "cc_subtitles": "Sari Kata CC", "auto_translated": "Sari Kata Terjemahan Automatik",
+    "no_subtitles": "Tiada sari kata dikesan untuk video ini", "no_voice": "Tiada suara dikesan dalam video ini",
+    "download": "Muat Turun", "bilingual_title": "Sari Kata Dua Bahasa",
+    "first_lang": "Bahasa Pertama", "second_lang": "Bahasa Kedua",
+    "download_bilingual": "Muat Turun Dua Bahasa", "format": "Format", "language": "Bahasa",
+    "select_language": "Pilih Bahasa", "count_languages": "{count} bahasa"
+  },
+  "video": { "title": "Tajuk", "author": "Pengarang", "duration": "Tempoh", "upload_date": "Tarikh Muat Naik", "platform": "Platform", "no_info": "Tiada maklumat video" },
+  "url_input": { "placeholder": "Tampal URL video...", "button_analyze": "Analisis", "button_analyzing": "Menganalisis...", "error_empty": "Sila masukkan URL video", "error_invalid": "Sila masukkan URL yang sah (bermula dengan http:// atau https://)" },
+  "progress": { "analyzing": "Menganalisis video...", "complete": "Selesai" },
+  "bilingual": { "title": "Penggabung Sari Kata Dua Bahasa", "first_lang": "Bahasa Pertama", "second_lang": "Bahasa Kedua", "download": "Muat Turun Sari Kata Dua Bahasa" },
+  "errors": {
+    "invalid_url": "Video yang diminta tidak wujud. Sila semak URL",
+    "not_supported": "Platform ini belum disokong. Cuba pautan video lain",
+    "network_error": "Ralat rangkaian. Sila cuba lagi kemudian",
+    "server_error": "Ralat pelayan. Sila cuba lagi kemudian",
+    "rate_limited": "Terlalu banyak permintaan. Sila tunggu sebentar",
+    "download_failed": "Muat turun sari kata gagal. Cuba format lain",
+    "analyze_failed": "Analisis gagal", "bilingual_failed": "Muat turun dua bahasa gagal. Pastikan sari kata wujud dalam kedua-dua bahasa"
+  },
+  "footer": {
+    "copyright": "© 2026 mLangSub. Hak cipta terpelihara.", "terms": "Syarat Penggunaan",
+    "privacy": "Dasar Privasi", "contact": "Hubungi Kami",
+    "description": "Ekstrak sari kata pelbagai bahasa dari 50+ platform video. Menyokong format SRT, VTT, ASS, TXT, HTML.",
+    "supported_platforms": "Platform Disokong", "links": "Pautan"
+  },
+  "admin": {
+    "title": "Panel Pentadbir", "dashboard": "Papan Pemuka", "cache_management": "Pengurusan Cache",
+    "access_log": "Log Akses", "total_visits": "Jumlah Lawatan", "total_downloads": "Jumlah Muat Turun",
+    "bilingual_count": "Sari Kata Dua Bahasa", "unique_ips": "IP Unik", "cache_status": "Status Cache",
+    "cache_entries": "Entri Cache", "total_size": "Jumlah Saiz", "hit_rate": "Kadar Hit",
+    "refresh": "Segar Semula", "clear_expired": "Padam Luput", "cache_cleared": "Cache dikosongkan",
+    "clear_cache_failed": "Pengosongan cache gagal", "fetch_error": "Gagal mengambil data",
+    "network_error": "Ralat rangkaian", "trend_7d": "Trend 7 Hari", "date": "Tarikh",
+    "visits": "Lawatan", "downloads": "Muat Turun", "action": "Tindakan", "video_id": "ID Video",
+    "platform_col": "Platform", "language_col": "Bahasa", "type": "Jenis", "size": "Saiz", "cache_hit": "Hit",
+    "download_action": "Muat Turun", "bilingual_action": "Dua Bahasa", "analyze_action": "Analisis",
+    "login_title": "Log Masuk Panel Pentadbir", "username": "Nama Pengguna",
+    "password": "Kata Laluan", "login": "Log Masuk", "logging_in": "Sedang log masuk...",
+    "login_failed": "Log masuk gagal", "fill_required": "Sila masukkan nama pengguna dan kata laluan",
+    "back_home": "Kembali ke Utama", "logout": "Log Keluar", "settings": "Tetapan",
+    "change_password": "Tukar Kata Laluan", "old_password": "Kata Laluan Semasa",
+    "new_password": "Kata Laluan Baharu", "password_changed": "Kata laluan berjaya ditukar",
+    "password_change_failed": "Penukaran kata laluan gagal", "user_not_found": "Pengguna tidak dijumpai",
+    "wrong_password": "Kata laluan semasa salah", "unauthorized": "Tidak dibenarkan"
+  },
+  "common": { "back_home": "Kembali ke Utama", "retry": "Cuba Lagi", "not_found": "Halaman Tidak Dijumpai" },
+  "platform": { "not_found": "Halaman Tidak Dijumpai", "back_home": "Kembali ke Utama", "faq": "Soalan Lazim" }
+}

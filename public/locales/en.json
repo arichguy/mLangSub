@@ -39,7 +39,8 @@
     "download_bilingual": "Download Bilingual",
     "format": "Format",
     "language": "Language",
-    "select_language": "Select Language"
+    "select_language": "Select Language",
+    "count_languages": "{count} languages"
   },
   "video": {
     "title": "Title",
@@ -49,18 +50,102 @@
     "platform": "Platform",
     "no_info": "No video info available"
   },
+  "url_input": {
+    "placeholder": "Paste video URL...",
+    "button_analyze": "Analyze",
+    "button_analyzing": "Analyzing...",
+    "error_empty": "Please enter a video URL",
+    "error_invalid": "Please enter a valid URL (starting with http:// or https://)"
+  },
+  "progress": {
+    "analyzing": "Analyzing video...",
+    "complete": "Complete"
+  },
+  "bilingual": {
+    "title": "Bilingual Subtitle Merger",
+    "first_lang": "First Language",
+    "second_lang": "Second Language",
+    "download": "Download Bilingual Subtitles"
+  },
   "errors": {
     "invalid_url": "The requested video does not exist. Please check the URL",
     "not_supported": "This platform is not yet supported. Try another video link",
     "network_error": "Network error. Please try again later",
     "server_error": "Server error. Please try again later",
     "rate_limited": "Too many requests. Please wait a moment",
-    "download_failed": "Subtitle download failed. Try another format"
+    "download_failed": "Subtitle download failed. Try another format",
+    "analyze_failed": "Analysis failed",
+    "bilingual_failed": "Bilingual subtitle download failed. Please ensure subtitles exist for both languages"
   },
   "footer": {
     "copyright": "© 2026 mLangSub. All rights reserved.",
     "terms": "Terms of Use",
     "privacy": "Privacy Policy",
-    "contact": "Contact Us"
+    "contact": "Contact Us",
+    "description": "Extract multilingual subtitles from 50+ video platforms including YouTube and Bilibili. Supports SRT, VTT, ASS, TXT, HTML formats.",
+    "supported_platforms": "Supported Platforms",
+    "links": "Links"
+  },
+  "admin": {
+    "title": "Admin Panel",
+    "dashboard": "Dashboard",
+    "cache_management": "Cache Management",
+    "access_log": "Access Log",
+    "total_visits": "Total Visits",
+    "total_downloads": "Total Downloads",
+    "bilingual_count": "Bilingual Subtitles",
+    "unique_ips": "Unique IPs",
+    "cache_status": "Cache Status",
+    "cache_entries": "Cache Entries",
+    "total_size": "Total Size",
+    "hit_rate": "Hit Rate",
+    "refresh": "Refresh",
+    "clear_expired": "Clear Expired",
+    "cache_cleared": "Cache cleared",
+    "clear_cache_failed": "Failed to clear cache",
+    "fetch_error": "Failed to fetch data",
+    "network_error": "Network error",
+    "trend_7d": "7-Day Trend",
+    "date": "Date",
+    "visits": "Visits",
+    "downloads": "Downloads",
+    "action": "Action",
+    "video_id": "Video ID",
+    "platform_col": "Platform",
+    "language_col": "Language",
+    "type": "Type",
+    "size": "Size",
+    "cache_hit": "Hit",
+    "download_action": "Download",
+    "bilingual_action": "Bilingual",
+    "analyze_action": "Analyze",
+    "login_title": "Admin Panel Login",
+    "username": "Username",
+    "password": "Password",
+    "login": "Login",
+    "logging_in": "Logging in...",
+    "login_failed": "Login failed",
+    "fill_required": "Please enter username and password",
+    "back_home": "Back to Home",
+    "logout": "Logout",
+    "settings": "Settings",
+    "change_password": "Change Password",
+    "old_password": "Current Password",
+    "new_password": "New Password",
+    "password_changed": "Password changed successfully",
+    "password_change_failed": "Failed to change password",
+    "user_not_found": "User not found",
+    "wrong_password": "Incorrect current password",
+    "unauthorized": "Unauthorized"
+  },
+  "common": {
+    "back_home": "Back to Home",
+    "retry": "Try Again",
+    "not_found": "Page Not Found"
+  },
+  "platform": {
+    "not_found": "Page Not Found",
+    "back_home": "Back to Home",
+    "faq": "FAQ"
   }
 }

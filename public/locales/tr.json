@@ -1,0 +1,63 @@
+{
+  "app": { "name": "mLangSub", "tagline": "Altyazı Aracı", "description": "YouTube ve Bilibili dahil 50'den fazla platformdan altyazı çıkarın" },
+  "nav": { "home": "Ana Sayfa", "supported_platforms": "Desteklenen Platformlar", "admin": "Yönetici", "language": "Dil" },
+  "home": {
+    "title": "Çevrimiçi Video Altyazı İndirici",
+    "subtitle": "YouTube, Bilibili, Viki ve 50'den fazla video platformundan çok dilli altyazı çıkarın",
+    "placeholder": "Video URL'sini yapıştırın...", "analyze": "Analiz Et", "analyzing": "Analiz ediliyor...",
+    "supported_platforms": "Desteklenen Platformlar", "how_it_works": "Nasıl Çalışır",
+    "step1_title": "URL'yi Yapıştırın", "step1_desc": "Altyazılarını indirmek istediğiniz videonun bağlantısını kopyalayın",
+    "step2_title": "Videoyu Analiz Edin", "step2_desc": "Videoyu otomatik olarak algılar ve mevcut altyazıları çıkarırız",
+    "step3_title": "Format Seçin", "step3_desc": "SRT, VTT, TXT, ASS veya HTML formatlarından seçin",
+    "step4_title": "İndirin", "step4_desc": "Altyazı dosyanızı tek tıkla indirin"
+  },
+  "subtitle": {
+    "cc_subtitles": "CC Altyazılar", "auto_translated": "Otomatik Çevrilmiş Altyazılar",
+    "no_subtitles": "Bu video için altyazı tespit edilmedi", "no_voice": "Bu videoda ses tespit edilmedi",
+    "download": "İndir", "bilingual_title": "İki Dilli Altyazılar",
+    "first_lang": "Birinci Dil", "second_lang": "İkinci Dil",
+    "download_bilingual": "İki Dilli İndir", "format": "Format", "language": "Dil",
+    "select_language": "Dil Seçin", "count_languages": "{count} dil"
+  },
+  "video": { "title": "Başlık", "author": "Yazar", "duration": "Süre", "upload_date": "Yükleme Tarihi", "platform": "Platform", "no_info": "Video bilgisi yok" },
+  "url_input": { "placeholder": "Video URL'sini yapıştırın...", "button_analyze": "Analiz Et", "button_analyzing": "Analiz ediliyor...", "error_empty": "Lütfen bir video URL'si girin", "error_invalid": "Lütfen geçerli bir URL girin (http:// veya https:// ile başlayan)" },
+  "progress": { "analyzing": "Video analiz ediliyor...", "complete": "Tamamlandı" },
+  "bilingual": { "title": "İki Dilli Altyazı Birleştirici", "first_lang": "Birinci Dil", "second_lang": "İkinci Dil", "download": "İki Dilli Altyazıları İndir" },
+  "errors": {
+    "invalid_url": "İstenen video mevcut değil. Lütfen URL'yi kontrol edin",
+    "not_supported": "Bu platform henüz desteklenmiyor. Başka bir video bağlantısı deneyin",
+    "network_error": "Ağ hatası. Lütfen daha sonra tekrar deneyin",
+    "server_error": "Sunucu hatası. Lütfen daha sonra tekrar deneyin",
+    "rate_limited": "Çok fazla istek. Lütfen biraz bekleyin",
+    "download_failed": "Altyazı indirme başarısız. Başka bir format deneyin",
+    "analyze_failed": "Analiz başarısız", "bilingual_failed": "İki dilli indirme başarısız. Her iki dilde de altyazı olduğundan emin olun"
+  },
+  "footer": {
+    "copyright": "© 2026 mLangSub. Tüm hakları saklıdır.", "terms": "Kullanım Koşulları",
+    "privacy": "Gizlilik Politikası", "contact": "İletişim",
+    "description": "50'den fazla video platformundan çok dilli altyazı çıkarın. SRT, VTT, ASS, TXT, HTML formatlarını destekler.",
+    "supported_platforms": "Desteklenen Platformlar", "links": "Bağlantılar"
+  },
+  "admin": {
+    "title": "Yönetici Paneli", "dashboard": "Gösterge Panosu", "cache_management": "Önbellek Yönetimi",
+    "access_log": "Erişim Günlüğü", "total_visits": "Toplam Ziyaret", "total_downloads": "Toplam İndirme",
+    "bilingual_count": "İki Dilli Altyazı", "unique_ips": "Benzersiz IP", "cache_status": "Önbellek Durumu",
+    "cache_entries": "Önbellek Girdisi", "total_size": "Toplam Boyut", "hit_rate": "İsabet Oranı",
+    "refresh": "Yenile", "clear_expired": "Süresi Geçenleri Temizle", "cache_cleared": "Önbellek temizlendi",
+    "clear_cache_failed": "Önbellek temizleme başarısız", "fetch_error": "Veri alınamadı",
+    "network_error": "Ağ hatası", "trend_7d": "7 Günlük Eğilim", "date": "Tarih",
+    "visits": "Ziyaretler", "downloads": "İndirmeler", "action": "İşlem", "video_id": "Video ID",
+    "platform_col": "Platform", "language_col": "Dil", "type": "Tür", "size": "Boyut", "cache_hit": "İsabet",
+    "download_action": "İndir", "bilingual_action": "İki Dilli", "analyze_action": "Analiz Et",
+    "login_title": "Yönetici Paneli Girişi", "username": "Kullanıcı Adı",
+    "password": "Şifre", "login": "Giriş Yap", "logging_in": "Giriş yapılıyor...",
+    "login_failed": "Giriş başarısız", "fill_required": "Lütfen kullanıcı adı ve şifre girin",
+    "back_home": "Ana Sayfaya Dön", "logout": "Çıkış Yap", "settings": "Ayarlar",
+    "change_password": "Şifre Değiştir", "old_password": "Mevcut Şifre",
+    "new_password": "Yeni Şifre", "password_changed": "Şifre başarıyla değiştirildi",
+    "password_change_failed": "Şifre değiştirme başarısız", "user_not_found": "Kullanıcı bulunamadı",
+    "wrong_password": "Mevcut şifre yanlış", "unauthorized": "Yetkisiz"
+  },
+  "common": { "back_home": "Ana Sayfaya Dön", "retry": "Tekrar Dene", "not_found": "Sayfa Bulunamadı" },
+  "platform": { "not_found": "Sayfa Bulunamadı", "back_home": "Ana Sayfaya Dön", "faq": "Sıkça Sorulan Sorular" }
+}

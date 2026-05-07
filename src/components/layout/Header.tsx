@@ -3,25 +3,15 @@
 import { useState } from "react";
 import { Menu, X, Globe } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { defaultLocale, locales, localeLabels, type Locale } from "@/lib/i18n/config";
+import { locales, localeLabels } from "@/lib/i18n/config";
+import { useLanguage } from "@/lib/i18n/context";
+import { useTranslation } from "@/lib/i18n/useTranslation";
 
-interface HeaderProps {
-  locale?: Locale;
-  t?: Record<string, any>;
-}
-
-export function Header({ locale = defaultLocale, t }: HeaderProps) {
+export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [langMenuOpen, setLangMenuOpen] = useState(false);
-  const [currentLocale, setCurrentLocale] = useState<Locale>(locale);
-
-  const texts = (t as any)?.nav || {
-    home: "首页",
-    supported_platforms: "支持平台",
-    admin: "管理",
-    language: "语言",
-  };
-  const appTexts = (t as any)?.app || { name: "mLangSub", tagline: "字幕下载工具" };
+  const { locale, setLocale } = useLanguage();
+  const { t } = useTranslation();
 
   return (
     <header className="sticky top-0 z-50 border-b border-warm-border bg-warm-bg/95 backdrop-blur supports-[backdrop-filter]:bg-warm-bg/80">
@@ -30,12 +20,12 @@ export function Header({ locale = defaultLocale, t }: HeaderProps) {
         <a href="/" className="flex items-center gap-2">
           <img
             src="/images/logo.svg"
-            alt={appTexts.name}
+            alt={t("app.name", "mLangSub")}
             className="h-9 w-9 rounded-lg"
           />
           <div className="hidden sm:block">
-            <div className="font-semibold text-warm-text">{appTexts.name}</div>
-            <div className="text-xs text-warm-muted">{appTexts.tagline}</div>
+            <div className="font-semibold text-warm-text">{t("app.name", "mLangSub")}</div>
+            <div className="text-xs text-warm-muted">{t("app.tagline", "字幕下载工具")}</div>
           </div>
         </a>
 
@@ -45,13 +35,13 @@ export function Header({ locale = defaultLocale, t }: HeaderProps) {
             href="/"
             className="rounded-lg px-3 py-2 text-sm font-medium text-warm-text hover:bg-warm-accent transition-colors"
           >
-            {texts.home}
+            {t("nav.home", "首页")}
           </a>
           <a
             href="/admin"
             className="rounded-lg px-3 py-2 text-sm font-medium text-warm-muted hover:text-warm-text hover:bg-warm-accent transition-colors"
           >
-            {texts.admin}
+            {t("nav.admin", "管理")}
           </a>
 
           {/* Language switcher */}
@@ -61,20 +51,20 @@ export function Header({ locale = defaultLocale, t }: HeaderProps) {
               className="flex items-center gap-1 rounded-lg px-3 py-2 text-sm font-medium text-warm-muted hover:text-warm-text hover:bg-warm-accent transition-colors"
             >
               <Globe className="h-4 w-4" />
-              {localeLabels[currentLocale]}
+              {localeLabels[locale]}
             </button>
             {langMenuOpen && (
-              <div className="absolute right-0 top-full mt-1 w-36 rounded-lg border border-warm-border bg-white py-1 shadow-card z-50">
+              <div className="absolute right-0 top-full mt-1 w-40 max-h-80 overflow-y-auto rounded-lg border border-warm-border bg-white py-1 shadow-card z-50">
                 {locales.map((loc) => (
                   <button
                     key={loc}
                     onClick={() => {
-                      setCurrentLocale(loc);
+                      setLocale(loc);
                       setLangMenuOpen(false);
                     }}
                     className={cn(
                       "block w-full px-4 py-2 text-left text-sm hover:bg-warm-accent transition-colors",
-                      currentLocale === loc
+                      locale === loc
                         ? "font-semibold text-warm-orange"
                         : "text-warm-text"
                     )}
@@ -104,28 +94,28 @@ export function Header({ locale = defaultLocale, t }: HeaderProps) {
             className="block rounded-lg px-3 py-2.5 text-sm font-medium text-warm-text hover:bg-warm-accent"
             onClick={() => setMobileOpen(false)}
           >
-            {texts.home}
+            {t("nav.home", "首页")}
           </a>
           <a
             href="/admin"
             className="block rounded-lg px-3 py-2.5 text-sm font-medium text-warm-muted hover:bg-warm-accent"
             onClick={() => setMobileOpen(false)}
           >
-            {texts.admin}
+            {t("nav.admin", "管理")}
           </a>
           <div className="mt-2 border-t border-warm-border pt-2">
-            <span className="px-3 text-xs text-warm-muted">{texts.language}:</span>
+            <span className="px-3 text-xs text-warm-muted">{t("nav.language", "语言")}:</span>
             <div className="mt-1 flex flex-wrap gap-1 px-2">
               {locales.map((loc) => (
                 <button
                   key={loc}
                   onClick={() => {
-                    setCurrentLocale(loc);
+                    setLocale(loc);
                     setMobileOpen(false);
                   }}
                   className={cn(
                     "rounded-md px-2.5 py-1.5 text-xs",
-                    currentLocale === loc
+                    locale === loc
                       ? "bg-warm-orange text-white"
                       : "text-warm-muted hover:bg-warm-accent"
                   )}

@@ -1,7 +1,7 @@
 {
   "app": {
     "name": "mLangSub",
-    "tagline": "字幕ダウンローダー",
+    "tagline": "字幕ダウンロードツール",
     "description": "YouTube、Bilibiliなど50以上のプラットフォームから字幕を抽出"
   },
   "nav": {
@@ -23,23 +23,24 @@
     "step2_title": "動画を分析",
     "step2_desc": "動画を自動検出し、利用可能な字幕を抽出します",
     "step3_title": "フォーマット選択",
-    "step3_desc": "SRT、VTT、TXT、ASS、HTMLから選択",
-    "step4_title": "ダウンロード",
-    "step4_desc": "ワンクリックで字幕ファイルをダウンロード"
+    "step3_desc": "SRT、VTT、TXT、ASS、HTML形式から選択",
+    "step4_title": "字幕をダウンロード",
+    "step4_desc": "必要な字幕ファイルをワンクリックでダウンロード"
   },
   "subtitle": {
     "cc_subtitles": "CC字幕",
     "auto_translated": "自動翻訳字幕",
-    "no_subtitles": "この動画には字幕がありません",
+    "no_subtitles": "この動画には字幕が検出されませんでした",
     "no_voice": "この動画には音声が検出されませんでした",
     "download": "ダウンロード",
-    "bilingual_title": "二言語字幕",
+    "bilingual_title": "バイリンガル字幕",
     "first_lang": "第一言語",
     "second_lang": "第二言語",
-    "download_bilingual": "二言語字幕をダウンロード",
-    "format": "形式",
+    "download_bilingual": "バイリンガル字幕をダウンロード",
+    "format": "フォーマット",
     "language": "言語",
-    "select_language": "言語を選択"
+    "select_language": "言語を選択",
+    "count_languages": "{count} 言語"
   },
   "video": {
     "title": "タイトル",
@@ -49,18 +50,102 @@
     "platform": "プラットフォーム",
     "no_info": "動画情報がありません"
   },
+  "url_input": {
+    "placeholder": "動画URLを貼り付け...",
+    "button_analyze": "分析開始",
+    "button_analyzing": "分析中...",
+    "error_empty": "動画URLを入力してください",
+    "error_invalid": "有効なURLを入力してください（http:// または https:// で始まるもの）"
+  },
+  "progress": {
+    "analyzing": "動画を分析中...",
+    "complete": "完了"
+  },
+  "bilingual": {
+    "title": "バイリンガル字幕結合",
+    "first_lang": "第一言語",
+    "second_lang": "第二言語",
+    "download": "バイリンガル字幕をダウンロード"
+  },
   "errors": {
-    "invalid_url": "動画が見つかりません。URLを確認してください",
-    "not_supported": "このプラットフォームはまだ対応していません",
-    "network_error": "ネットワークエラー。後でもう一度お試しください",
-    "server_error": "サーバーエラー。後でもう一度お試しください",
-    "rate_limited": "リクエストが多すぎます。しばらく待ってください",
-    "download_failed": "字幕のダウンロードに失敗しました"
+    "invalid_url": "リクエストされた動画は存在しません。URLをご確認ください",
+    "not_supported": "このプラットフォームには現在対応していません。別の動画リンクをお試しください",
+    "network_error": "ネットワークエラーです。しばらく経ってから再試行してください",
+    "server_error": "サーバーエラーです。しばらく経ってから再試行してください",
+    "rate_limited": "リクエストが多すぎます。しばらくお待ちください",
+    "download_failed": "字幕のダウンロードに失敗しました。別のフォーマットをお試しください",
+    "analyze_failed": "分析に失敗しました",
+    "bilingual_failed": "バイリンガル字幕のダウンロードに失敗しました。両方の言語の字幕が存在することを確認してください"
   },
   "footer": {
     "copyright": "© 2026 mLangSub. All rights reserved.",
     "terms": "利用規約",
     "privacy": "プライバシーポリシー",
-    "contact": "お問い合わせ"
+    "contact": "お問い合わせ",
+    "description": "YouTube、Bilibiliなど50以上の動画プラットフォームから多言語字幕を抽出。SRT、VTT、ASS、TXT、HTML形式に対応。",
+    "supported_platforms": "対応プラットフォーム",
+    "links": "リンク"
+  },
+  "admin": {
+    "title": "管理パネル",
+    "dashboard": "ダッシュボード",
+    "cache_management": "キャッシュ管理",
+    "access_log": "アクセスログ",
+    "total_visits": "総アクセス数",
+    "total_downloads": "総ダウンロード数",
+    "bilingual_count": "バイリンガル字幕",
+    "unique_ips": "ユニークIP",
+    "cache_status": "キャッシュ状態",
+    "cache_entries": "キャッシュエントリ",
+    "total_size": "合計サイズ",
+    "hit_rate": "ヒット率",
+    "refresh": "更新",
+    "clear_expired": "期限切れを削除",
+    "cache_cleared": "キャッシュを削除しました",
+    "clear_cache_failed": "キャッシュの削除に失敗しました",
+    "fetch_error": "データの取得に失敗しました",
+    "network_error": "ネットワークエラー",
+    "trend_7d": "7日間のトレンド",
+    "date": "日付",
+    "visits": "アクセス数",
+    "downloads": "ダウンロード数",
+    "action": "操作",
+    "video_id": "動画ID",
+    "platform_col": "プラットフォーム",
+    "language_col": "言語",
+    "type": "タイプ",
+    "size": "サイズ",
+    "cache_hit": "ヒット",
+    "download_action": "ダウンロード",
+    "bilingual_action": "バイリンガル",
+    "analyze_action": "分析",
+    "login_title": "管理パネルログイン",
+    "username": "ユーザー名",
+    "password": "パスワード",
+    "login": "ログイン",
+    "logging_in": "ログイン中...",
+    "login_failed": "ログイン失敗",
+    "fill_required": "ユーザー名とパスワードを入力してください",
+    "back_home": "ホームに戻る",
+    "logout": "ログアウト",
+    "settings": "設定",
+    "change_password": "パスワード変更",
+    "old_password": "現在のパスワード",
+    "new_password": "新しいパスワード",
+    "password_changed": "パスワードが変更されました",
+    "password_change_failed": "パスワードの変更に失敗しました",
+    "user_not_found": "ユーザーが見つかりません",
+    "wrong_password": "現在のパスワードが正しくありません",
+    "unauthorized": "認証されていません"
+  },
+  "common": {
+    "back_home": "ホームに戻る",
+    "retry": "再試行",
+    "not_found": "ページが見つかりません"
+  },
+  "platform": {
+    "not_found": "ページが見つかりません",
+    "back_home": "ホームに戻る",
+    "faq": "よくある質問"
   }
 }

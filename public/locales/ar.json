@@ -1,0 +1,63 @@
+{
+  "app": { "name": "mLangSub", "tagline": "أداة تحميل الترجمات", "description": "استخراج الترجمات من أكثر من 50 منصة، بما في ذلك يوتيوب وبيليبيلي" },
+  "nav": { "home": "الرئيسية", "supported_platforms": "المنصات المدعومة", "admin": "الإدارة", "language": "اللغة" },
+  "home": {
+    "title": "أداة تحميل ترجمات الفيديو عبر الإنترنت",
+    "subtitle": "استخراج ترجمات متعددة اللغات من يوتيوب وبيليبيلي وفيكي وأكثر من 50 منصة فيديو",
+    "placeholder": "الصق رابط الفيديو...", "analyze": "تحليل", "analyzing": "جارٍ التحليل...",
+    "supported_platforms": "المنصات المدعومة", "how_it_works": "كيف يعمل",
+    "step1_title": "الصق الرابط", "step1_desc": "انسخ رابط الفيديو الذي تريد تحميل ترجماته",
+    "step2_title": "تحليل الفيديو", "step2_desc": "نكتشف الفيديو تلقائياً ونستخرج الترجمات المتاحة",
+    "step3_title": "اختر التنسيق", "step3_desc": "اختر من تنسيقات SRT أو VTT أو TXT أو ASS أو HTML",
+    "step4_title": "تحميل", "step4_desc": "حمّل ملف الترجمة بنقرة واحدة"
+  },
+  "subtitle": {
+    "cc_subtitles": "ترجمات CC", "auto_translated": "ترجمات مترجمة تلقائياً",
+    "no_subtitles": "لم يتم اكتشاف ترجمات لهذا الفيديو", "no_voice": "لم يتم اكتشاف صوت بشري في هذا الفيديو",
+    "download": "تحميل", "bilingual_title": "ترجمات ثنائية اللغة",
+    "first_lang": "اللغة الأولى", "second_lang": "اللغة الثانية",
+    "download_bilingual": "تحميل ثنائي اللغة", "format": "التنسيق", "language": "اللغة",
+    "select_language": "اختر اللغة", "count_languages": "{count} لغات"
+  },
+  "video": { "title": "العنوان", "author": "المؤلف", "duration": "المدة", "upload_date": "تاريخ الرفع", "platform": "المنصة", "no_info": "لا توجد معلومات عن الفيديو" },
+  "url_input": { "placeholder": "الصق رابط الفيديو...", "button_analyze": "تحليل", "button_analyzing": "جارٍ التحليل...", "error_empty": "يرجى إدخال رابط الفيديو", "error_invalid": "يرجى إدخال رابط صحيح (يبدأ بـ http:// أو https://)" },
+  "progress": { "analyzing": "جارٍ تحليل الفيديو...", "complete": "مكتمل" },
+  "bilingual": { "title": "دمج الترجمات ثنائية اللغة", "first_lang": "اللغة الأولى", "second_lang": "اللغة الثانية", "download": "تحميل ترجمات ثنائية اللغة" },
+  "errors": {
+    "invalid_url": "الفيديو المطلوب غير موجود. يرجى التحقق من الرابط",
+    "not_supported": "هذه المنصة غير مدعومة بعد. جرب رابط فيديو آخر",
+    "network_error": "خطأ في الشبكة. يرجى المحاولة لاحقاً",
+    "server_error": "خطأ في الخادم. يرجى المحاولة لاحقاً",
+    "rate_limited": "طلبات كثيرة جداً. يرجى الانتظار قليلاً",
+    "download_failed": "فشل تحميل الترجمة. جرب تنسيقاً آخر",
+    "analyze_failed": "فشل التحليل", "bilingual_failed": "فشل التحميل ثنائي اللغة. تأكد من وجود ترجمات باللغتين"
+  },
+  "footer": {
+    "copyright": "© 2026 mLangSub. جميع الحقوق محفوظة.", "terms": "شروط الاستخدام",
+    "privacy": "سياسة الخصوصية", "contact": "اتصل بنا",
+    "description": "استخراج ترجمات متعددة اللغات من أكثر من 50 منصة فيديو. يدعم تنسيقات SRT وVTT وASS وTXT وHTML.",
+    "supported_platforms": "المنصات المدعومة", "links": "روابط"
+  },
+  "admin": {
+    "title": "لوحة الإدارة", "dashboard": "لوحة المعلومات", "cache_management": "إدارة التخزين المؤقت",
+    "access_log": "سجل الوصول", "total_visits": "إجمالي الزيارات", "total_downloads": "إجمالي التحميلات",
+    "bilingual_count": "ترجمات ثنائية اللغة", "unique_ips": "عناوين IP فريدة", "cache_status": "حالة التخزين المؤقت",
+    "cache_entries": "إدخالات التخزين المؤقت", "total_size": "الحجم الإجمالي", "hit_rate": "معدل الإصابات",
+    "refresh": "تحديث", "clear_expired": "مسح المنتهية", "cache_cleared": "تم مسح التخزين المؤقت",
+    "clear_cache_failed": "فشل مسح التخزين المؤقت", "fetch_error": "فشل جلب البيانات",
+    "network_error": "خطأ في الشبكة", "trend_7d": "اتجاه 7 أيام", "date": "التاريخ",
+    "visits": "زيارات", "downloads": "تحميلات", "action": "إجراء", "video_id": "معرف الفيديو",
+    "platform_col": "المنصة", "language_col": "اللغة", "type": "النوع", "size": "الحجم", "cache_hit": "إصابة",
+    "download_action": "تحميل", "bilingual_action": "ثنائي اللغة", "analyze_action": "تحليل",
+    "login_title": "تسجيل دخول لوحة الإدارة", "username": "اسم المستخدم",
+    "password": "كلمة المرور", "login": "تسجيل الدخول", "logging_in": "جارٍ تسجيل الدخول...",
+    "login_failed": "فشل تسجيل الدخول", "fill_required": "يرجى إدخال اسم المستخدم وكلمة المرور",
+    "back_home": "العودة للرئيسية", "logout": "تسجيل الخروج", "settings": "الإعدادات",
+    "change_password": "تغيير كلمة المرور", "old_password": "كلمة المرور الحالية",
+    "new_password": "كلمة المرور الجديدة", "password_changed": "تم تغيير كلمة المرور بنجاح",
+    "password_change_failed": "فشل تغيير كلمة المرور", "user_not_found": "المستخدم غير موجود",
+    "wrong_password": "كلمة المرور الحالية غير صحيحة", "unauthorized": "غير مصرح"
+  },
+  "common": { "back_home": "العودة للرئيسية", "retry": "حاول مرة أخرى", "not_found": "الصفحة غير موجودة" },
+  "platform": { "not_found": "الصفحة غير موجودة", "back_home": "العودة للرئيسية", "faq": "أسئلة شائعة" }
+}

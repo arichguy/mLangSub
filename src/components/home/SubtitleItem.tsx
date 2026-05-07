@@ -5,6 +5,7 @@ import { Download } from "lucide-react";
 import { cn, getLangFlag } from "@/lib/utils";
 import { FormatSelector } from "./FormatSelector";
 import type { SubtitleTrack, SubtitleFormat } from "@/types/subtitle";
+import { useTranslation } from "@/lib/i18n/useTranslation";
 
 interface SubtitleItemProps {
   track: SubtitleTrack;
@@ -14,6 +15,7 @@ interface SubtitleItemProps {
 
 export function SubtitleItem({ track, onDownload, isLoading }: SubtitleItemProps) {
   const [format, setFormat] = useState<SubtitleFormat>("srt");
+  const { t } = useTranslation();
   const flag = getLangFlag(track.langCode);
 
   return (
@@ -40,7 +42,7 @@ export function SubtitleItem({ track, onDownload, isLoading }: SubtitleItemProps
         )}
       >
         <Download className="h-3.5 w-3.5" />
-        <span className="hidden sm:inline">下载</span>
+        <span className="hidden sm:inline">{t("subtitle.download", "下载")}</span>
       </button>
     </div>
   );

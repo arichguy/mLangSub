@@ -1,0 +1,63 @@
+{
+  "app": { "name": "mLangSub", "tagline": "เครื่องมือดาวน์โหลดซับไตเติ้ล", "description": "ดึงซับไตเติ้ลจากกว่า 50 แพลตฟอร์ม รวมถึง YouTube และ Bilibili" },
+  "nav": { "home": "หน้าแรก", "supported_platforms": "แพลตฟอร์มที่รองรับ", "admin": "ผู้ดูแล", "language": "ภาษา" },
+  "home": {
+    "title": "ดาวน์โหลดซับไตเติ้ลวิดีโอออนไลน์",
+    "subtitle": "ดึงซับไตเติ้ลหลายภาษาจาก YouTube, Bilibili, Viki และกว่า 50 แพลตฟอร์มวิดีโอ",
+    "placeholder": "วาง URL วิดีโอ...", "analyze": "วิเคราะห์", "analyzing": "กำลังวิเคราะห์...",
+    "supported_platforms": "แพลตฟอร์มที่รองรับ", "how_it_works": "วิธีใช้งาน",
+    "step1_title": "วาง URL", "step1_desc": "คัดลอกลิงก์วิดีโอที่คุณต้องการดาวน์โหลดซับไตเติ้ล",
+    "step2_title": "วิเคราะห์วิดีโอ", "step2_desc": "เราตรวจจับวิดีโอโดยอัตโนมัติและดึงซับไตเติ้ลที่มีอยู่",
+    "step3_title": "เลือกรูปแบบ", "step3_desc": "เลือกจากรูปแบบ SRT, VTT, TXT, ASS หรือ HTML",
+    "step4_title": "ดาวน์โหลด", "step4_desc": "ดาวน์โหลดไฟล์ซับไตเติ้ลของคุณในคลิกเดียว"
+  },
+  "subtitle": {
+    "cc_subtitles": "ซับไตเติ้ล CC", "auto_translated": "ซับไตเติ้ลแปลอัตโนมัติ",
+    "no_subtitles": "ไม่พบซับไตเติ้ลสำหรับวิดีโอนี้", "no_voice": "ไม่พบเสียงพูดในวิดีโอนี้",
+    "download": "ดาวน์โหลด", "bilingual_title": "ซับไตเติ้ลสองภาษา",
+    "first_lang": "ภาษาแรก", "second_lang": "ภาษาที่สอง",
+    "download_bilingual": "ดาวน์โหลดสองภาษา", "format": "รูปแบบ", "language": "ภาษา",
+    "select_language": "เลือกภาษา", "count_languages": "{count} ภาษา"
+  },
+  "video": { "title": "ชื่อเรื่อง", "author": "ผู้เขียน", "duration": "ความยาว", "upload_date": "วันที่อัปโหลด", "platform": "แพลตฟอร์ม", "no_info": "ไม่มีข้อมูลวิดีโอ" },
+  "url_input": { "placeholder": "วาง URL วิดีโอ...", "button_analyze": "วิเคราะห์", "button_analyzing": "กำลังวิเคราะห์...", "error_empty": "กรุณาใส่ URL วิดีโอ", "error_invalid": "กรุณาใส่ URL ที่ถูกต้อง (เริ่มต้นด้วย http:// หรือ https://)" },
+  "progress": { "analyzing": "กำลังวิเคราะห์วิดีโอ...", "complete": "เสร็จสิ้น" },
+  "bilingual": { "title": "การรวมซับไตเติ้ลสองภาษา", "first_lang": "ภาษาแรก", "second_lang": "ภาษาที่สอง", "download": "ดาวน์โหลดซับไตเติ้ลสองภาษา" },
+  "errors": {
+    "invalid_url": "ไม่พบวิดีโอที่ร้องขอ โปรดตรวจสอบ URL",
+    "not_supported": "แพลตฟอร์มนี้ยังไม่รองรับ โปรดลองลิงก์วิดีโออื่น",
+    "network_error": "ข้อผิดพลาดเครือข่าย โปรดลองอีกครั้งในภายหลัง",
+    "server_error": "ข้อผิดพลาดเซิร์ฟเวอร์ โปรดลองอีกครั้งในภายหลัง",
+    "rate_limited": "คำขอมากเกินไป โปรดรอสักครู่",
+    "download_failed": "ดาวน์โหลดซับไตเติ้ลล้มเหลว โปรดลองรูปแบบอื่น",
+    "analyze_failed": "การวิเคราะห์ล้มเหลว", "bilingual_failed": "ดาวน์โหลดสองภาษาล้มเหลว โปรดตรวจสอบว่ามีซับไตเติ้ลทั้งสองภาษา"
+  },
+  "footer": {
+    "copyright": "© 2026 mLangSub. สงวนลิขสิทธิ์.", "terms": "เงื่อนไขการใช้งาน",
+    "privacy": "นโยบายความเป็นส่วนตัว", "contact": "ติดต่อเรา",
+    "description": "ดึงซับไตเติ้ลหลายภาษาจากกว่า 50 แพลตฟอร์มวิดีโอ รองรับรูปแบบ SRT, VTT, ASS, TXT, HTML",
+    "supported_platforms": "แพลตฟอร์มที่รองรับ", "links": "ลิงก์"
+  },
+  "admin": {
+    "title": "แผงควบคุมผู้ดูแล", "dashboard": "แดชบอร์ด", "cache_management": "จัดการแคช",
+    "access_log": "บันทึกการเข้าถึง", "total_visits": "การเข้าชมทั้งหมด", "total_downloads": "ดาวน์โหลดทั้งหมด",
+    "bilingual_count": "ซับไตเติ้ลสองภาษา", "unique_ips": "IP ที่ไม่ซ้ำ", "cache_status": "สถานะแคช",
+    "cache_entries": "รายการแคช", "total_size": "ขนาดรวม", "hit_rate": "อัตราการพบ",
+    "refresh": "รีเฟรช", "clear_expired": "ล้างที่หมดอายุ", "cache_cleared": "ล้างแคชแล้ว",
+    "clear_cache_failed": "ล้างแคชล้มเหลว", "fetch_error": "ดึงข้อมูลล้มเหลว",
+    "network_error": "ข้อผิดพลาดเครือข่าย", "trend_7d": "แนวโน้ม 7 วัน", "date": "วันที่",
+    "visits": "การเข้าชม", "downloads": "ดาวน์โหลด", "action": "การดำเนินการ", "video_id": "ID วิดีโอ",
+    "platform_col": "แพลตฟอร์ม", "language_col": "ภาษา", "type": "ประเภท", "size": "ขนาด", "cache_hit": "พบ",
+    "download_action": "ดาวน์โหลด", "bilingual_action": "สองภาษา", "analyze_action": "วิเคราะห์",
+    "login_title": "เข้าสู่ระบบแผงควบคุม", "username": "ชื่อผู้ใช้",
+    "password": "รหัสผ่าน", "login": "เข้าสู่ระบบ", "logging_in": "กำลังเข้าสู่ระบบ...",
+    "login_failed": "เข้าสู่ระบบล้มเหลว", "fill_required": "กรุณาใส่ชื่อผู้ใช้และรหัสผ่าน",
+    "back_home": "กลับหน้าแรก", "logout": "ออกจากระบบ", "settings": "การตั้งค่า",
+    "change_password": "เปลี่ยนรหัสผ่าน", "old_password": "รหัสผ่านปัจจุบัน",
+    "new_password": "รหัสผ่านใหม่", "password_changed": "เปลี่ยนรหัสผ่านสำเร็จ",
+    "password_change_failed": "เปลี่ยนรหัสผ่านล้มเหลว", "user_not_found": "ไม่พบผู้ใช้",
+    "wrong_password": "รหัสผ่านปัจจุบันไม่ถูกต้อง", "unauthorized": "ไม่ได้รับอนุญาต"
+  },
+  "common": { "back_home": "กลับหน้าแรก", "retry": "ลองอีกครั้ง", "not_found": "ไม่พบหน้า" },
+  "platform": { "not_found": "ไม่พบหน้า", "back_home": "กลับหน้าแรก", "faq": "คำถามที่พบบ่อย" }
+}

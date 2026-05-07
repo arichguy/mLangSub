@@ -5,14 +5,11 @@ import { ArrowDownUp, Download } from "lucide-react";
 import { cn, getLangFlag } from "@/lib/utils";
 import type { SubtitleTrack, SubtitleFormat } from "@/types/subtitle";
 import { FormatSelector } from "./FormatSelector";
+import { useTranslation } from "@/lib/i18n/useTranslation";
 
 interface BilingualSelectorProps {
   availableTracks: SubtitleTrack[];
-  onDownloadBilingual: (
-    first: SubtitleTrack,
-    second: SubtitleTrack,
-    format: SubtitleFormat
-  ) => void;
+  onDownloadBilingual: (first: SubtitleTrack, second: SubtitleTrack, format: SubtitleFormat) => void;
   isLoading?: boolean;
 }
 
@@ -21,15 +18,15 @@ export function BilingualSelector({
   onDownloadBilingual,
   isLoading,
 }: BilingualSelectorProps) {
+  const { t } = useTranslation();
   const [firstLang, setFirstLang] = useState<string>("");
   const [secondLang, setSecondLang] = useState<string>("");
   const [format, setFormat] = useState<SubtitleFormat>("srt");
   const [firstOpen, setFirstOpen] = useState(false);
   const [secondOpen, setSecondOpen] = useState(false);
 
-  const firstTrack = availableTracks.find((t) => t.langCode === firstLang);
-  const secondTrack = availableTracks.find((t) => t.langCode === secondLang);
-
+  const firstTrack = availableTracks.find((tr) => tr.langCode === firstLang);
+  const secondTrack = availableTracks.find((tr) => tr.langCode === secondLang);
   const canDownload = firstTrack && secondTrack;
 
   if (availableTracks.length < 2) return null;
@@ -37,7 +34,7 @@ export function BilingualSelector({
   return (
     <section className="rounded-2xl border border-warm-border bg-white p-5 shadow-subtle">
       <h3 className="text-sm font-semibold text-warm-text uppercase tracking-wide mb-4">
-        双语字幕合并
+        {t("bilingual.title", "双语字幕合并")}
       </h3>
 
       <div className="flex flex-col sm:flex-row items-center gap-3 mb-4">
@@ -53,28 +50,25 @@ export function BilingualSelector({
                 <span>{firstTrack.langName}</span>
               </>
             ) : (
-              <span className="text-warm-muted">第一语言</span>
+              <span className="text-warm-muted">{t("bilingual.first_lang", "第一语言")}</span>
             )}
           </button>
           {firstOpen && (
             <>
               <div className="fixed inset-0 z-10" onClick={() => setFirstOpen(false)} />
               <div className="absolute left-0 top-full z-20 mt-1 w-full max-h-48 overflow-auto rounded-lg border border-warm-border bg-white py-1 shadow-card">
-                {availableTracks.map((t) => (
+                {availableTracks.map((tr) => (
                   <button
-                    key={t.langCode}
-                    onClick={() => {
-                      setFirstLang(t.langCode);
-                      setFirstOpen(false);
-                    }}
+                    key={tr.langCode}
+                    onClick={() => { setFirstLang(tr.langCode); setFirstOpen(false); }}
                     className={cn(
                       "flex w-full items-center gap-2 px-3 py-2 text-sm hover:bg-warm-accent",
-                      firstLang === t.langCode ? "text-warm-orange font-medium" : "text-warm-text"
+                      firstLang === tr.langCode ? "text-warm-orange font-medium" : "text-warm-text"
                     )}
                   >
-                    <span>{getLangFlag(t.langCode)}</span>
-                    <span>{t.langName}</span>
-                    <span className="text-xs text-warm-muted">({t.langCode})</span>
+                    <span>{getLangFlag(tr.langCode)}</span>
+                    <span>{tr.langName}</span>
+                    <span className="text-xs text-warm-muted">({tr.langCode})</span>
                   </button>
                 ))}
               </div>
@@ -96,28 +90,25 @@ export function BilingualSelector({
                 <span>{secondTrack.langName}</span>
               </>
             ) : (
-              <span className="text-warm-muted">第二语言</span>
+              <span className="text-warm-muted">{t("bilingual.second_lang", "第二语言")}</span>
             )}
           </button>
           {secondOpen && (
             <>
               <div className="fixed inset-0 z-10" onClick={() => setSecondOpen(false)} />
               <div className="absolute left-0 top-full z-20 mt-1 w-full max-h-48 overflow-auto rounded-lg border border-warm-border bg-white py-1 shadow-card">
-                {availableTracks.map((t) => (
+                {availableTracks.map((tr) => (
                   <button
-                    key={t.langCode}
-                    onClick={() => {
-                      setSecondLang(t.langCode);
-                      setSecondOpen(false);
-                    }}
+                    key={tr.langCode}
+                    onClick={() => { setSecondLang(tr.langCode); setSecondOpen(false); }}
                     className={cn(
                       "flex w-full items-center gap-2 px-3 py-2 text-sm hover:bg-warm-accent",
-                      secondLang === t.langCode ? "text-warm-orange font-medium" : "text-warm-text"
+                      secondLang === tr.langCode ? "text-warm-orange font-medium" : "text-warm-text"
                     )}
                   >
-                    <span>{getLangFlag(t.langCode)}</span>
-                    <span>{t.langName}</span>
-                    <span className="text-xs text-warm-muted">({t.langCode})</span>
+                    <span>{getLangFlag(tr.langCode)}</span>
+                    <span>{tr.langName}</span>
+                    <span className="text-xs text-warm-muted">({tr.langCode})</span>
                   </button>
                 ))}
               </div>
@@ -130,9 +121,7 @@ export function BilingualSelector({
         <FormatSelector value={format} onChange={setFormat} />
         <button
           onClick={() => {
-            if (firstTrack && secondTrack) {
-              onDownloadBilingual(firstTrack, secondTrack, format);
-            }
+            if (firstTrack && secondTrack) onDownloadBilingual(firstTrack, secondTrack, format);
           }}
           disabled={!canDownload || isLoading}
           className={cn(
@@ -143,7 +132,7 @@ export function BilingualSelector({
           )}
         >
           <Download className="h-4 w-4" />
-          下载双语字幕
+          {t("bilingual.download", "下载双语字幕")}
         </button>
       </div>
     </section>

@@ -1,0 +1,63 @@
+{
+  "app": { "name": "mLangSub", "tagline": "Інструмент Субтитрів", "description": "Витягуйте субтитри з понад 50 платформ, включаючи YouTube і Bilibili" },
+  "nav": { "home": "Головна", "supported_platforms": "Платформи", "admin": "Адмін", "language": "Мова" },
+  "home": {
+    "title": "Онлайн Завантажувач Субтитрів",
+    "subtitle": "Витягуйте багатомовні субтитри з YouTube, Bilibili, Viki та понад 50 відеоплатформ",
+    "placeholder": "Вставте URL відео...", "analyze": "Аналізувати", "analyzing": "Аналіз...",
+    "supported_platforms": "Підтримувані Платформи", "how_it_works": "Як Це Працює",
+    "step1_title": "Вставте URL", "step1_desc": "Скопіюйте посилання на відео, з якого хочете завантажити субтитри",
+    "step2_title": "Аналіз Відео", "step2_desc": "Ми автоматично визначаємо відео та витягуємо доступні субтитри",
+    "step3_title": "Виберіть Формат", "step3_desc": "Виберіть із форматів SRT, VTT, TXT, ASS або HTML",
+    "step4_title": "Завантажити", "step4_desc": "Завантажте файл субтитрів одним клацанням"
+  },
+  "subtitle": {
+    "cc_subtitles": "CC Субтитри", "auto_translated": "Автоматично Перекладені Субтитри",
+    "no_subtitles": "Субтитри для цього відео не виявлено", "no_voice": "Голосовий звук у цьому відео не виявлено",
+    "download": "Завантажити", "bilingual_title": "Двомовні Субтитри",
+    "first_lang": "Перша Мова", "second_lang": "Друга Мова",
+    "download_bilingual": "Завантажити Двомовні", "format": "Формат", "language": "Мова",
+    "select_language": "Вибрати Мову", "count_languages": "{count} мов"
+  },
+  "video": { "title": "Назва", "author": "Автор", "duration": "Тривалість", "upload_date": "Дата Завантаження", "platform": "Платформа", "no_info": "Немає інформації про відео" },
+  "url_input": { "placeholder": "Вставте URL відео...", "button_analyze": "Аналізувати", "button_analyzing": "Аналіз...", "error_empty": "Будь ласка, введіть URL відео", "error_invalid": "Будь ласка, введіть дійсний URL (починається з http:// або https://)" },
+  "progress": { "analyzing": "Аналіз відео...", "complete": "Завершено" },
+  "bilingual": { "title": "Об'єднання Двомовних Субтитрів", "first_lang": "Перша Мова", "second_lang": "Друга Мова", "download": "Завантажити Двомовні Субтитри" },
+  "errors": {
+    "invalid_url": "Запитане відео не існує. Перевірте URL",
+    "not_supported": "Ця платформа ще не підтримується. Спробуйте інше посилання",
+    "network_error": "Помилка мережі. Будь ласка, спробуйте пізніше",
+    "server_error": "Помилка сервера. Будь ласка, спробуйте пізніше",
+    "rate_limited": "Забагато запитів. Будь ласка, зачекайте",
+    "download_failed": "Не вдалося завантажити субтитри. Спробуйте інший формат",
+    "analyze_failed": "Помилка аналізу", "bilingual_failed": "Помилка завантаження двомовних субтитрів. Переконайтеся, що субтитри доступні обома мовами"
+  },
+  "footer": {
+    "copyright": "© 2026 mLangSub. Усі права захищені.", "terms": "Умови Використання",
+    "privacy": "Політика Конфіденційності", "contact": "Контакти",
+    "description": "Витягуйте багатомовні субтитри з понад 50 відеоплатформ. Підтримує формати SRT, VTT, ASS, TXT, HTML.",
+    "supported_platforms": "Підтримувані Платформи", "links": "Посилання"
+  },
+  "admin": {
+    "title": "Панель Адміністратора", "dashboard": "Дашборд", "cache_management": "Керування Кешем",
+    "access_log": "Журнал Доступу", "total_visits": "Всього Відвідувань", "total_downloads": "Всього Завантажень",
+    "bilingual_count": "Двомовні Субтитри", "unique_ips": "Унікальні IP", "cache_status": "Стан Кешу",
+    "cache_entries": "Записів у Кеші", "total_size": "Загальний Розмір", "hit_rate": "Відсоток Влучань",
+    "refresh": "Оновити", "clear_expired": "Очистити Застарілі", "cache_cleared": "Кеш очищено",
+    "clear_cache_failed": "Помилка очищення кешу", "fetch_error": "Помилка отримання даних",
+    "network_error": "Помилка мережі", "trend_7d": "Тенденція за 7 Днів", "date": "Дата",
+    "visits": "Відвідування", "downloads": "Завантаження", "action": "Дія", "video_id": "ID Відео",
+    "platform_col": "Платформа", "language_col": "Мова", "type": "Тип", "size": "Розмір", "cache_hit": "Влучання",
+    "download_action": "Завантажити", "bilingual_action": "Двомовний", "analyze_action": "Аналіз",
+    "login_title": "Вхід до Панелі Адміністратора", "username": "Ім'я Користувача",
+    "password": "Пароль", "login": "Увійти", "logging_in": "Вхід...",
+    "login_failed": "Помилка входу", "fill_required": "Будь ласка, введіть ім'я користувача та пароль",
+    "back_home": "На Головну", "logout": "Вийти", "settings": "Налаштування",
+    "change_password": "Змінити Пароль", "old_password": "Поточний Пароль",
+    "new_password": "Новий Пароль", "password_changed": "Пароль успішно змінено",
+    "password_change_failed": "Помилка зміни пароля", "user_not_found": "Користувача не знайдено",
+    "wrong_password": "Неправильний поточний пароль", "unauthorized": "Не авторизовано"
+  },
+  "common": { "back_home": "На Головну", "retry": "Повторити", "not_found": "Сторінку Не Знайдено" },
+  "platform": { "not_found": "Сторінку Не Знайдено", "back_home": "На Головну", "faq": "Часті Запитання" }
+}

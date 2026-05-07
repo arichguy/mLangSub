@@ -1,11 +1,15 @@
 "use client";
 
+import { useTranslation } from "@/lib/i18n/useTranslation";
+
 interface ProgressBarProps {
   isLoading: boolean;
   status?: string;
 }
 
 export function ProgressBar({ isLoading, status }: ProgressBarProps) {
+  const { t } = useTranslation();
+
   if (!isLoading) return null;
 
   return (
@@ -16,7 +20,7 @@ export function ProgressBar({ isLoading, status }: ProgressBarProps) {
         <div className="loader-dot" />
       </div>
       <span className="text-sm text-warm-muted animate-pulse">
-        {status || "正在分析视频..."}
+        {status || t("progress.analyzing", "正在分析视频...")}
       </span>
     </div>
   );

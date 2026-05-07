@@ -1,0 +1,63 @@
+{
+  "app": { "name": "mLangSub", "tagline": "सबटाइटल डाउनलोडर", "description": "YouTube और Bilibili सहित 50+ प्लेटफ़ॉर्म से सबटाइटल निकालें" },
+  "nav": { "home": "होम", "supported_platforms": "समर्थित प्लेटफ़ॉर्म", "admin": "एडमिन", "language": "भाषा" },
+  "home": {
+    "title": "ऑनलाइन वीडियो सबटाइटल डाउनलोडर",
+    "subtitle": "YouTube, Bilibili, Viki और 50+ वीडियो प्लेटफ़ॉर्म से बहुभाषी सबटाइटल निकालें",
+    "placeholder": "वीडियो URL पेस्ट करें...", "analyze": "विश्लेषण करें", "analyzing": "विश्लेषण हो रहा है...",
+    "supported_platforms": "समर्थित प्लेटफ़ॉर्म", "how_it_works": "कैसे काम करता है",
+    "step1_title": "URL पेस्ट करें", "step1_desc": "जिस वीडियो के सबटाइटल डाउनलोड करने हैं उसका लिंक कॉपी करें",
+    "step2_title": "वीडियो का विश्लेषण करें", "step2_desc": "हम स्वचालित रूप से वीडियो का पता लगाकर उपलब्ध सबटाइटल निकालते हैं",
+    "step3_title": "फ़ॉर्मेट चुनें", "step3_desc": "SRT, VTT, TXT, ASS या HTML फ़ॉर्मेट में से चुनें",
+    "step4_title": "डाउनलोड करें", "step4_desc": "एक क्लिक में अपनी सबटाइटल फ़ाइल डाउनलोड करें"
+  },
+  "subtitle": {
+    "cc_subtitles": "CC सबटाइटल", "auto_translated": "स्वचालित रूप से अनुवादित सबटाइटल",
+    "no_subtitles": "इस वीडियो के लिए कोई सबटाइटल नहीं मिला", "no_voice": "इस वीडियो में कोई आवाज़ नहीं पाई गई",
+    "download": "डाउनलोड", "bilingual_title": "द्विभाषी सबटाइटल",
+    "first_lang": "पहली भाषा", "second_lang": "दूसरी भाषा",
+    "download_bilingual": "द्विभाषी डाउनलोड करें", "format": "फ़ॉर्मेट", "language": "भाषा",
+    "select_language": "भाषा चुनें", "count_languages": "{count} भाषाएँ"
+  },
+  "video": { "title": "शीर्षक", "author": "लेखक", "duration": "अवधि", "upload_date": "अपलोड तिथि", "platform": "प्लेटफ़ॉर्म", "no_info": "कोई वीडियो जानकारी उपलब्ध नहीं" },
+  "url_input": { "placeholder": "वीडियो URL पेस्ट करें...", "button_analyze": "विश्लेषण करें", "button_analyzing": "विश्लेषण हो रहा है...", "error_empty": "कृपया वीडियो URL दर्ज करें", "error_invalid": "कृपया एक मान्य URL दर्ज करें (http:// या https:// से शुरू)" },
+  "progress": { "analyzing": "वीडियो का विश्लेषण हो रहा है...", "complete": "पूर्ण" },
+  "bilingual": { "title": "द्विभाषी सबटाइटल विलय", "first_lang": "पहली भाषा", "second_lang": "दूसरी भाषा", "download": "द्विभाषी सबटाइटल डाउनलोड करें" },
+  "errors": {
+    "invalid_url": "अनुरोधित वीडियो मौजूद नहीं है। कृपया URL जाँचें",
+    "not_supported": "यह प्लेटफ़ॉर्म अभी समर्थित नहीं है। कोई अन्य वीडियो लिंक आज़माएँ",
+    "network_error": "नेटवर्क त्रुटि। कृपया बाद में पुनः प्रयास करें",
+    "server_error": "सर्वर त्रुटि। कृपया बाद में पुनः प्रयास करें",
+    "rate_limited": "बहुत अधिक अनुरोध। कृपया थोड़ी देर प्रतीक्षा करें",
+    "download_failed": "सबटाइटल डाउनलोड विफल। कोई अन्य फ़ॉर्मेट आज़माएँ",
+    "analyze_failed": "विश्लेषण विफल", "bilingual_failed": "द्विभाषी डाउनलोड विफल। सुनिश्चित करें कि दोनों भाषाओं में सबटाइटल मौजूद हैं"
+  },
+  "footer": {
+    "copyright": "© 2026 mLangSub. सर्वाधिकार सुरक्षित।", "terms": "उपयोग की शर्तें",
+    "privacy": "गोपनीयता नीति", "contact": "संपर्क करें",
+    "description": "50+ वीडियो प्लेटफ़ॉर्म से बहुभाषी सबटाइटल निकालें। SRT, VTT, ASS, TXT, HTML फ़ॉर्मेट समर्थित।",
+    "supported_platforms": "समर्थित प्लेटफ़ॉर्म", "links": "लिंक"
+  },
+  "admin": {
+    "title": "एडमिन पैनल", "dashboard": "डैशबोर्ड", "cache_management": "कैश प्रबंधन",
+    "access_log": "एक्सेस लॉग", "total_visits": "कुल विज़िट", "total_downloads": "कुल डाउनलोड",
+    "bilingual_count": "द्विभाषी सबटाइटल", "unique_ips": "अद्वितीय IP", "cache_status": "कैश स्थिति",
+    "cache_entries": "कैश प्रविष्टियाँ", "total_size": "कुल आकार", "hit_rate": "हिट दर",
+    "refresh": "रीफ़्रेश", "clear_expired": "समाप्त हटाएँ", "cache_cleared": "कैश साफ़ किया गया",
+    "clear_cache_failed": "कैश साफ़ करने में विफल", "fetch_error": "डेटा प्राप्त करने में विफल",
+    "network_error": "नेटवर्क त्रुटि", "trend_7d": "7-दिन का रुझान", "date": "तारीख",
+    "visits": "विज़िट", "downloads": "डाउनलोड", "action": "कार्रवाई", "video_id": "वीडियो ID",
+    "platform_col": "प्लेटफ़ॉर्म", "language_col": "भाषा", "type": "प्रकार", "size": "आकार", "cache_hit": "हिट",
+    "download_action": "डाउनलोड", "bilingual_action": "द्विभाषी", "analyze_action": "विश्लेषण",
+    "login_title": "एडमिन पैनल लॉगिन", "username": "उपयोगकर्ता नाम",
+    "password": "पासवर्ड", "login": "लॉगिन", "logging_in": "लॉगिन हो रहा है...",
+    "login_failed": "लॉगिन विफल", "fill_required": "कृपया उपयोगकर्ता नाम और पासवर्ड दर्ज करें",
+    "back_home": "होम पर वापस जाएँ", "logout": "लॉगआउट", "settings": "सेटिंग्स",
+    "change_password": "पासवर्ड बदलें", "old_password": "वर्तमान पासवर्ड",
+    "new_password": "नया पासवर्ड", "password_changed": "पासवर्ड सफलतापूर्वक बदला गया",
+    "password_change_failed": "पासवर्ड बदलने में विफल", "user_not_found": "उपयोगकर्ता नहीं मिला",
+    "wrong_password": "वर्तमान पासवर्ड गलत है", "unauthorized": "अनधिकृत"
+  },
+  "common": { "back_home": "होम पर वापस जाएँ", "retry": "पुनः प्रयास करें", "not_found": "पेज नहीं मिला" },
+  "platform": { "not_found": "पेज नहीं मिला", "back_home": "होम पर वापस जाएँ", "faq": "सामान्य प्रश्न" }
+}

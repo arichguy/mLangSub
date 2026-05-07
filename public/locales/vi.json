@@ -1,0 +1,63 @@
+{
+  "app": { "name": "mLangSub", "tagline": "Công Cụ Tải Phụ Đề", "description": "Trích xuất phụ đề từ hơn 50 nền tảng bao gồm YouTube và Bilibili" },
+  "nav": { "home": "Trang Chủ", "supported_platforms": "Nền Tảng Hỗ Trợ", "admin": "Quản Trị", "language": "Ngôn Ngữ" },
+  "home": {
+    "title": "Tải Phụ Đề Video Trực Tuyến",
+    "subtitle": "Trích xuất phụ đề đa ngôn ngữ từ YouTube, Bilibili, Viki và hơn 50 nền tảng video",
+    "placeholder": "Dán URL video...", "analyze": "Phân Tích", "analyzing": "Đang phân tích...",
+    "supported_platforms": "Nền Tảng Hỗ Trợ", "how_it_works": "Cách Hoạt Động",
+    "step1_title": "Dán URL", "step1_desc": "Sao chép liên kết video bạn muốn tải phụ đề",
+    "step2_title": "Phân Tích Video", "step2_desc": "Chúng tôi tự động phát hiện video và trích xuất phụ đề có sẵn",
+    "step3_title": "Chọn Định Dạng", "step3_desc": "Chọn từ các định dạng SRT, VTT, TXT, ASS hoặc HTML",
+    "step4_title": "Tải Xuống", "step4_desc": "Tải tệp phụ đề của bạn chỉ với một cú nhấp chuột"
+  },
+  "subtitle": {
+    "cc_subtitles": "Phụ Đề CC", "auto_translated": "Phụ Đề Dịch Tự Động",
+    "no_subtitles": "Không phát hiện phụ đề cho video này", "no_voice": "Không phát hiện giọng nói trong video này",
+    "download": "Tải Xuống", "bilingual_title": "Phụ Đề Song Ngữ",
+    "first_lang": "Ngôn Ngữ Thứ Nhất", "second_lang": "Ngôn Ngữ Thứ Hai",
+    "download_bilingual": "Tải Phụ Đề Song Ngữ", "format": "Định Dạng", "language": "Ngôn Ngữ",
+    "select_language": "Chọn Ngôn Ngữ", "count_languages": "{count} ngôn ngữ"
+  },
+  "video": { "title": "Tiêu Đề", "author": "Tác Giả", "duration": "Thời Lượng", "upload_date": "Ngày Tải Lên", "platform": "Nền Tảng", "no_info": "Không có thông tin video" },
+  "url_input": { "placeholder": "Dán URL video...", "button_analyze": "Phân Tích", "button_analyzing": "Đang phân tích...", "error_empty": "Vui lòng nhập URL video", "error_invalid": "Vui lòng nhập URL hợp lệ (bắt đầu bằng http:// hoặc https://)" },
+  "progress": { "analyzing": "Đang phân tích video...", "complete": "Hoàn Thành" },
+  "bilingual": { "title": "Ghép Phụ Đề Song Ngữ", "first_lang": "Ngôn Ngữ Thứ Nhất", "second_lang": "Ngôn Ngữ Thứ Hai", "download": "Tải Phụ Đề Song Ngữ" },
+  "errors": {
+    "invalid_url": "Video yêu cầu không tồn tại. Vui lòng kiểm tra URL",
+    "not_supported": "Nền tảng này chưa được hỗ trợ. Vui lòng thử liên kết video khác",
+    "network_error": "Lỗi mạng. Vui lòng thử lại sau",
+    "server_error": "Lỗi máy chủ. Vui lòng thử lại sau",
+    "rate_limited": "Quá nhiều yêu cầu. Vui lòng đợi một lát",
+    "download_failed": "Tải phụ đề thất bại. Vui lòng thử định dạng khác",
+    "analyze_failed": "Phân tích thất bại", "bilingual_failed": "Tải phụ đề song ngữ thất bại. Đảm bảo phụ đề tồn tại ở cả hai ngôn ngữ"
+  },
+  "footer": {
+    "copyright": "© 2026 mLangSub. Đã đăng ký bản quyền.", "terms": "Điều Khoản Sử Dụng",
+    "privacy": "Chính Sách Bảo Mật", "contact": "Liên Hệ",
+    "description": "Trích xuất phụ đề đa ngôn ngữ từ hơn 50 nền tảng video. Hỗ trợ định dạng SRT, VTT, ASS, TXT, HTML.",
+    "supported_platforms": "Nền Tảng Hỗ Trợ", "links": "Liên Kết"
+  },
+  "admin": {
+    "title": "Bảng Quản Trị", "dashboard": "Bảng Điều Khiển", "cache_management": "Quản Lý Bộ Nhớ Đệm",
+    "access_log": "Nhật Ký Truy Cập", "total_visits": "Tổng Lượt Truy Cập", "total_downloads": "Tổng Lượt Tải",
+    "bilingual_count": "Phụ Đề Song Ngữ", "unique_ips": "IP Duy Nhất", "cache_status": "Trạng Thái Bộ Nhớ Đệm",
+    "cache_entries": "Mục Bộ Nhớ Đệm", "total_size": "Tổng Kích Thước", "hit_rate": "Tỷ Lệ Truy Cập",
+    "refresh": "Làm Mới", "clear_expired": "Xóa Hết Hạn", "cache_cleared": "Đã xóa bộ nhớ đệm",
+    "clear_cache_failed": "Xóa bộ nhớ đệm thất bại", "fetch_error": "Lấy dữ liệu thất bại",
+    "network_error": "Lỗi mạng", "trend_7d": "Xu Hướng 7 Ngày", "date": "Ngày",
+    "visits": "Lượt Truy Cập", "downloads": "Lượt Tải", "action": "Hành Động", "video_id": "ID Video",
+    "platform_col": "Nền Tảng", "language_col": "Ngôn Ngữ", "type": "Loại", "size": "Kích Thước", "cache_hit": "Truy Cập",
+    "download_action": "Tải Xuống", "bilingual_action": "Song Ngữ", "analyze_action": "Phân Tích",
+    "login_title": "Đăng Nhập Bảng Quản Trị", "username": "Tên Người Dùng",
+    "password": "Mật Khẩu", "login": "Đăng Nhập", "logging_in": "Đang đăng nhập...",
+    "login_failed": "Đăng nhập thất bại", "fill_required": "Vui lòng nhập tên người dùng và mật khẩu",
+    "back_home": "Về Trang Chủ", "logout": "Đăng Xuất", "settings": "Cài Đặt",
+    "change_password": "Đổi Mật Khẩu", "old_password": "Mật Khẩu Hiện Tại",
+    "new_password": "Mật Khẩu Mới", "password_changed": "Đổi mật khẩu thành công",
+    "password_change_failed": "Đổi mật khẩu thất bại", "user_not_found": "Không tìm thấy người dùng",
+    "wrong_password": "Mật khẩu hiện tại không đúng", "unauthorized": "Không được phép"
+  },
+  "common": { "back_home": "Về Trang Chủ", "retry": "Thử Lại", "not_found": "Không Tìm Thấy Trang" },
+  "platform": { "not_found": "Không Tìm Thấy Trang", "back_home": "Về Trang Chủ", "faq": "Câu Hỏi Thường Gặp" }
+}

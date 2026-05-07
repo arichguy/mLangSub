@@ -2,36 +2,36 @@
   "app": {
     "name": "mLangSub",
     "tagline": "Descargador de Subtítulos",
-    "description": "Extrae subtítulos de más de 50 plataformas incluyendo YouTube y Bilibili"
+    "description": "Extrae subtítulos de más de 50 plataformas, incluyendo YouTube y Bilibili"
   },
   "nav": {
     "home": "Inicio",
-    "supported_platforms": "Plataformas Soportadas",
+    "supported_platforms": "Plataformas Compatibles",
     "admin": "Admin",
     "language": "Idioma"
   },
   "home": {
-    "title": "Descargador de Subtítulos en Línea",
-    "subtitle": "Extrae subtítulos multilingües de YouTube, Bilibili, Viki y más de 50 plataformas",
-    "placeholder": "Pega la URL del video...",
+    "title": "Descargador de Subtítulos de Video en Línea",
+    "subtitle": "Extrae subtítulos multilingües de YouTube, Bilibili, Viki y más de 50 plataformas de video",
+    "placeholder": "Pega el enlace del video...",
     "analyze": "Analizar",
     "analyzing": "Analizando...",
-    "supported_platforms": "Plataformas Soportadas",
+    "supported_platforms": "Plataformas Compatibles",
     "how_it_works": "Cómo Funciona",
-    "step1_title": "Pega la URL",
+    "step1_title": "Pega el Enlace",
     "step1_desc": "Copia el enlace del video del que quieres descargar subtítulos",
-    "step2_title": "Analiza el Video",
+    "step2_title": "Analizar Video",
     "step2_desc": "Detectamos automáticamente el video y extraemos los subtítulos disponibles",
-    "step3_title": "Elige el Formato",
+    "step3_title": "Elegir Formato",
     "step3_desc": "Selecciona entre SRT, VTT, TXT, ASS o HTML",
     "step4_title": "Descargar",
     "step4_desc": "Descarga tu archivo de subtítulos con un solo clic"
   },
   "subtitle": {
     "cc_subtitles": "Subtítulos CC",
-    "auto_translated": "Subtítulos Traducidos",
-    "no_subtitles": "No se detectaron subtítulos en este video",
-    "no_voice": "No se detectó voz en este video",
+    "auto_translated": "Subtítulos Traducidos Automáticamente",
+    "no_subtitles": "No se detectaron subtítulos para este video",
+    "no_voice": "No se detectó audio de voz en este video",
     "download": "Descargar",
     "bilingual_title": "Subtítulos Bilingües",
     "first_lang": "Primer Idioma",
@@ -39,7 +39,8 @@
     "download_bilingual": "Descargar Bilingüe",
     "format": "Formato",
     "language": "Idioma",
-    "select_language": "Seleccionar Idioma"
+    "select_language": "Seleccionar Idioma",
+    "count_languages": "{count} idiomas"
   },
   "video": {
     "title": "Título",
@@ -49,18 +50,102 @@
     "platform": "Plataforma",
     "no_info": "Sin información del video"
   },
+  "url_input": {
+    "placeholder": "Pega el enlace del video...",
+    "button_analyze": "Analizar",
+    "button_analyzing": "Analizando...",
+    "error_empty": "Por favor, introduce un enlace de video",
+    "error_invalid": "Por favor, introduce una URL válida (que comience con http:// o https://)"
+  },
+  "progress": {
+    "analyzing": "Analizando video...",
+    "complete": "Completado"
+  },
+  "bilingual": {
+    "title": "Combinador de Subtítulos Bilingües",
+    "first_lang": "Primer Idioma",
+    "second_lang": "Segundo Idioma",
+    "download": "Descargar Subtítulos Bilingües"
+  },
   "errors": {
     "invalid_url": "El video solicitado no existe. Verifica la URL",
-    "not_supported": "Esta plataforma aún no es compatible",
+    "not_supported": "Esta plataforma aún no es compatible. Prueba con otro enlace de video",
     "network_error": "Error de red. Inténtalo de nuevo más tarde",
     "server_error": "Error del servidor. Inténtalo de nuevo más tarde",
     "rate_limited": "Demasiadas solicitudes. Espera un momento",
-    "download_failed": "Falló la descarga de subtítulos"
+    "download_failed": "Falló la descarga de subtítulos. Prueba con otro formato",
+    "analyze_failed": "Falló el análisis",
+    "bilingual_failed": "Falló la descarga de subtítulos bilingües. Asegúrate de que existan subtítulos en ambos idiomas"
   },
   "footer": {
     "copyright": "© 2026 mLangSub. Todos los derechos reservados.",
     "terms": "Términos de Uso",
     "privacy": "Política de Privacidad",
-    "contact": "Contacto"
+    "contact": "Contacto",
+    "description": "Extrae subtítulos multilingües de más de 50 plataformas de video, incluyendo YouTube y Bilibili. Compatible con formatos SRT, VTT, ASS, TXT, HTML.",
+    "supported_platforms": "Plataformas Compatibles",
+    "links": "Enlaces"
+  },
+  "admin": {
+    "title": "Panel de Administración",
+    "dashboard": "Panel",
+    "cache_management": "Gestión de Caché",
+    "access_log": "Registro de Acceso",
+    "total_visits": "Visitas Totales",
+    "total_downloads": "Descargas Totales",
+    "bilingual_count": "Subtítulos Bilingües",
+    "unique_ips": "IPs Únicas",
+    "cache_status": "Estado de Caché",
+    "cache_entries": "Entradas de Caché",
+    "total_size": "Tamaño Total",
+    "hit_rate": "Tasa de Aciertos",
+    "refresh": "Actualizar",
+    "clear_expired": "Limpiar Expirados",
+    "cache_cleared": "Caché limpiada",
+    "clear_cache_failed": "Error al limpiar caché",
+    "fetch_error": "Error al obtener datos",
+    "network_error": "Error de red",
+    "trend_7d": "Tendencia de 7 Días",
+    "date": "Fecha",
+    "visits": "Visitas",
+    "downloads": "Descargas",
+    "action": "Acción",
+    "video_id": "ID de Video",
+    "platform_col": "Plataforma",
+    "language_col": "Idioma",
+    "type": "Tipo",
+    "size": "Tamaño",
+    "cache_hit": "Acierto",
+    "download_action": "Descargar",
+    "bilingual_action": "Bilingüe",
+    "analyze_action": "Analizar",
+    "login_title": "Inicio de Sesión del Panel de Administración",
+    "username": "Usuario",
+    "password": "Contraseña",
+    "login": "Iniciar Sesión",
+    "logging_in": "Iniciando sesión...",
+    "login_failed": "Inicio de sesión fallido",
+    "fill_required": "Por favor, introduce usuario y contraseña",
+    "back_home": "Volver al Inicio",
+    "logout": "Cerrar Sesión",
+    "settings": "Configuración",
+    "change_password": "Cambiar Contraseña",
+    "old_password": "Contraseña Actual",
+    "new_password": "Nueva Contraseña",
+    "password_changed": "Contraseña cambiada exitosamente",
+    "password_change_failed": "Error al cambiar contraseña",
+    "user_not_found": "Usuario no encontrado",
+    "wrong_password": "Contraseña actual incorrecta",
+    "unauthorized": "No autorizado"
+  },
+  "common": {
+    "back_home": "Volver al Inicio",
+    "retry": "Reintentar",
+    "not_found": "Página No Encontrada"
+  },
+  "platform": {
+    "not_found": "Página No Encontrada",
+    "back_home": "Volver al Inicio",
+    "faq": "Preguntas Frecuentes"
   }
 }

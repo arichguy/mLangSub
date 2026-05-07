@@ -1,0 +1,63 @@
+{
+  "app": { "name": "mLangSub", "tagline": "Ondertiteling Downloader", "description": "Extraheer ondertitels van 50+ platforms, waaronder YouTube en Bilibili" },
+  "nav": { "home": "Home", "supported_platforms": "Platforms", "admin": "Beheer", "language": "Taal" },
+  "home": {
+    "title": "Online Video Ondertiteling Downloader",
+    "subtitle": "Extraheer meertalige ondertitels van YouTube, Bilibili, Viki en 50+ videoplatforms",
+    "placeholder": "Video-URL plakken...", "analyze": "Analyseren", "analyzing": "Analyseren...",
+    "supported_platforms": "Ondersteunde Platforms", "how_it_works": "Hoe Het Werkt",
+    "step1_title": "URL Plakken", "step1_desc": "Kopieer de link van de video waarvan je ondertitels wilt downloaden",
+    "step2_title": "Video Analyseren", "step2_desc": "We detecteren de video automatisch en extraheren beschikbare ondertitels",
+    "step3_title": "Formaat Kiezen", "step3_desc": "Kies uit SRT, VTT, TXT, ASS of HTML formaten",
+    "step4_title": "Downloaden", "step4_desc": "Download je ondertitelingsbestand met één klik"
+  },
+  "subtitle": {
+    "cc_subtitles": "CC Ondertitels", "auto_translated": "Automatisch Vertaalde Ondertitels",
+    "no_subtitles": "Geen ondertitels gedetecteerd voor deze video", "no_voice": "Geen stemgeluid gedetecteerd in deze video",
+    "download": "Downloaden", "bilingual_title": "Tweetalige Ondertitels",
+    "first_lang": "Eerste Taal", "second_lang": "Tweede Taal",
+    "download_bilingual": "Tweetalig Downloaden", "format": "Formaat", "language": "Taal",
+    "select_language": "Taal Selecteren", "count_languages": "{count} talen"
+  },
+  "video": { "title": "Titel", "author": "Auteur", "duration": "Duur", "upload_date": "Uploaddatum", "platform": "Platform", "no_info": "Geen video-informatie" },
+  "url_input": { "placeholder": "Video-URL plakken...", "button_analyze": "Analyseren", "button_analyzing": "Analyseren...", "error_empty": "Voer een video-URL in", "error_invalid": "Voer een geldige URL in (beginnend met http:// of https://)" },
+  "progress": { "analyzing": "Video analyseren...", "complete": "Voltooid" },
+  "bilingual": { "title": "Tweetalige Ondertiteling Samenvoegen", "first_lang": "Eerste Taal", "second_lang": "Tweede Taal", "download": "Tweetalige Ondertitels Downloaden" },
+  "errors": {
+    "invalid_url": "De opgevraagde video bestaat niet. Controleer de URL",
+    "not_supported": "Dit platform wordt nog niet ondersteund. Probeer een andere videolink",
+    "network_error": "Netwerkfout. Probeer het later opnieuw",
+    "server_error": "Serverfout. Probeer het later opnieuw",
+    "rate_limited": "Te veel verzoeken. Wacht even",
+    "download_failed": "Downloaden van ondertitels mislukt. Probeer een ander formaat",
+    "analyze_failed": "Analyse mislukt", "bilingual_failed": "Tweetalige download mislukt. Zorg dat ondertitels in beide talen bestaan"
+  },
+  "footer": {
+    "copyright": "© 2026 mLangSub. Alle rechten voorbehouden.", "terms": "Gebruiksvoorwaarden",
+    "privacy": "Privacybeleid", "contact": "Contact",
+    "description": "Extraheer meertalige ondertitels van 50+ videoplatforms. Ondersteunt SRT, VTT, ASS, TXT, HTML.",
+    "supported_platforms": "Ondersteunde Platforms", "links": "Links"
+  },
+  "admin": {
+    "title": "Beheerpaneel", "dashboard": "Dashboard", "cache_management": "Cachebeheer",
+    "access_log": "Toegangslogboek", "total_visits": "Totaal Bezoeken", "total_downloads": "Totaal Downloads",
+    "bilingual_count": "Tweetalige Ondertitels", "unique_ips": "Unieke IP's", "cache_status": "Cachestatus",
+    "cache_entries": "Cache-items", "total_size": "Totale Grootte", "hit_rate": "Hitratio",
+    "refresh": "Vernieuwen", "clear_expired": "Verlopen Wissen", "cache_cleared": "Cache gewist",
+    "clear_cache_failed": "Cache wissen mislukt", "fetch_error": "Ophalen gegevens mislukt",
+    "network_error": "Netwerkfout", "trend_7d": "7-Dagen Trend", "date": "Datum",
+    "visits": "Bezoeken", "downloads": "Downloads", "action": "Actie", "video_id": "Video-ID",
+    "platform_col": "Platform", "language_col": "Taal", "type": "Type", "size": "Grootte", "cache_hit": "Hit",
+    "download_action": "Downloaden", "bilingual_action": "Tweetalig", "analyze_action": "Analyseren",
+    "login_title": "Beheerpaneel Inloggen", "username": "Gebruikersnaam",
+    "password": "Wachtwoord", "login": "Inloggen", "logging_in": "Inloggen...",
+    "login_failed": "Inloggen mislukt", "fill_required": "Voer gebruikersnaam en wachtwoord in",
+    "back_home": "Terug naar Home", "logout": "Uitloggen", "settings": "Instellingen",
+    "change_password": "Wachtwoord Wijzigen", "old_password": "Huidig Wachtwoord",
+    "new_password": "Nieuw Wachtwoord", "password_changed": "Wachtwoord succesvol gewijzigd",
+    "password_change_failed": "Wachtwoord wijzigen mislukt", "user_not_found": "Gebruiker niet gevonden",
+    "wrong_password": "Huidig wachtwoord onjuist", "unauthorized": "Niet gemachtigd"
+  },
+  "common": { "back_home": "Terug naar Home", "retry": "Opnieuw Proberen", "not_found": "Pagina Niet Gevonden" },
+  "platform": { "not_found": "Pagina Niet Gevonden", "back_home": "Terug naar Home", "faq": "Veelgestelde Vragen" }
+}

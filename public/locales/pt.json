@@ -1,0 +1,63 @@
+{
+  "app": { "name": "mLangSub", "tagline": "Downloader de Legendas", "description": "Extraia legendas de mais de 50 plataformas, incluindo YouTube e Bilibili" },
+  "nav": { "home": "Início", "supported_platforms": "Plataformas", "admin": "Admin", "language": "Idioma" },
+  "home": {
+    "title": "Downloader de Legendas de Vídeo Online",
+    "subtitle": "Extraia legendas multilíngues do YouTube, Bilibili, Viki e mais de 50 plataformas de vídeo",
+    "placeholder": "Cole o URL do vídeo...", "analyze": "Analisar", "analyzing": "Analisando...",
+    "supported_platforms": "Plataformas Compatíveis", "how_it_works": "Como Funciona",
+    "step1_title": "Cole o URL", "step1_desc": "Copie o link do vídeo do qual deseja baixar legendas",
+    "step2_title": "Analise o Vídeo", "step2_desc": "Detectamos automaticamente o vídeo e extraímos as legendas disponíveis",
+    "step3_title": "Escolha o Formato", "step3_desc": "Selecione entre SRT, VTT, TXT, ASS ou HTML",
+    "step4_title": "Baixar", "step4_desc": "Baixe seu arquivo de legendas com um clique"
+  },
+  "subtitle": {
+    "cc_subtitles": "Legendas CC", "auto_translated": "Legendas Traduzidas Automaticamente",
+    "no_subtitles": "Nenhuma legenda detectada para este vídeo", "no_voice": "Nenhum áudio de voz detectado neste vídeo",
+    "download": "Baixar", "bilingual_title": "Legendas Bilíngues",
+    "first_lang": "Primeiro Idioma", "second_lang": "Segundo Idioma",
+    "download_bilingual": "Baixar Bilíngue", "format": "Formato", "language": "Idioma",
+    "select_language": "Selecionar Idioma", "count_languages": "{count} idiomas"
+  },
+  "video": { "title": "Título", "author": "Autor", "duration": "Duração", "upload_date": "Data de Envio", "platform": "Plataforma", "no_info": "Sem informações do vídeo" },
+  "url_input": { "placeholder": "Cole o URL do vídeo...", "button_analyze": "Analisar", "button_analyzing": "Analisando...", "error_empty": "Por favor, insira um URL de vídeo", "error_invalid": "Por favor, insira um URL válido (começando com http:// ou https://)" },
+  "progress": { "analyzing": "Analisando vídeo...", "complete": "Concluído" },
+  "bilingual": { "title": "Combinador de Legendas Bilíngues", "first_lang": "Primeiro Idioma", "second_lang": "Segundo Idioma", "download": "Baixar Legendas Bilíngues" },
+  "errors": {
+    "invalid_url": "O vídeo solicitado não existe. Verifique o URL",
+    "not_supported": "Esta plataforma ainda não é compatível. Tente outro link de vídeo",
+    "network_error": "Erro de rede. Tente novamente mais tarde",
+    "server_error": "Erro do servidor. Tente novamente mais tarde",
+    "rate_limited": "Muitas solicitações. Aguarde um momento",
+    "download_failed": "Falha no download da legenda. Tente outro formato",
+    "analyze_failed": "Falha na análise", "bilingual_failed": "Falha no download bilíngue. Certifique-se de que existem legendas em ambos os idiomas"
+  },
+  "footer": {
+    "copyright": "© 2026 mLangSub. Todos os direitos reservados.", "terms": "Termos de Uso",
+    "privacy": "Política de Privacidade", "contact": "Contato",
+    "description": "Extraia legendas multilíngues de mais de 50 plataformas de vídeo. Compatível com SRT, VTT, ASS, TXT, HTML.",
+    "supported_platforms": "Plataformas Compatíveis", "links": "Links"
+  },
+  "admin": {
+    "title": "Painel de Administração", "dashboard": "Painel", "cache_management": "Gerenciamento de Cache",
+    "access_log": "Registro de Acesso", "total_visits": "Total de Visitas", "total_downloads": "Total de Downloads",
+    "bilingual_count": "Legendas Bilíngues", "unique_ips": "IPs Únicos", "cache_status": "Status do Cache",
+    "cache_entries": "Entradas de Cache", "total_size": "Tamanho Total", "hit_rate": "Taxa de Acertos",
+    "refresh": "Atualizar", "clear_expired": "Limpar Expirados", "cache_cleared": "Cache limpo",
+    "clear_cache_failed": "Falha ao limpar cache", "fetch_error": "Falha ao buscar dados",
+    "network_error": "Erro de rede", "trend_7d": "Tendência de 7 Dias", "date": "Data",
+    "visits": "Visitas", "downloads": "Downloads", "action": "Ação", "video_id": "ID do Vídeo",
+    "platform_col": "Plataforma", "language_col": "Idioma", "type": "Tipo", "size": "Tamanho", "cache_hit": "Acerto",
+    "download_action": "Baixar", "bilingual_action": "Bilíngue", "analyze_action": "Analisar",
+    "login_title": "Login do Painel de Administração", "username": "Nome de Usuário",
+    "password": "Senha", "login": "Entrar", "logging_in": "Entrando...",
+    "login_failed": "Falha no login", "fill_required": "Por favor, insira nome de usuário e senha",
+    "back_home": "Voltar ao Início", "logout": "Sair", "settings": "Configurações",
+    "change_password": "Alterar Senha", "old_password": "Senha Atual",
+    "new_password": "Nova Senha", "password_changed": "Senha alterada com sucesso",
+    "password_change_failed": "Falha ao alterar senha", "user_not_found": "Usuário não encontrado",
+    "wrong_password": "Senha atual incorreta", "unauthorized": "Não autorizado"
+  },
+  "common": { "back_home": "Voltar ao Início", "retry": "Tentar Novamente", "not_found": "Página Não Encontrada" },
+  "platform": { "not_found": "Página Não Encontrada", "back_home": "Voltar ao Início", "faq": "Perguntas Frequentes" }
+}

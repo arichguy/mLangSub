@@ -1,15 +1,19 @@
+"use client";
+
 import { formatDuration, getPlatformName } from "@/lib/utils";
 import type { VideoInfo as VideoInfoType } from "@/types/video";
 import { Play, Clock, User, Calendar } from "lucide-react";
+import { useTranslation } from "@/lib/i18n/useTranslation";
 
 interface VideoInfoProps {
   info: VideoInfoType;
 }
 
 export function VideoInfo({ info }: VideoInfoProps) {
+  const { t } = useTranslation();
+
   return (
     <div className="overflow-hidden rounded-2xl border border-warm-border bg-white shadow-subtle">
-      {/* Thumbnail */}
       {info.thumbnail && (
         <div className="relative aspect-video bg-warm-accent overflow-hidden">
           <img
@@ -26,16 +30,17 @@ export function VideoInfo({ info }: VideoInfoProps) {
         </div>
       )}
 
-      {/* Info */}
       <div className="p-4 space-y-3">
         <h2 className="font-semibold text-warm-text line-clamp-2 leading-snug">
-          {info.title}
+          {info.title || t("video.no_info", "暂无视频信息")}
         </h2>
         <div className="space-y-1.5 text-sm text-warm-muted">
-          <div className="flex items-center gap-2">
-            <User className="h-3.5 w-3.5" />
-            <span>{info.author}</span>
-          </div>
+          {info.author && (
+            <div className="flex items-center gap-2">
+              <User className="h-3.5 w-3.5" />
+              <span>{info.author}</span>
+            </div>
+          )}
           {info.duration && (
             <div className="flex items-center gap-2">
               <Clock className="h-3.5 w-3.5" />

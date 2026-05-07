@@ -1,0 +1,63 @@
+{
+  "app": { "name": "mLangSub", "tagline": "Загрузчик Субтитров", "description": "Извлекайте субтитры с более чем 50 платформ, включая YouTube и Bilibili" },
+  "nav": { "home": "Главная", "supported_platforms": "Платформы", "admin": "Админ", "language": "Язык" },
+  "home": {
+    "title": "Онлайн Загрузчик Субтитров",
+    "subtitle": "Извлекайте многоязычные субтитры с YouTube, Bilibili, Viki и более чем 50 видеоплатформ",
+    "placeholder": "Вставьте URL видео...", "analyze": "Анализировать", "analyzing": "Анализ...",
+    "supported_platforms": "Поддерживаемые Платформы", "how_it_works": "Как Это Работает",
+    "step1_title": "Вставьте URL", "step1_desc": "Скопируйте ссылку на видео, с которого хотите скачать субтитры",
+    "step2_title": "Анализ Видео", "step2_desc": "Мы автоматически определяем видео и извлекаем доступные субтитры",
+    "step3_title": "Выберите Формат", "step3_desc": "Выберите из форматов SRT, VTT, TXT, ASS или HTML",
+    "step4_title": "Скачать", "step4_desc": "Скачайте файл субтитров одним кликом"
+  },
+  "subtitle": {
+    "cc_subtitles": "CC Субтитры", "auto_translated": "Автоматически Переведённые Субтитры",
+    "no_subtitles": "Субтитры для этого видео не обнаружены", "no_voice": "Голосовой звук в этом видео не обнаружен",
+    "download": "Скачать", "bilingual_title": "Двуязычные Субтитры",
+    "first_lang": "Первый Язык", "second_lang": "Второй Язык",
+    "download_bilingual": "Скачать Двуязычные", "format": "Формат", "language": "Язык",
+    "select_language": "Выбрать Язык", "count_languages": "{count} языков"
+  },
+  "video": { "title": "Название", "author": "Автор", "duration": "Длительность", "upload_date": "Дата Загрузки", "platform": "Платформа", "no_info": "Нет информации о видео" },
+  "url_input": { "placeholder": "Вставьте URL видео...", "button_analyze": "Анализировать", "button_analyzing": "Анализ...", "error_empty": "Пожалуйста, введите URL видео", "error_invalid": "Пожалуйста, введите действительный URL (начинающийся с http:// или https://)" },
+  "progress": { "analyzing": "Анализ видео...", "complete": "Завершено" },
+  "bilingual": { "title": "Объединение Двуязычных Субтитров", "first_lang": "Первый Язык", "second_lang": "Второй Язык", "download": "Скачать Двуязычные Субтитры" },
+  "errors": {
+    "invalid_url": "Запрошенное видео не существует. Проверьте URL",
+    "not_supported": "Эта платформа пока не поддерживается. Попробуйте другую ссылку",
+    "network_error": "Ошибка сети. Пожалуйста, попробуйте позже",
+    "server_error": "Ошибка сервера. Пожалуйста, попробуйте позже",
+    "rate_limited": "Слишком много запросов. Пожалуйста, подождите",
+    "download_failed": "Не удалось скачать субтитры. Попробуйте другой формат",
+    "analyze_failed": "Ошибка анализа", "bilingual_failed": "Ошибка скачивания двуязычных субтитров. Убедитесь, что субтитры доступны на обоих языках"
+  },
+  "footer": {
+    "copyright": "© 2026 mLangSub. Все права защищены.", "terms": "Условия Использования",
+    "privacy": "Политика Конфиденциальности", "contact": "Контакты",
+    "description": "Извлекайте многоязычные субтитры с более чем 50 видеоплатформ. Поддерживает форматы SRT, VTT, ASS, TXT, HTML.",
+    "supported_platforms": "Поддерживаемые Платформы", "links": "Ссылки"
+  },
+  "admin": {
+    "title": "Панель Администратора", "dashboard": "Дашборд", "cache_management": "Управление Кэшем",
+    "access_log": "Журнал Доступа", "total_visits": "Всего Посещений", "total_downloads": "Всего Загрузок",
+    "bilingual_count": "Двуязычные Субтитры", "unique_ips": "Уникальные IP", "cache_status": "Состояние Кэша",
+    "cache_entries": "Записей в Кэше", "total_size": "Общий Размер", "hit_rate": "Процент Попаданий",
+    "refresh": "Обновить", "clear_expired": "Очистить Устаревшие", "cache_cleared": "Кэш очищен",
+    "clear_cache_failed": "Ошибка очистки кэша", "fetch_error": "Ошибка получения данных",
+    "network_error": "Ошибка сети", "trend_7d": "Тенденция за 7 Дней", "date": "Дата",
+    "visits": "Посещения", "downloads": "Загрузки", "action": "Действие", "video_id": "ID Видео",
+    "platform_col": "Платформа", "language_col": "Язык", "type": "Тип", "size": "Размер", "cache_hit": "Попадание",
+    "download_action": "Скачать", "bilingual_action": "Двуязычный", "analyze_action": "Анализ",
+    "login_title": "Вход в Панель Администратора", "username": "Имя Пользователя",
+    "password": "Пароль", "login": "Войти", "logging_in": "Вход...",
+    "login_failed": "Ошибка входа", "fill_required": "Пожалуйста, введите имя пользователя и пароль",
+    "back_home": "На Главную", "logout": "Выйти", "settings": "Настройки",
+    "change_password": "Изменить Пароль", "old_password": "Текущий Пароль",
+    "new_password": "Новый Пароль", "password_changed": "Пароль успешно изменён",
+    "password_change_failed": "Ошибка изменения пароля", "user_not_found": "Пользователь не найден",
+    "wrong_password": "Неверный текущий пароль", "unauthorized": "Не авторизован"
+  },
+  "common": { "back_home": "На Главную", "retry": "Повторить", "not_found": "Страница Не Найдена" },
+  "platform": { "not_found": "Страница Не Найдена", "back_home": "На Главную", "faq": "Часто Задаваемые Вопросы" }
+}
