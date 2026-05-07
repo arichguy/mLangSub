@@ -43,7 +43,8 @@ COPY --from=builder /app/node_modules/@prisma ./node_modules/@prisma
 RUN python3 -m pip install --break-system-packages yt-dlp
 
 RUN mkdir -p /app/data/tmp /app/data/subtitles && \
-    chown -R nextjs:nodejs /app/data
+    chown -R nextjs:nodejs /app/data && \
+    chown -R nextjs:nodejs /app/node_modules/.prisma /app/node_modules/@prisma /app/node_modules/prisma /app/node_modules/tsx 2>/dev/null || true
 
 USER nextjs
 
