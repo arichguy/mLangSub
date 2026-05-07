@@ -54,7 +54,7 @@ export function Header() {
               {localeLabels[locale]}
             </button>
             {langMenuOpen && (
-              <div className="absolute right-0 top-full mt-1 w-40 max-h-80 overflow-y-auto rounded-lg border border-warm-border bg-white py-1 shadow-card z-50">
+              <div className="absolute right-0 top-full mt-1 w-48 max-h-80 overflow-y-auto rounded-lg border border-warm-border bg-white py-1 shadow-card z-50">
                 {locales.map((loc) => (
                   <button
                     key={loc}
@@ -63,7 +63,7 @@ export function Header() {
                       setLangMenuOpen(false);
                     }}
                     className={cn(
-                      "block w-full px-4 py-2 text-left text-sm hover:bg-warm-accent transition-colors",
+                      "block w-full px-4 py-2 text-left text-sm whitespace-nowrap hover:bg-warm-accent transition-colors",
                       locale === loc
                         ? "font-semibold text-warm-orange"
                         : "text-warm-text"
@@ -114,7 +114,7 @@ export function Header() {
                     setMobileOpen(false);
                   }}
                   className={cn(
-                    "rounded-md px-2.5 py-1.5 text-xs",
+                    "rounded-md px-2.5 py-1.5 text-xs whitespace-nowrap",
                     locale === loc
                       ? "bg-warm-orange text-white"
                       : "text-warm-muted hover:bg-warm-accent"
