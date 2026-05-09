@@ -160,11 +160,24 @@ export async function downloadSubtitle(
     subtitleType,
   });
 
-  // Step 3: For YouTube, try timedtext API as fallback
+  // Step 2b: If --write-subs didn't work, try --write-auto-subs (and vice versa).
+  // Some videos only have manual subs, some only auto-generated.
+  if (!content) {
+    const altType = subtitleType === "auto-generated" ? "cc" : "auto-generated";
+    content = await ytdlpDownload(sanitizedUrl, langCode, format, {
+      platform: platform!,
+      proxy: proxyUrl,
+      videoId: videoId!,
+      subtitleType: altType,
+    });
+  }
+
+  // Step 3: For YouTube, try yt-dlp with extractor args as fallback
+  // (the fast path above skips player_client to avoid PO token issues)
   if (!content && platform === "youtube" && videoId) {
-    const timedTextFormat = format === "srt" ? "srt" : "vtt";
+    // Try timedtext API with the URL from yt-dlp's listing output
     const timedText = await fetchTimedText(videoId, langCode, {
-      format: timedTextFormat as SubtitleFormat,
+      format: format === "srt" ? "srt" : "vtt",
     });
     if (timedText && timedText.length > 100) {
       content = timedText;
