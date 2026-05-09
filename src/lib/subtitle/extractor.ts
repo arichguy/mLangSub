@@ -156,6 +156,8 @@ export async function downloadSubtitle(
   let content = await ytdlpDownload(sanitizedUrl, langCode, format, {
     platform: platform!,
     proxy: proxyUrl,
+    videoId: videoId!,
+    subtitleType,
   });
 
   // Step 3: For YouTube, try timedtext API as fallback
