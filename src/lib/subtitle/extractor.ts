@@ -160,16 +160,35 @@ export async function downloadSubtitle(
     subtitleType,
   });
 
-  // Step 2b: If --write-subs didn't work, try --write-auto-subs (and vice versa).
-  // Some videos only have manual subs, some only auto-generated.
+  // Step 2b: Cross-try the other subtitle type(s).
+  // translated → auto-generated (try ASR in same language)
+  // auto-generated → cc        (try manual CC)
+  // cc              → auto-generated (try ASR)
   if (!content) {
-    const altType = subtitleType === "auto-generated" ? "cc" : "auto-generated";
+    let altType: string;
+    if (subtitleType === "auto-generated") {
+      altType = "cc";
+    } else if (subtitleType === "translated") {
+      altType = "auto-generated";
+    } else {
+      altType = "auto-generated";
+    }
     content = await ytdlpDownload(sanitizedUrl, langCode, format, {
       platform: platform!,
       proxy: proxyUrl,
       videoId: videoId!,
       subtitleType: altType,
     });
+
+    // If translated → auto also failed, try manual CC as last resort
+    if (!content && subtitleType === "translated") {
+      content = await ytdlpDownload(sanitizedUrl, langCode, format, {
+        platform: platform!,
+        proxy: proxyUrl,
+        videoId: videoId!,
+        subtitleType: "cc",
+      });
+    }
   }
 
   // Step 3: For YouTube, try yt-dlp with extractor args as fallback
